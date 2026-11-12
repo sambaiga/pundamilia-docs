@@ -9,6 +9,7 @@ kernelspec:
 `milia.cluster` groups series that behave alike, decides how many groups the data supports, and reports how far to trust
 them.
 
+
 ```{code-cell} ipython3
 from milia import available, make
 from milia.data import profiles, synthetic
@@ -18,11 +19,34 @@ shapes = profiles.shape(population.pivot)
 available("clusterer")
 ```
 
+```{figure} ../_static/img/diagrams/families.svg
+:class: mi-diagram
+:alt: Four families of clustering objective: partition, hierarchical, density-connectivity, and graph and spectral.
+
+Clusterers form groups in four ways: around centroids, by cutting a tree, by density, and by cutting a graph.
+```
+
+
 ## Choose the number of groups
 
 `validation.sweep` scores every candidate number of groups by internal validity, and with `resampling=True` by
 prediction strength, the smallest-cluster bootstrap and subsample agreement. `selection.recommend` applies a strategy to
 the table. The `trust` strategy only accepts a number of groups that passes the resampling checks.
+
+```{figure} ../_static/img/diagrams/resampling.svg
+:class: mi-diagram
+:alt: Prediction strength and cluster-wise stability.
+
+The two resampling checks. Prediction strength asks whether the centroids of one half predict the other half. Stability asks whether each cluster reappears when the data are resampled.
+```
+
+```{figure} ../_static/img/diagrams/internal.svg
+:class: mi-diagram
+:alt: What the silhouette, the Davies-Bouldin index and the Calinski-Harabasz index compare.
+
+The internal indices of the sweep compare how compact each group is with how far apart the groups are.
+```
+
 
 ```{code-cell} ipython3
 from milia.cluster import selection, validation

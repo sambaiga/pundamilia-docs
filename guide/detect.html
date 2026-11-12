@@ -35,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=6a604523" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/milia.css?v=3243ebb9" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/milia.css?v=48f34c4c" />
     <link crossorigin="anonymous" rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
   
   <!-- So that users can add custom icons -->
@@ -499,6 +499,12 @@
   <section class="tex2jax_ignore mathjax_ignore" id="detect">
 <h1>Detect<a class="headerlink" href="#detect" title="Link to this heading">#</a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">milia.anomaly</span></code> flags the days or windows that are not normal, at a false-alarm rate that you set.</p>
+<figure class="align-default" id="id1">
+<img alt="Point, contextual and collective anomalies." class="mi-diagram" src="../_images/anomalykinds.svg" />
+<figcaption>
+<p><span class="caption-text">Three kinds of anomaly: one reading that departs from its day, an ordinary value at an unusual time, and ordinary members whose sum is unusual.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">milia</span><span class="w"> </span><span class="kn">import</span> <span class="n">available</span>
@@ -534,6 +540,18 @@
 <p>An ensemble rescales the scores of several detectors to a common range and combines them. The threshold is the
 split-conformal quantile of the scores of held-out normal days, so that, for exchangeable data, the expected share of
 normal days that are flagged is at most <code class="docutils literal notranslate"><span class="pre">alpha</span></code>.</p>
+<figure class="align-default" id="id2">
+<img alt="A level set of the density of normal days." class="mi-diagram" src="../_images/levelset.svg" />
+<figcaption>
+<p><span class="caption-text">Detection as a level set: the threshold encloses the region that holds 90% of normal days, and a normal day outside it is a false alarm.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id3">
+<img alt="Five rules for the threshold, each at a target false-alarm rate of 10%." class="mi-diagram" src="../_images/thresholdstrategies.svg" />
+<figcaption>
+<p><span class="caption-text">Five rules for the threshold at a target rate of 10%. Only the conformal threshold reaches it, because it is read from held-out normal scores.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
@@ -560,6 +578,12 @@ normal days that are flagged is at most <code class="docutils literal notranslat
 <p>The score of each day is available through <code class="docutils literal notranslate"><span class="pre">score_samples</span></code>. <code class="docutils literal notranslate"><span class="pre">conformal.pvalues</span></code> turns scores into conformal p-values, and
 <code class="docutils literal notranslate"><span class="pre">conformal.mondrian</span></code> gives each group its own threshold, so that a group with a different normal range is not judged by
 the range of another.</p>
+<figure class="align-default" id="id4">
+<img alt="One threshold against a threshold for each group." class="mi-diagram" src="../_images/mondrian.svg" />
+<figcaption>
+<p><span class="caption-text">One threshold does not hold the false-alarm rate in each group, because the groups have different normal ranges. A threshold for each group does.</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">milia.anomaly</span><span class="w"> </span><span class="kn">import</span> <span class="n">conformal</span>
@@ -583,6 +607,12 @@ the range of another.</p>
 <h2>Change points<a class="headerlink" href="#change-points" title="Link to this heading">#</a></h2>
 <p>When the question is <em>when did behaviour change</em>, <code class="docutils literal notranslate"><span class="pre">changepoint.cusum</span></code> finds the points where a series drifts away from
 its baseline, and <code class="docutils literal notranslate"><span class="pre">pelt</span></code> and <code class="docutils literal notranslate"><span class="pre">binseg</span></code> segment it (they need the <code class="docutils literal notranslate"><span class="pre">changepoint</span></code> extra).</p>
+<figure class="align-default" id="id5">
+<img alt="The difference between an anomaly and a change of normal behaviour." class="mi-diagram" src="../_images/changeoranomaly.svg" />
+<figcaption>
+<p><span class="caption-text">An anomaly is a departure from normal, and a change is a new normal. CUSUM accumulates small departures, so it finds a change that no single day reveals.</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">milia.anomaly</span><span class="w"> </span><span class="kn">import</span> <span class="n">changepoint</span>

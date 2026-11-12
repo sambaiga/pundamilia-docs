@@ -49,6 +49,14 @@ that produced it.
 `milia.evaluate` holds the harnesses: the self-baseline benchmark for detectors, which scores each entity against its own
 normal days with injected anomalies, and the benchmarks for retrieval and ranking.
 
+```{figure} ../_static/img/diagrams/injection.svg
+:class: mi-diagram
+:alt: Training, calibration, held-out and injected days, and four injected faults.
+
+The self-baseline protocol: fit on one block of normal days, set the threshold on another, measure the false-alarm rate on a third, and measure recall on days with an injected fault.
+```
+
+
 ## Limits
 
 A significance test says a difference is reproducible on these units, not that it matters for your decision. Report the

@@ -21,6 +21,14 @@ and by resampling checks (prediction strength, per-cluster bootstrap and subsamp
 checks against structureless reference data, so a split that the data does not support is not chosen. A retrieval
 carries a trust radius, so a query that is far from every labelled case is reported as such.
 
+```{figure} ../_static/img/diagrams/resampling.svg
+:class: mi-diagram
+:alt: Prediction strength and cluster-wise stability.
+
+Two of the resampling checks that a clustering has to pass.
+```
+
+
 ## Conformal thresholds
 
 Anomaly scores have no natural scale. milia sets the threshold from held-out normal data with a split-conformal

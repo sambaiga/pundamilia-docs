@@ -35,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=6a604523" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/milia.css?v=3243ebb9" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/milia.css?v=48f34c4c" />
     <link crossorigin="anonymous" rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
   
   <!-- So that users can add custom icons -->
@@ -499,6 +499,12 @@
   <section class="tex2jax_ignore mathjax_ignore" id="rank">
 <h1>Rank<a class="headerlink" href="#rank" title="Link to this heading">#</a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">milia.recommend</span></code> finds the cases most similar to a series, ranks them, and recommends the action that worked for them.</p>
+<figure class="align-default" id="id1">
+<img alt="A query is matched to its nearest cases, the cases are ranked, and an action is recommended." class="mi-diagram" src="../_images/decisionchain.svg" />
+<figcaption>
+<p><span class="caption-text">The chain of a retrieval task: a query, the nearest past cases inside the trust radius, a ranking of the queries, and the action of least cost.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
@@ -537,6 +543,12 @@ sets a trust radius: a query that is farther than the radius from every labelled
 <section id="recommend-an-action">
 <h2>Recommend an action<a class="headerlink" href="#recommend-an-action" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">CaseRecommender</span></code> suggests the action taken most often on the nearest past cases, with ties going to the nearer one.</p>
+<figure class="align-default" id="id2">
+<img alt="Case-based reasoning: retrieve, reuse, revise and retain." class="mi-diagram" src="../_images/cbrcycle.svg" />
+<figcaption>
+<p><span class="caption-text">Case-based recommendation follows four steps: retrieve the most similar solved case, reuse its action, revise it for the new case, and retain the result.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">milia.recommend.action</span><span class="w"> </span><span class="kn">import</span> <span class="n">CaseRecommender</span>

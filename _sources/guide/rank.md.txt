@@ -8,6 +8,14 @@ kernelspec:
 
 `milia.recommend` finds the cases most similar to a series, ranks them, and recommends the action that worked for them.
 
+```{figure} ../_static/img/diagrams/decisionchain.svg
+:class: mi-diagram
+:alt: A query is matched to its nearest cases, the cases are ranked, and an action is recommended.
+
+The chain of a retrieval task: a query, the nearest past cases inside the trust radius, a ranking of the queries, and the action of least cost.
+```
+
+
 ```{code-cell} ipython3
 import numpy as np
 
@@ -35,6 +43,14 @@ retriever.predict(queries), retriever.trusted(queries), round(float(retriever.ta
 ## Recommend an action
 
 `CaseRecommender` suggests the action taken most often on the nearest past cases, with ties going to the nearer one.
+
+```{figure} ../_static/img/diagrams/cbrcycle.svg
+:class: mi-diagram
+:alt: Case-based reasoning: retrieve, reuse, revise and retain.
+
+Case-based recommendation follows four steps: retrieve the most similar solved case, reuse its action, revise it for the new case, and retain the result.
+```
+
 
 ```{code-cell} ipython3
 from milia.recommend.action import CaseRecommender

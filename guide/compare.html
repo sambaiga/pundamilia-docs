@@ -35,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=6a604523" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/milia.css?v=3243ebb9" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/milia.css?v=48f34c4c" />
     <link crossorigin="anonymous" rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
   
   <!-- So that users can add custom icons -->
@@ -612,6 +612,12 @@ that produced it.</p>
 <h2>Harnesses<a class="headerlink" href="#harnesses" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">milia.evaluate</span></code> holds the harnesses: the self-baseline benchmark for detectors, which scores each entity against its own
 normal days with injected anomalies, and the benchmarks for retrieval and ranking.</p>
+<figure class="align-default" id="id1">
+<img alt="Training, calibration, held-out and injected days, and four injected faults." class="mi-diagram" src="../_images/injection.svg" />
+<figcaption>
+<p><span class="caption-text">The self-baseline protocol: fit on one block of normal days, set the threshold on another, measure the false-alarm rate on a third, and measure recall on days with an injected fault.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 <section id="limits">
 <h2>Limits<a class="headerlink" href="#limits" title="Link to this heading">#</a></h2>

@@ -1,32 +1,31 @@
 /* ============================================================
    milia - PyData theme overrides
-   Ported from twiga-forecast's docs so the two sites read as siblings;
-   palette from milia.plotting.tokens, so the docs match milia's figures.
+   Ported from popo and twiga-forecast; the palette is the book's, so the docs match its figures.
    Fonts: Jost (headings) · Libre Franklin (body)
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Libre+Franklin:wght@300;400;500;600;700&display=swap');
 
 /* ── Tokens ──────────────────────────────────────────────────────
-   milia.plotting.tokens:
-     deep teal   #111318  - primary: headings, links (5.2:1 on white)
-     bright cyan #C47F2C  - accents, icons, hover
-     orange      #C47F2C  - the thing to notice: primary button, highlights
-     charcoal    #111318  - text
+   The book palette, as in umeme.style.tokens:
+     slate  #1E293B  - ink: text and headings
+     blue   #0369A1  - the subject: links, accents, icons
+     orange #E26029  - the thing to notice: the primary button, highlights
    ─────────────────────────────────────────────────────────────── */
+/* Tokens: the book palette (slate #1E293B, blue #0369A1, orange #E26029), as in umeme.style.tokens. */
 :root {
-  --mi-teal:         #111318;
-  --mi-teal-mid:     #C47F2C;
-  --mi-teal-light:   #F3EBDD;
-  --mi-teal-bg:      #FAF6EE;
-  --mi-orange:       #C47F2C;
-  --mi-orange-deep:  #9C6420;
-  --mi-charcoal:     #111318;
-  --mi-slate:        #4A453D;
-  --mi-border:       #E5DCCB;
-  --mi-surface:      #F8F6F2;
+  --mi-teal:         #0369A1;
+  --mi-teal-mid:     #0C4A6E;
+  --mi-teal-light:   #EAF3FA;
+  --mi-teal-bg:      #F4F8FB;
+  --mi-orange:       #E26029;
+  --mi-orange-deep:  #B8441A;
+  --mi-charcoal:     #1E293B;
+  --mi-slate:        #475569;
+  --mi-border:       #D5E2EC;
+  --mi-surface:      #F5F8FB;
   --mi-white:        #ffffff;
-  --mi-text:         #111318;
+  --mi-text:         #1E293B;
 
   --pst-color-primary:           var(--mi-teal);
   --pst-color-primary-highlight: var(--mi-teal-mid);
@@ -39,21 +38,20 @@
   --pst-sidebar-secondary-width:  195px;
 }
 
-/* Night: milia sees in the dark, so the dark theme is a first-class one. */
 html[data-theme="dark"] {
-  --mi-teal:       #C47F2C;
-  --mi-teal-mid:   #C47F2C;
-  --mi-teal-light: rgba(196,127,44,0.12);
-  --mi-teal-bg:    rgba(196,127,44,0.08);
-  --mi-border:     rgba(196,127,44,0.25);
-  --mi-surface:    #17191E;
-  --mi-text:       #E7E2D8;
+  --mi-teal:       #38A3DC;
+  --mi-teal-mid:   #7DC3EA;
+  --mi-teal-light: rgba(56,163,220,0.14);
+  --mi-teal-bg:    rgba(56,163,220,0.08);
+  --mi-border:     rgba(56,163,220,0.28);
+  --mi-surface:    #1E293B;
+  --mi-text:       #E2E8F0;
   --pst-color-primary:           var(--mi-teal);
   --pst-color-primary-highlight: var(--mi-teal-mid);
   --pst-color-link:              var(--mi-teal);
   --pst-color-link-hover:        var(--mi-teal-mid);
-  --pst-color-background:        #0F1115;
-  --pst-color-on-background:     #17191E;
+  --pst-color-background:        #0F172A;
+  --pst-color-on-background:     #1E293B;
 }
 
 /* ── Base ────────────────────────────────────────────────────── */
@@ -63,7 +61,7 @@ body {
   line-height: 1.7;
   color: var(--mi-slate);
 }
-html[data-theme="dark"] body { color: #A8A196; }
+html[data-theme="dark"] body { color: #94A3B8; }
 
 h1, h2, h3, h4, h5 {
   font-family: 'Jost', 'Segoe UI', sans-serif;
@@ -81,7 +79,7 @@ a:hover { color: var(--mi-teal-mid); }
 /* ── Navbar ──────────────────────────────────────────────────── */
 .bd-header {
   border-bottom: 2px solid var(--mi-teal) !important;
-  box-shadow: 0 1px 4px rgba(17,19,24,0.08) !important;
+  box-shadow: 0 1px 4px rgba(30,41,59,0.08) !important;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
@@ -106,7 +104,7 @@ a:hover { color: var(--mi-teal-mid); }
   box-shadow: none !important;
 }
 
-html[data-theme="dark"] .navbar-nav .nav-link { color: #E5DCCB !important; }
+html[data-theme="dark"] .navbar-nav .nav-link { color: #D5E2EC !important; }
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link:active,
@@ -139,7 +137,7 @@ html[data-theme="dark"] .navbar-nav .nav-link:focus-visible {
 .dropdown-menu {
   border: 1px solid var(--mi-border) !important;
   border-radius: 6px !important;
-  box-shadow: 0 4px 16px rgba(17,19,24,0.12) !important;
+  box-shadow: 0 4px 16px rgba(30,41,59,0.12) !important;
   padding: 6px !important;
   min-width: 180px;
 }
@@ -250,12 +248,12 @@ section#milia {
   border-radius: 8px;
   overflow: hidden;
   margin: 1rem 0;
-  box-shadow: 0 1px 4px rgba(17,19,24,0.06);
+  box-shadow: 0 1px 4px rgba(30,41,59,0.06);
 }
 
 html[data-theme="dark"] [class*="highlight-"].notranslate {
-  background-color: #0F1115 !important;
-  border-color: rgba(196,127,44,0.18);
+  background-color: #0F172A !important;
+  border-color: rgba(3,105,161,0.18);
   box-shadow: none;
 }
 
@@ -290,11 +288,11 @@ code:not(pre code) {
 /* ── Admonitions ─────────────────────────────────────────────── */
 .admonition { border-radius: 6px; border-left-width: 4px; }
 .admonition.note    { border-color: var(--mi-teal);   background: var(--mi-teal-bg); }
-.admonition.tip     { border-color: #4A453D;           background: #F4F0E8; }
-.admonition.warning { border-color: #C47F2C;           background: #FBF3E6; }
+.admonition.tip     { border-color: #475569;           background: #F1F5F9; }
+.admonition.warning { border-color: #0369A1;           background: #FCEFEA; }
 html[data-theme="dark"] .admonition.note    { background: var(--mi-teal-bg); }
-html[data-theme="dark"] .admonition.tip     { background: rgba(74,69,61,0.1); }
-html[data-theme="dark"] .admonition.warning { background: rgba(196,127,44,0.1); }
+html[data-theme="dark"] .admonition.tip     { background: rgba(71,85,105,0.1); }
+html[data-theme="dark"] .admonition.warning { background: rgba(3,105,161,0.1); }
 
 .admonition .admonition-title {
   font-family: 'Jost', sans-serif;
@@ -308,9 +306,9 @@ table.docutils {
   border-collapse: collapse;
   font-family: 'Libre Franklin', 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
   font-size: 13px;
-  color: #23262D;
-  border-top: 2px solid #111318;
-  border-bottom: 1px solid #111318;
+  color: #273449;
+  border-top: 2px solid #1E293B;
+  border-bottom: 1px solid #1E293B;
   border-left: none;
   border-right: none;
   border-radius: 0;
@@ -328,15 +326,15 @@ table.docutils th {
   font-size: 13px;
   text-transform: none;
   letter-spacing: 0;
-  border-bottom: 1px solid #6B6358;
+  border-bottom: 1px solid #475569;
 }
 table.docutils td {
   padding: 7px 14px;
-  border-bottom: 1px solid #E4E0D8;
+  border-bottom: 1px solid #E2E8F0;
   font-size: 13px;
 }
 table.docutils tr:last-child td { border-bottom: none; }
-table.docutils tr:nth-child(even) td { background: #FAF8F4; }
+table.docutils tr:nth-child(even) td { background: #F8FAFC; }
 html[data-theme="dark"] table.docutils tr:nth-child(even) td { background: rgba(255,255,255,0.04); }
 
 /* ── sphinx-design cards ─────────────────────────────────────── */
@@ -348,7 +346,7 @@ html[data-theme="dark"] table.docutils tr:nth-child(even) td { background: rgba(
 }
 html[data-theme="dark"] .sd-card { background: var(--mi-surface) !important; }
 .sd-card:hover {
-  box-shadow: 0 4px 18px rgba(17,19,24,0.15);
+  box-shadow: 0 4px 18px rgba(30,41,59,0.15);
   transform: translateY(-2px);
   border-color: var(--mi-teal) !important;
 }
@@ -470,7 +468,7 @@ dl.py.class > dt, dl.py.function > dt, dl.py.method > dt {
 .mi-install-code {
   margin: 0; padding: 0; background: transparent;
   border: none; border-left: none;
-  font-size: 0.88rem; color: #D8CDB8;
+  font-size: 0.88rem; color: #CBD5E1;
   font-family: 'SFMono-Regular', 'Consolas', monospace;
 }
 
@@ -483,13 +481,13 @@ dl.py.class > dt, dl.py.function > dt, dl.py.method > dt {
 .mi-code-snippet pre {
   margin: 0; padding: 0;
   background: transparent !important; border: none;
-  font-size: 0.83rem; color: #E7E2D8;
+  font-size: 0.83rem; color: #E2E8F0;
   line-height: 1.65;
   font-family: 'SFMono-Regular', 'Consolas', monospace;
 }
 
 .mi-code-snippet .kw { color: var(--mi-teal-mid); }
-.mi-code-snippet .st { color: #D8CDB8; }
+.mi-code-snippet .st { color: #CBD5E1; }
 
 /* ════════════════════════════════════════════════════════════════
    TASK PANELS  (Model, Simulate, Estimate on the landing page)
@@ -517,7 +515,7 @@ dl.py.class > dt, dl.py.function > dt, dl.py.method > dt {
 html[data-theme="dark"] .mi-task { background: var(--mi-surface); }
 
 .mi-task:hover {
-  box-shadow: 0 4px 20px rgba(17,19,24,0.12);
+  box-shadow: 0 4px 20px rgba(30,41,59,0.12);
   border-color: var(--mi-teal-mid);
 }
 
@@ -556,7 +554,7 @@ html[data-theme="dark"] .mi-task-figure { border: 1px solid var(--mi-border); }
   flex: 1;
 }
 
-html[data-theme="dark"] .mi-task-body { color: #A8A196; }
+html[data-theme="dark"] .mi-task-body { color: #94A3B8; }
 
 .mi-task-link {
   display: inline-flex;
@@ -613,7 +611,7 @@ html[data-theme="dark"] .mi-task-body { color: #A8A196; }
 html[data-theme="dark"] .mi-nav-card { background: var(--mi-surface); }
 
 .mi-nav-card:hover {
-  box-shadow: 0 4px 20px rgba(17,19,24,0.14);
+  box-shadow: 0 4px 20px rgba(30,41,59,0.14);
   transform: translateY(-2px);
   border-color: var(--mi-teal);
   text-decoration: none !important;
@@ -635,7 +633,7 @@ html[data-theme="dark"] .mi-nav-card { background: var(--mi-surface); }
 }
 
 .mi-nav-card:hover .mi-nav-card-button { background: var(--mi-teal); color: #fff; }
-html[data-theme="dark"] .mi-nav-card:hover .mi-nav-card-button { color: #0F1115; }
+html[data-theme="dark"] .mi-nav-card:hover .mi-nav-card-button { color: #0F172A; }
 
 
 .mi-nav-card-body h3 {
@@ -651,7 +649,7 @@ html[data-theme="dark"] .mi-nav-card:hover .mi-nav-card-button { color: #0F1115;
   line-height: 1.55; margin: 0;
 }
 
-html[data-theme="dark"] .mi-nav-card-body p { color: #A8A196; }
+html[data-theme="dark"] .mi-nav-card-body p { color: #94A3B8; }
 
 /* ════════════════════════════════════════════════════════════════
    TUTORIAL GALLERY  (thumbnails from each tutorial's own figures)
@@ -681,7 +679,7 @@ html[data-theme="dark"] .mi-nav-card-body p { color: #A8A196; }
 html[data-theme="dark"] .mi-gallery-card { background: var(--mi-surface); }
 
 .mi-gallery-card:hover {
-  box-shadow: 0 4px 20px rgba(17,19,24,0.12);
+  box-shadow: 0 4px 20px rgba(30,41,59,0.12);
   border-color: var(--mi-teal-mid);
 }
 
@@ -712,7 +710,7 @@ html[data-theme="dark"] .mi-gallery-thumb img { filter: none; }
   color: var(--mi-slate);
 }
 
-html[data-theme="dark"] .mi-gallery-num { color: #A8A196; }
+html[data-theme="dark"] .mi-gallery-num { color: #94A3B8; }
 
 .mi-gallery-info h3 {
   font-family: 'Jost', sans-serif;
@@ -731,18 +729,18 @@ html[data-theme="dark"] .mi-gallery-num { color: #A8A196; }
   margin: 0;
 }
 
-html[data-theme="dark"] .mi-gallery-info p { color: #A8A196; }
+html[data-theme="dark"] .mi-gallery-info p { color: #94A3B8; }
 
 /* ════════════════════════════════════════════════════════════════
    SUBSYSTEM GRADIENT HEADERS  (new - MLOps & overview cards)
    ════════════════════════════════════════════════════════════════ */
 
-.mi-ovr-pipe  { background: linear-gradient(135deg, #111318, #6B6358) !important; color: white !important; }
-.mi-ovr-model { background: linear-gradient(135deg, #3A362F, #111318) !important; color: white !important; }
-.mi-ovr-cv    { background: linear-gradient(135deg, #9C6420, #C47F2C) !important; color: white !important; }
-.mi-ovr-met   { background: linear-gradient(135deg, #1E3A5F, #234B73) !important; color: white !important; }
-.mi-ovr-conf  { background: linear-gradient(135deg, #3A362F, #4A453D) !important; color: white !important; }
-.mi-ovr-mlops { background: linear-gradient(135deg, #5A3E1B, #7A5320) !important; color: white !important; }
+.mi-ovr-pipe  { background: linear-gradient(135deg, #1E293B, #475569) !important; color: white !important; }
+.mi-ovr-model { background: linear-gradient(135deg, #334155, #1E293B) !important; color: white !important; }
+.mi-ovr-cv    { background: linear-gradient(135deg, #983D21, #0369A1) !important; color: white !important; }
+.mi-ovr-met   { background: linear-gradient(135deg, #0C4A6E, #0369A1) !important; color: white !important; }
+.mi-ovr-conf  { background: linear-gradient(135deg, #334155, #475569) !important; color: white !important; }
+.mi-ovr-mlops { background: linear-gradient(135deg, #0C4A6E, #0C4A6E) !important; color: white !important; }
 
 /* ════════════════════════════════════════════════════════════════
    OVERVIEW SUBSYSTEM CARDS  - responsive grid polish
@@ -834,7 +832,7 @@ html[data-theme="dark"] .mi-version-btn.show {
 
 .mi-version-btn.show .mi-alpha-pill,
 .mi-version-btn:hover .mi-alpha-pill {
-  background: rgba(17,19,24,0.15);
+  background: rgba(30,41,59,0.15);
   border-color: var(--mi-teal);
 }
 
@@ -843,7 +841,7 @@ html[data-theme="dark"] .mi-version-btn.show {
   padding: 14px 16px !important;
   border: 1px solid var(--mi-border) !important;
   border-radius: 8px !important;
-  box-shadow: 0 6px 24px rgba(17,19,24,0.13) !important;
+  box-shadow: 0 6px 24px rgba(30,41,59,0.13) !important;
   margin-top: 6px !important;
 }
 
@@ -951,7 +949,7 @@ img.image-border {
   border: 1px solid var(--mi-border);
   margin-bottom: 1.15rem;
   border-radius: 4px;
-  box-shadow: 1px 2px 6px rgba(17,19,24,0.12);
+  box-shadow: 1px 2px 6px rgba(30,41,59,0.12);
 }
 
 /* ════════════════════════════════════════════════════════════════
@@ -970,16 +968,16 @@ table.dataframe {
   border: none !important;
   border-collapse: collapse;
   border-spacing: 0;
-  border-top: 2px solid #111318 !important;
-  border-bottom: 1px solid #111318 !important;
+  border-top: 2px solid #1E293B !important;
+  border-bottom: 1px solid #1E293B !important;
   font-family: 'Libre Franklin', 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
   font-size: 13px;
-  color: #23262D;
+  color: #273449;
   width: 100%;
 }
 
 table.dataframe thead {
-  border-bottom: 1px solid #6B6358;
+  border-bottom: 1px solid #475569;
   vertical-align: bottom;
 }
 
@@ -1006,7 +1004,7 @@ table.dataframe th {
 }
 
 table.dataframe tbody tr:nth-child(even) {
-  background: #FAF8F4;
+  background: #F8FAFC;
 }
 
 table.dataframe tbody tr:nth-child(odd) {
@@ -1014,11 +1012,11 @@ table.dataframe tbody tr:nth-child(odd) {
 }
 
 table.dataframe tbody tr:hover {
-  background: #F3EEE4;
+  background: #EAF3FA;
 }
 
 table.dataframe tbody td {
-  border-bottom: 1px solid #E4E0D8;
+  border-bottom: 1px solid #E2E8F0;
 }
 
 table.dataframe tbody tr:last-child td {
@@ -1032,7 +1030,7 @@ html[data-theme="dark"] table.dataframe {
 }
 
 html[data-theme="dark"] table.dataframe th {
-  background: #3A362F;
+  background: #334155;
 }
 
 html[data-theme="dark"] table.dataframe tbody tr:nth-child(even) {
@@ -1065,8 +1063,8 @@ html[data-theme="dark"] div.cell_output table th { color: var(--mi-text); }
 
 /* Hero code snippet: keywords, strings and comments. */
 .mi-code-snippet .k { color: var(--mi-teal-mid); font-weight: 600; }
-.mi-code-snippet .s { color: #E8C48F; }
-.mi-code-snippet .c { color: #8E887D; font-style: italic; }
+.mi-code-snippet .s { color: #81B4D0; }
+.mi-code-snippet .c { color: #64748B; font-style: italic; }
 
 /* Section headings on the landing page. */
 .mi-section-title {
@@ -1118,3 +1116,27 @@ div.cell > div.cell_input,
   border-left-color: var(--mi-orange) !important;
 }
 div.cell > div.cell_input { border-left-width: 3px; }
+
+
+/* ── Concept diagrams from the book: a white card in both themes ───────────── */
+figure.mi-diagram, div.mi-diagram { margin: 1.4rem -2.5rem; }
+@media (max-width: 1100px) { figure.mi-diagram, div.mi-diagram { margin: 1.2rem 0; } }
+figure.mi-diagram img, .mi-diagram img {
+  background: #ffffff;
+  border: 1px solid var(--mi-border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  width: 100%;
+  height: auto;
+}
+figure.mi-diagram figcaption, figure.mi-diagram figcaption p {
+  font-size: 0.8rem;
+  color: var(--mi-slate);
+  margin-top: 0.4rem;
+}
+html[data-theme="dark"] figure.mi-diagram figcaption, html[data-theme="dark"] figure.mi-diagram figcaption p { color: #94A3B8; }
+
+/* ── The dark hero box: light syntax colours on the slate surface ──────────── */
+.mi-install-label { color: #F2814F !important; }
+.mi-code-snippet .k { color: #7DC3EA !important; }
+.mi-code-snippet .s { color: #F2B98F !important; }

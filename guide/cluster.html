@@ -35,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=6a604523" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/milia.css?v=3243ebb9" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/milia.css?v=48f34c4c" />
     <link crossorigin="anonymous" rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
   
   <!-- So that users can add custom icons -->
@@ -527,11 +527,29 @@ them.</p>
 </div>
 </div>
 </div>
+<figure class="align-default" id="id1">
+<img alt="Four families of clustering objective: partition, hierarchical, density-connectivity, and graph and spectral." class="mi-diagram" src="../_images/families.svg" />
+<figcaption>
+<p><span class="caption-text">Clusterers form groups in four ways: around centroids, by cutting a tree, by density, and by cutting a graph.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <section id="choose-the-number-of-groups">
 <h2>Choose the number of groups<a class="headerlink" href="#choose-the-number-of-groups" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">validation.sweep</span></code> scores every candidate number of groups by internal validity, and with <code class="docutils literal notranslate"><span class="pre">resampling=True</span></code> by
 prediction strength, the smallest-cluster bootstrap and subsample agreement. <code class="docutils literal notranslate"><span class="pre">selection.recommend</span></code> applies a strategy to
 the table. The <code class="docutils literal notranslate"><span class="pre">trust</span></code> strategy only accepts a number of groups that passes the resampling checks.</p>
+<figure class="align-default" id="id2">
+<img alt="Prediction strength and cluster-wise stability." class="mi-diagram" src="../_images/resampling.svg" />
+<figcaption>
+<p><span class="caption-text">The two resampling checks. Prediction strength asks whether the centroids of one half predict the other half. Stability asks whether each cluster reappears when the data are resampled.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id3">
+<img alt="What the silhouette, the Davies-Bouldin index and the Calinski-Harabasz index compare." class="mi-diagram" src="../_images/internal.svg" />
+<figcaption>
+<p><span class="caption-text">The internal indices of the sweep compare how compact each group is with how far apart the groups are.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">milia.cluster</span><span class="w"> </span><span class="kn">import</span> <span class="n">selection</span><span class="p">,</span> <span class="n">validation</span>

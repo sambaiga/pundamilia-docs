@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-11-12T15:56:55.883158</dc:date>
+    <dc:date>2026-11-12T16:09:07.768298</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -41,7 +41,7 @@ z
    </g>
    <g id="FillBetweenPolyCollection_1">
     <defs>
-     <path id="m134e397edd" d="M 18.144 -47.093271 
+     <path id="mb2895e41f2" d="M 18.144 -47.093271 
 L 18.144 -44.497767 
 L 23.004 -44.135792 
 L 27.864 -44.145534 
@@ -142,25 +142,25 @@ L 18.144 -47.093271
 z
 "/>
     </defs>
-    <g clip-path="url(#p4f1a883153)">
-     <use xlink:href="#m134e397edd" x="0" y="165.6" style="fill: #8e887d; fill-opacity: 0.22"/>
+    <g clip-path="url(#p3a0971f067)">
+     <use xlink:href="#mb2895e41f2" x="0" y="165.6" style="fill: #64748b; fill-opacity: 0.22"/>
     </g>
    </g>
    <g id="matplotlib.axis_1">
     <g id="xtick_1">
      <g id="line2d_1">
       <defs>
-       <path id="me075314959" d="M 0 0 
+       <path id="mc17fbf57dc" d="M 0 0 
 L 0 3 
-" style="stroke: #8e887d; stroke-width: 0.8"/>
+" style="stroke: #64748b; stroke-width: 0.8"/>
       </defs>
       <g>
-       <use xlink:href="#me075314959" x="18.144" y="137.448" style="fill: #8e887d; stroke: #8e887d; stroke-width: 0.8"/>
+       <use xlink:href="#mc17fbf57dc" x="18.144" y="137.448" style="fill: #64748b; stroke: #64748b; stroke-width: 0.8"/>
       </g>
      </g>
      <g id="text_1">
       <!-- 0 -->
-      <g style="fill: #8e887d" transform="translate(15.392125 151.676) scale(0.08 -0.08)">
+      <g style="fill: #64748b" transform="translate(15.392125 151.676) scale(0.08 -0.08)">
        <defs>
         <path id="LibreFranklin-Regular-2db" d="M 2208 4813 
 Q 2586 4813 2909 4656 
@@ -203,12 +203,12 @@ z
     <g id="xtick_2">
      <g id="line2d_2">
       <g>
-       <use xlink:href="#me075314959" x="134.784" y="137.448" style="fill: #8e887d; stroke: #8e887d; stroke-width: 0.8"/>
+       <use xlink:href="#mc17fbf57dc" x="134.784" y="137.448" style="fill: #64748b; stroke: #64748b; stroke-width: 0.8"/>
       </g>
      </g>
      <g id="text_2">
       <!-- 12 -->
-      <g style="fill: #8e887d" transform="translate(130.52775 151.676) scale(0.08 -0.08)">
+      <g style="fill: #64748b" transform="translate(130.52775 151.676) scale(0.08 -0.08)">
        <defs>
         <path id="LibreFranklin-Regular-2dc" d="M 2637 486 
 Q 2707 486 2707 422 
@@ -290,12 +290,12 @@ z
     <g id="xtick_3">
      <g id="line2d_3">
       <g>
-       <use xlink:href="#me075314959" x="251.424" y="137.448" style="fill: #8e887d; stroke: #8e887d; stroke-width: 0.8"/>
+       <use xlink:href="#mc17fbf57dc" x="251.424" y="137.448" style="fill: #64748b; stroke: #64748b; stroke-width: 0.8"/>
       </g>
      </g>
      <g id="text_3">
       <!-- 24 h -->
-      <g style="fill: #8e887d" transform="translate(243.239 151.676) scale(0.08 -0.08)">
+      <g style="fill: #64748b" transform="translate(243.239 151.676) scale(0.08 -0.08)">
        <defs>
         <path id="LibreFranklin-Regular-2df" d="M 2470 4678 
 Q 2502 4717 2534 4733 
@@ -425,7 +425,7 @@ L 231.984 112.99695
 L 236.844 116.483164 
 L 241.704 118.518041 
 L 246.564 119.520244 
-" clip-path="url(#p4f1a883153)" style="fill: none; stroke: #111318; stroke-width: 2.2; stroke-linecap: round"/>
+" clip-path="url(#p3a0971f067)" style="fill: none; stroke: #1e293b; stroke-width: 2.2; stroke-linecap: round"/>
    </g>
    <g id="line2d_5">
     <path d="M 18.144 120.445588 
@@ -476,21 +476,21 @@ L 231.984 99.566911
 L 236.844 108.233427 
 L 241.704 106.121849 
 L 246.564 106.406998 
-" clip-path="url(#p4f1a883153)" style="fill: none; stroke: #c47f2c; stroke-width: 2.4; stroke-linecap: round"/>
+" clip-path="url(#p3a0971f067)" style="fill: none; stroke: #e26029; stroke-width: 2.4; stroke-linecap: round"/>
    </g>
    <g id="patch_3">
     <path d="M 18.144 137.448 
 L 18.144 8.28 
-" style="fill: none; stroke: #8e887d; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+" style="fill: none; stroke: #64748b; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
    <g id="patch_4">
     <path d="M 18.144 137.448 
 L 251.424 137.448 
-" style="fill: none; stroke: #8e887d; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+" style="fill: none; stroke: #64748b; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
    <g id="text_4">
     <!-- Flagged -->
-    <g style="fill: #c47f2c" transform="translate(214.488 31.043593) scale(0.085 -0.085)">
+    <g style="fill: #e26029" transform="translate(214.488 31.043593) scale(0.085 -0.085)">
      <defs>
       <path id="LibreFranklin-Regular-46" d="M 621 4659 
 Q 621 4749 698 4749 
@@ -754,7 +754,7 @@ z
    </g>
    <g id="text_5">
     <!-- Normal days -->
-    <g style="fill: #8e887d" transform="translate(25.92 65.041107) scale(0.085 -0.085)">
+    <g style="fill: #64748b" transform="translate(25.92 65.041107) scale(0.085 -0.085)">
      <defs>
       <path id="LibreFranklin-Regular-74" d="M 4154 4749 
 Q 4224 4749 4224 4672 
@@ -988,7 +988,7 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="p4f1a883153">
+  <clipPath id="p3a0971f067">
    <rect x="18.144" y="8.28" width="233.28" height="129.168"/>
   </clipPath>
  </defs>

@@ -8,6 +8,14 @@ kernelspec:
 
 `milia.anomaly` flags the days or windows that are not normal, at a false-alarm rate that you set.
 
+```{figure} ../_static/img/diagrams/anomalykinds.svg
+:class: mi-diagram
+:alt: Point, contextual and collective anomalies.
+
+Three kinds of anomaly: one reading that departs from its day, an ordinary value at an unusual time, and ordinary members whose sum is unusual.
+```
+
+
 ```{code-cell} ipython3
 from milia import available
 from milia.data import profiles, synthetic
@@ -25,6 +33,21 @@ available("detector")
 An ensemble rescales the scores of several detectors to a common range and combines them. The threshold is the
 split-conformal quantile of the scores of held-out normal days, so that, for exchangeable data, the expected share of
 normal days that are flagged is at most `alpha`.
+
+```{figure} ../_static/img/diagrams/levelset.svg
+:class: mi-diagram
+:alt: A level set of the density of normal days.
+
+Detection as a level set: the threshold encloses the region that holds 90% of normal days, and a normal day outside it is a false alarm.
+```
+
+```{figure} ../_static/img/diagrams/thresholdstrategies.svg
+:class: mi-diagram
+:alt: Five rules for the threshold, each at a target false-alarm rate of 10%.
+
+Five rules for the threshold at a target rate of 10%. Only the conformal threshold reaches it, because it is read from held-out normal scores.
+```
+
 
 ```{code-cell} ipython3
 import numpy as np
@@ -44,6 +67,14 @@ The score of each day is available through `score_samples`. `conformal.pvalues` 
 `conformal.mondrian` gives each group its own threshold, so that a group with a different normal range is not judged by
 the range of another.
 
+```{figure} ../_static/img/diagrams/mondrian.svg
+:class: mi-diagram
+:alt: One threshold against a threshold for each group.
+
+One threshold does not hold the false-alarm rate in each group, because the groups have different normal ranges. A threshold for each group does.
+```
+
+
 ```{code-cell} ipython3
 from milia.anomaly import conformal
 
@@ -58,6 +89,14 @@ int(selected.sum())
 
 When the question is *when did behaviour change*, `changepoint.cusum` finds the points where a series drifts away from
 its baseline, and `pelt` and `binseg` segment it (they need the `changepoint` extra).
+
+```{figure} ../_static/img/diagrams/changeoranomaly.svg
+:class: mi-diagram
+:alt: The difference between an anomaly and a change of normal behaviour.
+
+An anomaly is a departure from normal, and a change is a new normal. CUSUM accumulates small departures, so it finds a change that no single day reveals.
+```
+
 
 ```{code-cell} ipython3
 from milia.anomaly import changepoint
