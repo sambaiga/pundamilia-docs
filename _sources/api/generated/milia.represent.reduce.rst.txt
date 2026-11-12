@@ -1,0 +1,22 @@
+milia.represent.reduce
+======================
+
+.. automodule:: milia.represent.reduce
+
+   
+   .. rubric:: Module Attributes
+
+   .. autosummary::
+   
+      REDUCERS
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      components
+      likelihood
+      pca
+      project
+      reducer
+   

@@ -1,0 +1,59 @@
+---
+file_format: mystnb
+kernelspec:
+  name: python3
+---
+
+# Prepare
+
+`milia.data`, `milia.features` and `milia.represent` turn readings into the matrices that the other modules use.
+
+## The pivot
+
+A pivot is a table with a time index and one column per series. `prep.validate` checks the contract that every function
+in `milia.data` assumes, and `prep.clean` drops series with too many missing readings and fills the remaining gaps.
+
+```{code-cell} ipython3
+from milia.data import prep, profiles, synthetic
+
+population = synthetic.generate(meters=60, days=90, steps=48, rate=0.03)
+pivot = prep.clean(prep.validate(population.pivot))
+pivot.shape
+```
+
+## Profiles and tensors
+
+A *shape* is the mean day of a series, divided by its peak, so that series of different size can be compared by their
+pattern. A *tensor* keeps every day: series by days by steps.
+
+```{code-cell} ipython3
+shapes = profiles.shape(pivot)
+cube = profiles.tensor(pivot)
+shapes.shape, cube.shape
+```
+
+## Features
+
+Clustering uses named features of each series: the mean day by hour, calendar summaries, magnitude, volatility and
+trend. Anomaly detection uses features of each window: its normalised shape, rolling statistics and the largest
+spectral components.
+
+```{code-cell} ipython3
+from milia.features.profile import ProfileFeatures
+from milia.features.window import names, vector
+
+series_features = ProfileFeatures().fit_transform(pivot)
+window = vector(cube[0, 0])
+series_features.shape, window.shape, names(48)[:3]
+```
+
+## Representations
+
+`milia.represent` adds reducers, diffusion maps, Tucker decompositions of the tensor, CROCS (each series as a set of
+representative days) and foundation-model embeddings. They are optional: the shapes and features above are enough for
+most problems, and the extras that they need are listed in [Installation](../getting-started/installation.md).
+
+## Limits
+
+Peak normalisation removes size, so two series with the same pattern and different demand look alike. Cluster on
+features that keep size when size matters to the decision.

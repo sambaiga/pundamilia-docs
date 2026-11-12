@@ -1,0 +1,13 @@
+milia.anomaly.models.iforest
+============================
+
+.. automodule:: milia.anomaly.models.iforest
+
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      IForest
+      IForestConfig
+   

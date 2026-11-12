@@ -1,0 +1,21 @@
+milia.cluster.conformal
+=======================
+
+.. automodule:: milia.cluster.conformal
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      centroids
+      confusion
+      sets
+      setsizes
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      ConformalSets
+   

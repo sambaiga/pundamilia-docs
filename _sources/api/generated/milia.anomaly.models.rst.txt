@@ -1,0 +1,23 @@
+milia.anomaly.models
+====================
+
+.. automodule:: milia.anomaly.models
+
+   
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   controllimit
+   copod
+   ecod
+   hbos
+   iforest
+   kde
+   knn
+   lof
+   mahalanobis
+   ocsvm
+   reconstruction

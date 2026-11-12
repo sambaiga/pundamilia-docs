@@ -1,0 +1,14 @@
+milia.core.conformal
+====================
+
+.. automodule:: milia.core.conformal
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      level
+      pvalue
+      quantile
+   

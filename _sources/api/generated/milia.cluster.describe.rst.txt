@@ -1,0 +1,16 @@
+milia.cluster.describe
+======================
+
+.. automodule:: milia.cluster.describe
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      association
+      contrast
+      describe
+      explained
+      outcomes
+   

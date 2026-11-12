@@ -1,0 +1,21 @@
+milia.plot.labels
+=================
+
+.. automodule:: milia.plot.labels
+
+   
+   .. rubric:: Module Attributes
+
+   .. autosummary::
+   
+      ROLES
+      AXES
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      capital
+      capitalised
+      textual
+   

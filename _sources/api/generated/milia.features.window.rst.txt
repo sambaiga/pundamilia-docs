@@ -1,0 +1,21 @@
+milia.features.window
+=====================
+
+.. automodule:: milia.features.window
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      names
+      rolling
+      spectrum
+      vector
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      WindowFeatures
+   

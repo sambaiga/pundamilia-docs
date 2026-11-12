@@ -1,0 +1,20 @@
+milia.represent.tensor
+======================
+
+.. automodule:: milia.represent.tensor
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      decompose
+      explained
+      ranks
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Tucker
+   

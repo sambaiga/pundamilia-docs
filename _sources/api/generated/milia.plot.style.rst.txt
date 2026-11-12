@@ -1,0 +1,32 @@
+milia.plot.style
+================
+
+.. automodule:: milia.plot.style
+
+   
+   .. rubric:: Module Attributes
+
+   .. autosummary::
+   
+      TEXTWIDTH
+      RC
+      GAP
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      configure
+      filebackend
+      finish
+      golden
+      legend
+      pad
+      panel
+      place
+      save
+      show
+      sketch
+      style
+      texsafe
+   

@@ -1,0 +1,32 @@
+milia.plot.tokens
+=================
+
+.. automodule:: milia.plot.tokens
+
+   
+   .. rubric:: Module Attributes
+
+   .. autosummary::
+   
+      DEFICIENCIES
+      CMYK
+      SHAPES
+      MARKERS
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      assign
+      colors
+      contrast
+      deficiency
+      diverging
+      lightness
+      matrix
+      printed
+      printshift
+      separation
+      sequential
+      tint
+   

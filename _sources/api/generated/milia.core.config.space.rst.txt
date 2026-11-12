@@ -1,0 +1,19 @@
+milia.core.config.space
+=======================
+
+.. automodule:: milia.core.config.space
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      hashable
+      logscale
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      SearchSpace
+   

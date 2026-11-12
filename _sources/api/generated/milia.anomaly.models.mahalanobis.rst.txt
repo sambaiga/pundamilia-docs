@@ -1,0 +1,13 @@
+milia.anomaly.models.mahalanobis
+================================
+
+.. automodule:: milia.anomaly.models.mahalanobis
+
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Mahalanobis
+      MahalanobisConfig
+   

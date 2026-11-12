@@ -1,0 +1,18 @@
+milia.cluster.consensus
+=======================
+
+.. automodule:: milia.cluster.consensus
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      coassociation
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Consensus
+   

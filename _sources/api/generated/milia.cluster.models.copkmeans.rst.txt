@@ -1,0 +1,13 @@
+milia.cluster.models.copkmeans
+==============================
+
+.. automodule:: milia.cluster.models.copkmeans
+
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      ConstrainedKMeans
+      ConstrainedKMeansConfig
+   

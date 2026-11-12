@@ -1,0 +1,77 @@
+---
+file_format: mystnb
+kernelspec:
+  name: python3
+---
+
+# Rank
+
+`milia.recommend` finds the cases most similar to a series, ranks them, and recommends the action that worked for them.
+
+```{code-cell} ipython3
+import numpy as np
+
+from milia.data import profiles, synthetic
+
+population = synthetic.generate(meters=60, days=90, steps=48)
+shapes = np.asarray(profiles.shape(population.pivot))
+outcome = population.labels.astype(float)  # a stand-in for a known outcome
+```
+
+## Retrieve similar cases
+
+`KNNRetriever` predicts the outcome of a series from its nearest labelled neighbours. Calibrating it on held-out cases
+sets a trust radius: a query that is farther than the radius from every labelled case is reported as not trusted.
+
+```{code-cell} ipython3
+from milia.recommend.retrieval import KNNRetriever
+
+retriever = KNNRetriever(n_neighbors=3).fit(shapes[:45], outcome[:45])
+retriever.calibrate(shapes[45:55], alpha=0.1, y=outcome[45:55])
+queries = shapes[55:58]
+retriever.predict(queries), retriever.trusted(queries), round(float(retriever.tau_), 3)
+```
+
+## Recommend an action
+
+`CaseRecommender` suggests the action taken most often on the nearest past cases, with ties going to the nearer one.
+
+```{code-cell} ipython3
+from milia.recommend.action import CaseRecommender
+
+actions = population.labels  # the action taken on each past case
+recommender = CaseRecommender(n_neighbors=3).fit(shapes[:45], actions[:45])
+recommender.predict(queries)
+```
+
+## A baseline to beat
+
+`GroupMean` predicts the mean outcome of the query's group. A retrieval method that does not beat it is not adding
+information.
+
+```{code-cell} ipython3
+from milia import make
+from milia.recommend.baselines import GroupMean
+
+baseline = GroupMean(clusterer=make("clusterer", "kmeans", n_clusters=3)).fit(shapes[:45], outcome[:45])
+baseline.predict(queries)
+```
+
+## Rank cases and groups
+
+`ranking.rank` orders a table by a score, and `ranking.interval` adds a bootstrap interval to each rank, so a reader can
+see which ranks are real.
+
+```{code-cell} ipython3
+import pandas as pd
+
+from milia.recommend import ranking
+
+cases = pd.DataFrame({"case": range(6), "risk": [3, 9, 1, 7, 5, 2]})
+ranking.interval(cases, "risk", bootstrap=100)
+```
+
+## Limits
+
+Similarity is only as good as the features that define it. A retrieval over shapes cannot tell two series of different
+size apart, and a trust radius says a query is near the labelled cases, not that their outcomes transfer.

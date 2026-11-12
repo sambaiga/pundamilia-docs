@@ -1,0 +1,12 @@
+milia.recommend.diagnostics
+===========================
+
+.. automodule:: milia.recommend.diagnostics
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      variance
+   

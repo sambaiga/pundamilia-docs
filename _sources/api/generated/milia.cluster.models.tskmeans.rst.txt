@@ -1,0 +1,13 @@
+milia.cluster.models.tskmeans
+=============================
+
+.. automodule:: milia.cluster.models.tskmeans
+
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      TSKMeans
+      TSKMeansConfig
+   

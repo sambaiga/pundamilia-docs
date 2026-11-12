@@ -1,0 +1,13 @@
+milia.anomaly.models.hbos
+=========================
+
+.. automodule:: milia.anomaly.models.hbos
+
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      HBOS
+      HBOSConfig
+   

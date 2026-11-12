@@ -1,0 +1,55 @@
+---
+file_format: mystnb
+kernelspec:
+  name: python3
+---
+
+# Compare
+
+`milia.evaluate` and `milia.benchmark` compare methods on per-unit results, record how every run was produced, and
+test whether a difference is real.
+
+## Per-unit losses
+
+A comparison needs one loss for each unit, such as each meter, so that the test sees the spread and not only the
+average. `compare.pairwise` runs the Diebold-Mariano test on every pair with a Benjamini-Hochberg adjustment, and
+`compare.mcs` returns the Model Confidence Set: the methods that are statistically tied with the best.
+
+```{code-cell} ipython3
+import numpy as np
+
+from milia.benchmark import compare
+
+rng = np.random.default_rng(0)
+losses = {
+    "knn": rng.normal(0.20, 0.05, 40),
+    "ensemble": rng.normal(0.25, 0.05, 40),
+    "lof": rng.normal(0.20, 0.05, 40),
+}
+compare.pairwise(losses).round(3)
+```
+
+```{code-cell} ipython3
+compare.mcs(losses)
+```
+
+## Seeds as named conditions
+
+`conditions` names a replicate by its seed, so `"lof@s2"` is the LOF condition with seed 2. A claim then rests on
+several seeds, not on one lucky run.
+
+## Run folders and provenance
+
+`runs` writes each experiment to a folder named by timestamp, hash and commit, with a `latest` link, and `provenance`
+saves the settings, the package versions and the input files next to the output. A number can then be traced to the code
+that produced it.
+
+## Harnesses
+
+`milia.evaluate` holds the harnesses: the self-baseline benchmark for detectors, which scores each entity against its own
+normal days with injected anomalies, and the benchmarks for retrieval and ranking.
+
+## Limits
+
+A significance test says a difference is reproducible on these units, not that it matters for your decision. Report the
+size of the difference with the test.

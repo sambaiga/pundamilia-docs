@@ -1,0 +1,13 @@
+milia.cluster.models.agglomerative
+==================================
+
+.. automodule:: milia.cluster.models.agglomerative
+
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Agglomerative
+      AgglomerativeConfig
+   

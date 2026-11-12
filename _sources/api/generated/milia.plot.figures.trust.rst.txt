@@ -1,0 +1,17 @@
+milia.plot.figures.trust
+========================
+
+.. automodule:: milia.plot.figures.trust
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      calibration
+      dumbbell
+      excess
+      importance
+      pareto
+      plane
+   

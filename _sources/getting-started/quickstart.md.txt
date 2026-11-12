@@ -1,0 +1,66 @@
+---
+file_format: mystnb
+kernelspec:
+  name: python3
+---
+
+# Quickstart
+
+This page runs milia on a synthetic population of meters: sixty meters, ninety days, and three kinds of daily pattern.
+Every cell runs when the documentation is built.
+
+## A population of series
+
+```{code-cell} ipython3
+from milia.data import profiles, synthetic
+
+population = synthetic.generate(meters=60, days=90, steps=48, rate=0.03)
+shapes = profiles.shape(population.pivot)  # the peak-normalised mean day of each meter
+shapes.shape
+```
+
+## Cluster
+
+The number of groups is chosen from the data, and a trust gate keeps a split that is only an artefact of one sample.
+
+```{code-cell} ipython3
+from milia import make
+from milia.cluster import selection, validation
+
+scores = validation.sweep(shapes, range(2, 8), resampling=True)
+k = selection.recommend(scores, strategy="trust")
+labels = make("clusterer", "kmeans", n_clusters=k).fit_predict(shapes)
+k, [int((labels == c).sum()) for c in range(k)]
+```
+
+## Detect
+
+An ensemble of detectors is fitted on normal days. A threshold calibrated on held-out normal days bounds the share of
+normal days that are flagged.
+
+```{code-cell} ipython3
+from milia.anomaly.ensemble import Ensemble
+from milia.features.window import vector
+
+days = profiles.tensor(population.pivot)[0]  # one meter: days by steps
+features = [vector(day) for day in days]
+detector = Ensemble().fit(features[:60]).calibrate(features[60:80], alpha=0.1)
+flags = detector.flag(features[80:])
+int(sum(flags)), len(flags)
+```
+
+## Rank
+
+A retriever returns the nearest labelled cases to a query, and says whether the query is close enough to trust them.
+
+```{code-cell} ipython3
+import numpy as np
+
+from milia.recommend.retrieval import KNNRetriever
+
+retriever = KNNRetriever(n_neighbors=3).fit(shapes[1:], np.zeros(len(shapes) - 1))
+distances, neighbours = retriever.index_.kneighbors(shapes[:1])
+neighbours[0], distances[0].round(3)
+```
+
+Next, read the [key concepts](key-concepts.md), then the user guide for the task you need.

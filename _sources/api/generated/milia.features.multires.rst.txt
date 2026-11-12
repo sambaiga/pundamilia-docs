@@ -1,0 +1,12 @@
+milia.features.multires
+=======================
+
+.. automodule:: milia.features.multires
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      extract
+   

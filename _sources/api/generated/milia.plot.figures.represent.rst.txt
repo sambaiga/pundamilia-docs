@@ -1,0 +1,16 @@
+milia.plot.figures.represent
+============================
+
+.. automodule:: milia.plot.figures.represent
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      ablation
+      components
+      daytypes
+      recovery
+      spectrum
+   

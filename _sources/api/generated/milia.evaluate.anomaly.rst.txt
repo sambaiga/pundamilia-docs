@@ -1,0 +1,33 @@
+milia.evaluate.anomaly
+======================
+
+.. automodule:: milia.evaluate.anomaly
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      adoption
+      alphas
+      auc
+      balance
+      behaviour
+      drift
+      faultaucs
+      features
+      match
+      monitor
+      novelty
+      pointadjust
+      profilerows
+      selfbaseline
+      split
+      summarize
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Monitoring
+   

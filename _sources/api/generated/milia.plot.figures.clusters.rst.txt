@@ -1,0 +1,19 @@
+milia.plot.figures.clusters
+===========================
+
+.. automodule:: milia.plot.figures.clusters
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      centroids
+      dendrogram
+      grid
+      long
+      members
+      profiles
+      scatter
+      validity
+   

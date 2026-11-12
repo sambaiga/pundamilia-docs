@@ -1,0 +1,14 @@
+milia.core.config
+=================
+
+.. automodule:: milia.core.config
+
+   
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   base
+   space

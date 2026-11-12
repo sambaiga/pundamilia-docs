@@ -1,0 +1,13 @@
+milia.anomaly.models.kde
+========================
+
+.. automodule:: milia.anomaly.models.kde
+
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      KDE
+      KDEConfig
+   

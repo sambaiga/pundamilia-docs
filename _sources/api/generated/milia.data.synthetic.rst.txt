@@ -1,0 +1,24 @@
+milia.data.synthetic
+====================
+
+.. automodule:: milia.data.synthetic
+
+   
+   .. rubric:: Module Attributes
+
+   .. autosummary::
+   
+      SHAPES
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      generate
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Synthetic
+   

@@ -1,0 +1,21 @@
+milia.represent.crocs
+=====================
+
+.. automodule:: milia.represent.crocs
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      distances
+      rls
+      wsmd
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      CROCS
+      RLS
+   

@@ -1,0 +1,14 @@
+# User guide
+
+One page for each task, in the order that a project follows them. Each page explains the idea, runs a small example on a
+synthetic population, and states what the method cannot do.
+
+```{toctree}
+:maxdepth: 1
+
+prepare
+cluster
+rank
+detect
+compare
+```

@@ -1,0 +1,13 @@
+milia.cluster.models.gmm
+========================
+
+.. automodule:: milia.cluster.models.gmm
+
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      GMM
+      GMMConfig
+   

@@ -1,0 +1,13 @@
+milia.anomaly.models.lof
+========================
+
+.. automodule:: milia.anomaly.models.lof
+
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      LOF
+      LOFConfig
+   

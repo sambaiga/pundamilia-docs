@@ -1,0 +1,15 @@
+milia.features.scale
+====================
+
+.. automodule:: milia.features.scale
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      rangescale
+      scale
+      scaler
+      standardise
+   

@@ -1,0 +1,15 @@
+﻿milia.evaluate
+==============
+
+.. automodule:: milia.evaluate
+
+   
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   anomaly
+   ranking
+   retrieval

@@ -1,0 +1,13 @@
+milia.cluster.models.hdbscan
+============================
+
+.. automodule:: milia.cluster.models.hdbscan
+
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      HDBSCAN
+      HDBSCANConfig
+   

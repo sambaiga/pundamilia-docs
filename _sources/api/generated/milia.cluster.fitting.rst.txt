@@ -1,0 +1,17 @@
+milia.cluster.fitting
+=====================
+
+.. automodule:: milia.cluster.fitting
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      at
+      bycorrelation
+      countparam
+      default
+      labels
+      precomputed
+   

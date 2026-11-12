@@ -1,0 +1,13 @@
+milia.cluster.models.minibatch
+==============================
+
+.. automodule:: milia.cluster.models.minibatch
+
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      MiniBatch
+      MiniBatchConfig
+   

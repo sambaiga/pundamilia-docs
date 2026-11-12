@@ -1,0 +1,21 @@
+﻿milia.anomaly
+=============
+
+.. automodule:: milia.anomaly
+
+   
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   base
+   changepoint
+   conformal
+   ensemble
+   explain
+   group
+   inject
+   models
+   triage

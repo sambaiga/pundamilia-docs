@@ -1,0 +1,12 @@
+milia.anomaly.base
+==================
+
+.. automodule:: milia.anomaly.base
+
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      BaseDetector
+   

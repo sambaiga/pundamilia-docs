@@ -1,0 +1,34 @@
+milia.anomaly.group
+===================
+
+.. automodule:: milia.anomaly.group
+
+   
+   .. rubric:: Module Attributes
+
+   .. autosummary::
+   
+      POOLINGS
+      MEMBERTESTS
+      LOSSMODELS
+      LOSSALTERNATIVES
+      TAMPERS
+      BYPASS
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      coincidence
+      exportscore
+      fitloss
+      imbalance
+      locate
+      lossdesign
+      lossmodel
+      memberflags
+      perday
+      setfeatures
+      tamper
+      unexplained
+   

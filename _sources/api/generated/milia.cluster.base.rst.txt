@@ -1,0 +1,18 @@
+milia.cluster.base
+==================
+
+.. automodule:: milia.cluster.base
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      predictive
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      BaseClusterer
+   

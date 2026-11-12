@@ -1,0 +1,13 @@
+milia.data.aggregate
+====================
+
+.. automodule:: milia.data.aggregate
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      aggregate
+      synthesize
+   

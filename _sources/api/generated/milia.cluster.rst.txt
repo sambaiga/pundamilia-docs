@@ -1,0 +1,26 @@
+﻿milia.cluster
+=============
+
+.. automodule:: milia.cluster
+
+   
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   ablation
+   agreement
+   base
+   conformal
+   consensus
+   describe
+   fitting
+   graph
+   indices
+   models
+   search
+   selection
+   stability
+   validation

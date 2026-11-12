@@ -1,0 +1,18 @@
+milia.recommend.ranker
+======================
+
+.. automodule:: milia.recommend.ranker
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      grades
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Ranker
+   

@@ -1,0 +1,24 @@
+milia.plot.theme
+================
+
+.. automodule:: milia.plot.theme
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      color
+      current
+      fill
+      reset
+      theme
+      twiga
+      use
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Style
+   

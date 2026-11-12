@@ -1,0 +1,18 @@
+milia.anomaly.changepoint
+=========================
+
+.. automodule:: milia.anomaly.changepoint
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      binseg
+      cusum
+      ewmapaths
+      firstalarms
+      pathlimit
+      paths
+      pelt
+   

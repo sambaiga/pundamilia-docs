@@ -1,0 +1,16 @@
+﻿milia.data
+==========
+
+.. automodule:: milia.data
+
+   
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   aggregate
+   prep
+   profiles
+   synthetic

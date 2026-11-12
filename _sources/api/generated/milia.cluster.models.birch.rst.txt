@@ -1,0 +1,13 @@
+milia.cluster.models.birch
+==========================
+
+.. automodule:: milia.cluster.models.birch
+
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Birch
+      BirchConfig
+   

@@ -1,0 +1,35 @@
+# Key concepts
+
+## From series to features
+
+Methods in milia work on a matrix with one row per series, or per window of a series. `milia.data` turns a table of
+readings into normalised daily profiles and day tensors, and `milia.features` turns those into named features: the
+shape of the mean day, calendar and magnitude summaries for clustering, and shape, rolling and spectral features of a
+window for anomaly detection. Features carry names, so a result can be read back in the units of the problem.
+
+## Estimators and the registry
+
+Every learned component is a scikit-learn estimator with `fit` and `predict`, so it clones, pickles, tunes with
+`GridSearchCV` and composes in a `Pipeline`. Detectors and clusterers are registered by name:
+`milia.available("detector")` lists them, and `milia.make("detector", "lof", n_neighbors=30)` builds one from its
+validated configuration.
+
+## Trust before use
+
+A clustering is real only if it survives resampling. milia scores each candidate number of groups by internal validity
+and by resampling checks (prediction strength, per-cluster bootstrap and subsample agreement), and it calibrates those
+checks against structureless reference data, so a split that the data does not support is not chosen. A retrieval
+carries a trust radius, so a query that is far from every labelled case is reported as such.
+
+## Conformal thresholds
+
+Anomaly scores have no natural scale. milia sets the threshold from held-out normal data with a split-conformal
+quantile, so that, for exchangeable data, the expected share of normal cases that are flagged is bounded by the level
+`alpha` that you choose. A threshold can also be set per group, so that a group with a different normal range is held to
+its own standard.
+
+## Reproducible runs
+
+Randomness is seeded from named conditions, and a benchmark writes a run folder with a provenance record: the settings,
+the package versions and the input files. Methods are compared with significance tests on per-unit results, not by a
+single average.

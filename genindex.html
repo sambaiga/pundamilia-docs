@@ -1,0 +1,3290 @@
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index &#8212; milia</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=18bd87630a240e9c25be" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=18bd87630a240e9c25be" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx_autodoc_typehints.css?v=057ac668" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=6a604523" />
+    <link rel="stylesheet" type="text/css" href="_static/css/milia.css?v=f7449740" />
+    <link crossorigin="anonymous" rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=18bd87630a240e9c25be"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=18bd87630a240e9c25be" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=18bd87630a240e9c25be" />
+
+    <script src="_static/documentation_options.js?v=01f34227"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=22840dfd"></script>
+    <script>let toggleHintShow = 'Show';</script>
+    <script>let toggleHintHide = 'Hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="_static/design-tabs.js?v=fcb327ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'genindex';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="icon" href="_static/favicon.svg"/>
+    <link rel="index" title="Index" href="#" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="color-scheme" content="light dark"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="0.1.0" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="light">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button type="button" class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="_static/logo.svg" class="logo__image only-light" alt="milia"/>
+    <img src="_static/logo-dark.svg" class="logo__image only-dark pst-js-only" alt="milia"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="getting-started/index.html">
+    Get started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="guide/index.html">
+    User guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="tutorials/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="api/index.html">
+    Reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="contributing.html">
+    Contributing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="changelog.html">
+    Changelog
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button type="button" class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+<div class="dropdown mi-version-wrapper">
+  <button
+    class="btn dropdown-toggle mi-version-btn"
+    type="button"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+    aria-label="milia version 0.1.0"
+  >
+    <span class="mi-version-label">v0.1.0</span>
+    <span class="mi-alpha-pill">alpha</span>
+  </button>
+  <div class="dropdown-menu dropdown-menu-end mi-version-menu">
+    <div class="mi-version-info">
+      <p>
+        <strong>milia 0.1.0</strong> is in alpha.
+        The API may change before 1.0.
+      </p>
+      <a
+        href="changelog.html"
+        class="mi-version-changelog-link"
+      >
+        View changelog <i class="bi bi-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</div></div>
+      
+        <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pundamilia/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/box-seam-fill.svg" class="icon-link-image" alt="PyPI"/></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button type="button" class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="getting-started/index.html">
+    Get started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="guide/index.html">
+    User guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="tutorials/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="api/index.html">
+    Reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="contributing.html">
+    Contributing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="changelog.html">
+    Changelog
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<div class="dropdown mi-version-wrapper">
+  <button
+    class="btn dropdown-toggle mi-version-btn"
+    type="button"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+    aria-label="milia version 0.1.0"
+  >
+    <span class="mi-version-label">v0.1.0</span>
+    <span class="mi-alpha-pill">alpha</span>
+  </button>
+  <div class="dropdown-menu dropdown-menu-end mi-version-menu">
+    <div class="mi-version-info">
+      <p>
+        <strong>milia 0.1.0</strong> is in alpha.
+        The API may change before 1.0.
+      </p>
+      <a
+        href="changelog.html"
+        class="mi-version-changelog-link"
+      >
+        View changelog <i class="bi bi-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</div></div>
+        
+          <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pundamilia/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/box-seam-fill.svg" class="icon-link-image" alt="PyPI"/></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none"></div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+
+<h1 id="index">Index</h1>
+
+<div class="genindex-jumpbox">
+ <a href="#A"><strong>A</strong></a>
+ | <a href="#B"><strong>B</strong></a>
+ | <a href="#C"><strong>C</strong></a>
+ | <a href="#D"><strong>D</strong></a>
+ | <a href="#E"><strong>E</strong></a>
+ | <a href="#F"><strong>F</strong></a>
+ | <a href="#G"><strong>G</strong></a>
+ | <a href="#H"><strong>H</strong></a>
+ | <a href="#I"><strong>I</strong></a>
+ | <a href="#J"><strong>J</strong></a>
+ | <a href="#K"><strong>K</strong></a>
+ | <a href="#L"><strong>L</strong></a>
+ | <a href="#M"><strong>M</strong></a>
+ | <a href="#N"><strong>N</strong></a>
+ | <a href="#O"><strong>O</strong></a>
+ | <a href="#P"><strong>P</strong></a>
+ | <a href="#Q"><strong>Q</strong></a>
+ | <a href="#R"><strong>R</strong></a>
+ | <a href="#S"><strong>S</strong></a>
+ | <a href="#T"><strong>T</strong></a>
+ | <a href="#U"><strong>U</strong></a>
+ | <a href="#V"><strong>V</strong></a>
+ | <a href="#W"><strong>W</strong></a>
+ | <a href="#X"><strong>X</strong></a>
+ 
+</div>
+<h2 id="A">A</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.cluster.ablation.html#milia.cluster.ablation.ablate">ablate() (in module milia.cluster.ablation)</a>
+</li>
+      <li><a href="api/generated/milia.plot.figures.represent.html#milia.plot.figures.represent.ablation">ablation() (in module milia.plot.figures.represent)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.lets.represent.html#milia.plot.lets.represent.ablation">(in module milia.plot.lets.represent)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.represent.html#milia.plot.mpl.represent.ablation">(in module milia.plot.mpl.represent)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.plot.lets.draw.html#milia.plot.lets.draw.accents">accents() (in module milia.plot.lets.draw)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.inject.html#milia.anomaly.inject.adopt">adopt() (in module milia.anomaly.inject)</a>
+</li>
+      <li><a href="api/generated/milia.evaluate.anomaly.html#milia.evaluate.anomaly.adoption">adoption() (in module milia.evaluate.anomaly)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.inject.html#milia.anomaly.inject.ADOPTIONS">ADOPTIONS (in module milia.anomaly.inject)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.models.agglomerative.html#milia.cluster.models.agglomerative.Agglomerative">Agglomerative (class in milia.cluster.models.agglomerative)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.models.agglomerative.html#milia.cluster.models.agglomerative.AgglomerativeConfig">AgglomerativeConfig (class in milia.cluster.models.agglomerative)</a>
+</li>
+      <li><a href="api/generated/milia.data.aggregate.html#milia.data.aggregate.aggregate">aggregate() (in module milia.data.aggregate)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.evaluate.anomaly.html#milia.evaluate.anomaly.alphas">alphas() (in module milia.evaluate.anomaly)</a>
+</li>
+      <li><a href="api/generated/milia.features.profile.html#milia.features.profile.ProfileConfig.anygroup">anygroup() (milia.features.profile.ProfileConfig method)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.agreement.html#milia.cluster.agreement.assign">assign() (in module milia.cluster.agreement)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.tokens.html#milia.plot.tokens.assign">(in module milia.plot.tokens)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.cluster.describe.html#milia.cluster.describe.association">association() (in module milia.cluster.describe)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.fitting.html#milia.cluster.fitting.at">at() (in module milia.cluster.fitting)</a>
+</li>
+      <li><a href="api/generated/milia.evaluate.anomaly.html#milia.evaluate.anomaly.auc">auc() (in module milia.evaluate.anomaly)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.search.html#milia.cluster.search.audit">audit() (in module milia.cluster.search)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.cluster.stability.html#milia.cluster.stability.audit">(in module milia.cluster.stability)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.features.profile.html#milia.features.profile.autocorr">autocorr() (in module milia.features.profile)</a>
+</li>
+      <li><a href="api/generated/milia.core.registry.html#milia.core.registry.available">available() (in module milia.core.registry)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="B">B</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.cluster.validation.html#milia.cluster.validation.balance">balance() (in module milia.cluster.validation)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.evaluate.anomaly.html#milia.evaluate.anomaly.balance">(in module milia.evaluate.anomaly)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.features.events.html#milia.features.events.band">band() (in module milia.features.events)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.figures.anomaly.html#milia.plot.figures.anomaly.band">(in module milia.plot.figures.anomaly)</a>
+</li>
+        <li><a href="api/generated/milia.plot.lets.anomaly.html#milia.plot.lets.anomaly.band">(in module milia.plot.lets.anomaly)</a>
+</li>
+        <li><a href="api/generated/milia.plot.lets.draw.html#milia.plot.lets.draw.band">(in module milia.plot.lets.draw)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.anomaly.html#milia.plot.mpl.anomaly.band">(in module milia.plot.mpl.anomaly)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.draw.html#milia.plot.mpl.draw.band">(in module milia.plot.mpl.draw)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.plot.lets.draw.html#milia.plot.lets.draw.bars">bars() (in module milia.plot.lets.draw)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.mpl.draw.html#milia.plot.mpl.draw.bars">(in module milia.plot.mpl.draw)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.benchmark.conditions.html#milia.benchmark.conditions.base">base() (in module milia.benchmark.conditions)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.core.registry.html#milia.core.registry.base">(in module milia.core.registry)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.cluster.html#milia.cluster.BaseClusterer">BaseClusterer (class in milia.cluster)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.cluster.base.html#milia.cluster.base.BaseClusterer">(class in milia.cluster.base)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.anomaly.html#milia.anomaly.BaseDetector">BaseDetector (class in milia.anomaly)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.anomaly.base.html#milia.anomaly.base.BaseDetector">(class in milia.anomaly.base)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.core.config.html#milia.core.config.BaseModelConfig">BaseModelConfig (class in milia.core.config)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.core.config.base.html#milia.core.config.base.BaseModelConfig">(class in milia.core.config.base)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.evaluate.anomaly.html#milia.evaluate.anomaly.behaviour">behaviour() (in module milia.evaluate.anomaly)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.inject.html#milia.anomaly.inject.behaviourfault">behaviourfault() (in module milia.anomaly.inject)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.inject.html#milia.anomaly.inject.BEHAVIOURFAULTS">BEHAVIOURFAULTS (in module milia.anomaly.inject)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.inject.html#milia.anomaly.inject.BEHAVIOURS">BEHAVIOURS (in module milia.anomaly.inject)</a>
+</li>
+      <li><a href="api/generated/milia.evaluate.retrieval.html#milia.evaluate.retrieval.benchmark">benchmark() (in module milia.evaluate.retrieval)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.selection.html#milia.cluster.selection.best">best() (in module milia.cluster.selection)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.conformal.html#milia.anomaly.conformal.bestf1">bestf1() (in module milia.anomaly.conformal)</a>
+</li>
+      <li><a href="api/generated/milia.plot.bind.html#milia.plot.bind.bind">bind() (in module milia.plot.bind)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.changepoint.html#milia.anomaly.changepoint.binseg">binseg() (in module milia.anomaly.changepoint)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.models.birch.html#milia.cluster.models.birch.Birch">Birch (class in milia.cluster.models.birch)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.models.birch.html#milia.cluster.models.birch.BirchConfig">BirchConfig (class in milia.cluster.models.birch)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.selection.html#milia.cluster.selection.BOOKKEEPING">BOOKKEEPING (in module milia.cluster.selection)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.stability.html#milia.cluster.stability.bootstrap">bootstrap() (in module milia.cluster.stability)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.selection.html#milia.cluster.selection.borda">borda() (in module milia.cluster.selection)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.fitting.html#milia.cluster.fitting.bycorrelation">bycorrelation() (in module milia.cluster.fitting)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.group.html#milia.anomaly.group.BYPASS">BYPASS (in module milia.anomaly.group)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="C">C</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.features.profile.html#milia.features.profile.calendar">calendar() (in module milia.features.profile)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.conformal.html#milia.anomaly.conformal.calibrate">calibrate() (in module milia.anomaly.conformal)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.anomaly.base.html#milia.anomaly.base.BaseDetector.calibrate">(milia.anomaly.base.BaseDetector method)</a>
+</li>
+        <li><a href="api/generated/milia.anomaly.html#milia.anomaly.BaseDetector.calibrate">(milia.anomaly.BaseDetector method)</a>
+</li>
+        <li><a href="api/generated/milia.recommend.retrieval.html#milia.recommend.retrieval.KNNRetriever.calibrate">(milia.recommend.retrieval.KNNRetriever method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.cluster.stability.html#milia.cluster.stability.calibrated">calibrated() (in module milia.cluster.stability)</a>
+</li>
+      <li><a href="api/generated/milia.plot.figures.trust.html#milia.plot.figures.trust.calibration">calibration() (in module milia.plot.figures.trust)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.lets.trust.html#milia.plot.lets.trust.calibration">(in module milia.plot.lets.trust)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.trust.html#milia.plot.mpl.trust.calibration">(in module milia.plot.mpl.trust)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.plot.labels.html#milia.plot.labels.capital">capital() (in module milia.plot.labels)</a>
+</li>
+      <li><a href="api/generated/milia.plot.labels.html#milia.plot.labels.capitalised">capitalised() (in module milia.plot.labels)</a>
+</li>
+      <li><a href="api/generated/milia.recommend.action.html#milia.recommend.action.CaseRecommender">CaseRecommender (class in milia.recommend.action)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.conformal.html#milia.cluster.conformal.centroids">centroids() (in module milia.cluster.conformal)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.figures.clusters.html#milia.plot.figures.clusters.centroids">(in module milia.plot.figures.clusters)</a>
+</li>
+        <li><a href="api/generated/milia.plot.lets.clusters.html#milia.plot.lets.clusters.centroids">(in module milia.plot.lets.clusters)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.clusters.html#milia.plot.mpl.clusters.centroids">(in module milia.plot.mpl.clusters)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.core.config.html#milia.core.config.SearchSpace.check">check() (milia.core.config.SearchSpace method)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.core.config.space.html#milia.core.config.space.SearchSpace.check">(milia.core.config.space.SearchSpace method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.core.config.html#milia.core.config.SearchSpace.checkfields">checkfields() (milia.core.config.SearchSpace method)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.core.config.space.html#milia.core.config.space.SearchSpace.checkfields">(milia.core.config.space.SearchSpace method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.features.events.html#milia.features.events.CIRCULAR_NAMES">CIRCULAR_NAMES (in module milia.features.events)</a>
+</li>
+      <li><a href="api/generated/milia.data.prep.html#milia.data.prep.clean">clean() (in module milia.data.prep)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.inject.html#milia.anomaly.inject.clockerror">clockerror() (in module milia.anomaly.inject)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.inject.html#milia.anomaly.inject.CLOCKSHIFT">CLOCKSHIFT (in module milia.anomaly.inject)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.inject.html#milia.anomaly.inject.clockshift">clockshift() (in module milia.anomaly.inject)</a>
+</li>
+      <li><a href="api/generated/milia.core.registry.html#milia.core.registry.clusterer">clusterer() (in module milia.core.registry)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.search.html#milia.cluster.search.clusterers">clusterers() (in module milia.cluster.search)</a>
+</li>
+      <li><a href="api/generated/milia.plot.tokens.html#milia.plot.tokens.CMYK">CMYK (in module milia.plot.tokens)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.consensus.html#milia.cluster.consensus.coassociation">coassociation() (in module milia.cluster.consensus)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.group.html#milia.anomaly.group.coincidence">coincidence() (in module milia.anomaly.group)</a>
+</li>
+      <li><a href="api/generated/milia.plot.theme.html#milia.plot.theme.color">color() (in module milia.plot.theme)</a>
+</li>
+      <li><a href="api/generated/milia.plot.tokens.html#milia.plot.tokens.colors">colors() (in module milia.plot.tokens)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.ensemble.html#milia.anomaly.ensemble.combine">combine() (in module milia.anomaly.ensemble)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.recommend.ranking.html#milia.recommend.ranking.combine">(in module milia.recommend.ranking)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.cluster.stability.html#milia.cluster.stability.comembership">comembership() (in module milia.cluster.stability)</a>
+</li>
+      <li><a href="api/generated/milia.benchmark.runs.html#milia.benchmark.runs.commit">commit() (in module milia.benchmark.runs)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.graph.html#milia.cluster.graph.components">components() (in module milia.cluster.graph)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.figures.represent.html#milia.plot.figures.represent.components">(in module milia.plot.figures.represent)</a>
+</li>
+        <li><a href="api/generated/milia.plot.lets.represent.html#milia.plot.lets.represent.components">(in module milia.plot.lets.represent)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.represent.html#milia.plot.mpl.represent.components">(in module milia.plot.mpl.represent)</a>
+</li>
+        <li><a href="api/generated/milia.represent.reduce.html#milia.represent.reduce.components">(in module milia.represent.reduce)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.cluster.selection.html#milia.cluster.selection.composite">composite() (in module milia.cluster.selection)</a>
+</li>
+      <li><a href="api/generated/milia.core.exceptions.html#milia.core.exceptions.ConfigurationError">ConfigurationError</a>
+</li>
+      <li><a href="api/generated/milia.plot.style.html#milia.plot.style.configure">configure() (in module milia.plot.style)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.conformal.html#milia.cluster.conformal.ConformalSets">ConformalSets (class in milia.cluster.conformal)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.conformal.html#milia.cluster.conformal.confusion">confusion() (in module milia.cluster.conformal)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.figures.agreement.html#milia.plot.figures.agreement.confusion">(in module milia.plot.figures.agreement)</a>
+</li>
+        <li><a href="api/generated/milia.plot.lets.agreement.html#milia.plot.lets.agreement.confusion">(in module milia.plot.lets.agreement)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.agreement.html#milia.plot.mpl.agreement.confusion">(in module milia.plot.mpl.agreement)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.cluster.graph.html#milia.cluster.graph.connectivity">connectivity() (in module milia.cluster.graph)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.consensus.html#milia.cluster.consensus.Consensus">Consensus (class in milia.cluster.consensus)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.ablation.html#milia.cluster.ablation.consensus">consensus() (in module milia.cluster.ablation)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.models.copkmeans.html#milia.cluster.models.copkmeans.ConstrainedKMeans">ConstrainedKMeans (class in milia.cluster.models.copkmeans)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.models.copkmeans.html#milia.cluster.models.copkmeans.ConstrainedKMeansConfig">ConstrainedKMeansConfig (class in milia.cluster.models.copkmeans)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.describe.html#milia.cluster.describe.contrast">contrast() (in module milia.cluster.describe)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.tokens.html#milia.plot.tokens.contrast">(in module milia.plot.tokens)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.anomaly.models.controllimit.html#milia.anomaly.models.controllimit.ControlLimit">ControlLimit (class in milia.anomaly.models.controllimit)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.models.controllimit.html#milia.anomaly.models.controllimit.ControlLimitConfig">ControlLimitConfig (class in milia.anomaly.models.controllimit)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.models.copod.html#milia.anomaly.models.copod.COPOD">COPOD (class in milia.anomaly.models.copod)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.models.copod.html#milia.anomaly.models.copod.COPODConfig">COPODConfig (class in milia.anomaly.models.copod)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.fitting.html#milia.cluster.fitting.countparam">countparam() (in module milia.cluster.fitting)</a>
+</li>
+      <li><a href="api/generated/milia.data.prep.html#milia.data.prep.coverage">coverage() (in module milia.data.prep)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.recommend.retrieval.html#milia.recommend.retrieval.coverage">(in module milia.recommend.retrieval)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.represent.crocs.html#milia.represent.crocs.CROCS">CROCS (class in milia.represent.crocs)</a>
+</li>
+      <li><a href="api/generated/milia.plot.theme.html#milia.plot.theme.current">current() (in module milia.plot.theme)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.changepoint.html#milia.anomaly.changepoint.cusum">cusum() (in module milia.anomaly.changepoint)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.indices.html#milia.cluster.indices.cvflda">cvflda() (in module milia.cluster.indices)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="D">D</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.data.profiles.html#milia.data.profiles.daily">daily() (in module milia.data.profiles)</a>
+</li>
+      <li><a href="api/generated/milia.data.prep.html#milia.data.prep.dailymax">dailymax() (in module milia.data.prep)</a>
+</li>
+      <li><a href="api/generated/milia.features.events.html#milia.features.events.DAYREPRESENTATIONS">DAYREPRESENTATIONS (in module milia.features.events)</a>
+</li>
+      <li><a href="api/generated/milia.features.events.html#milia.features.events.daysummary">daysummary() (in module milia.features.events)</a>
+</li>
+      <li><a href="api/generated/milia.plot.figures.represent.html#milia.plot.figures.represent.daytypes">daytypes() (in module milia.plot.figures.represent)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.lets.represent.html#milia.plot.lets.represent.daytypes">(in module milia.plot.lets.represent)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.represent.html#milia.plot.mpl.represent.daytypes">(in module milia.plot.mpl.represent)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.cluster.indices.html#milia.cluster.indices.dbcs">dbcs() (in module milia.cluster.indices)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.indices.html#milia.cluster.indices.dbcv">dbcv() (in module milia.cluster.indices)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.indices.html#milia.cluster.indices.dbcvknn">dbcvknn() (in module milia.cluster.indices)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.models.dbscan.html#milia.cluster.models.dbscan.DBSCAN">DBSCAN (class in milia.cluster.models.dbscan)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.models.dbscan.html#milia.cluster.models.dbscan.DBSCANConfig">DBSCANConfig (class in milia.cluster.models.dbscan)</a>
+</li>
+      <li><a href="api/generated/milia.evaluate.ranking.html#milia.evaluate.ranking.dcg">dcg() (in module milia.evaluate.ranking)</a>
+</li>
+      <li><a href="api/generated/milia.plot.figures.anomaly.html#milia.plot.figures.anomaly.decay">decay() (in module milia.plot.figures.anomaly)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.lets.anomaly.html#milia.plot.lets.anomaly.decay">(in module milia.plot.lets.anomaly)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.anomaly.html#milia.plot.mpl.anomaly.decay">(in module milia.plot.mpl.anomaly)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.anomaly.base.html#milia.anomaly.base.BaseDetector.decision_function">decision_function() (milia.anomaly.base.BaseDetector method)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.anomaly.html#milia.anomaly.BaseDetector.decision_function">(milia.anomaly.BaseDetector method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.represent.tensor.html#milia.represent.tensor.decompose">decompose() (in module milia.represent.tensor)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.fitting.html#milia.cluster.fitting.default">default() (in module milia.cluster.fitting)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.ensemble.html#milia.anomaly.ensemble.DEFAULTS">DEFAULTS (in module milia.anomaly.ensemble)</a>
+</li>
+      <li><a href="api/generated/milia.plot.tokens.html#milia.plot.tokens.DEFICIENCIES">DEFICIENCIES (in module milia.plot.tokens)</a>
+</li>
+      <li><a href="api/generated/milia.plot.tokens.html#milia.plot.tokens.deficiency">deficiency() (in module milia.plot.tokens)</a>
+</li>
+      <li><a href="api/generated/milia.plot.figures.clusters.html#milia.plot.figures.clusters.dendrogram">dendrogram() (in module milia.plot.figures.clusters)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.lets.clusters.html#milia.plot.lets.clusters.dendrogram">(in module milia.plot.lets.clusters)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.clusters.html#milia.plot.mpl.clusters.dendrogram">(in module milia.plot.mpl.clusters)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.cluster.describe.html#milia.cluster.describe.describe">describe() (in module milia.cluster.describe)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.features.events.html#milia.features.events.describe">(in module milia.features.events)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.core.registry.html#milia.core.registry.detector">detector() (in module milia.core.registry)</a>
+</li>
+      <li><a href="api/generated/milia.represent.diffusion.html#milia.represent.diffusion.Diffusion">Diffusion (class in milia.represent.diffusion)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.validation.html#milia.cluster.validation.DIRECTION">DIRECTION (in module milia.cluster.validation)</a>
+</li>
+      <li><a href="api/generated/milia.recommend.retrieval.html#milia.recommend.retrieval.KNNRetriever.distance">distance() (milia.recommend.retrieval.KNNRetriever method)</a>
+</li>
+      <li><a href="api/generated/milia.represent.crocs.html#milia.represent.crocs.distances">distances() (in module milia.represent.crocs)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.cluster.conformal.html#milia.cluster.conformal.ConformalSets.distances">(milia.cluster.conformal.ConformalSets method)</a>
+</li>
+        <li><a href="api/generated/milia.cluster.models.kmeans.html#milia.cluster.models.kmeans.KMeans.distances">(milia.cluster.models.kmeans.KMeans method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.features.profile.html#milia.features.profile.distribution">distribution() (in module milia.features.profile)</a>
+</li>
+      <li><a href="api/generated/milia.plot.tokens.html#milia.plot.tokens.diverging">diverging() (in module milia.plot.tokens)</a>
+</li>
+      <li><a href="api/generated/milia.data.profiles.html#milia.data.profiles.diversity">diversity() (in module milia.data.profiles)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.indices.html#milia.cluster.indices.divide">divide() (in module milia.cluster.indices)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.inject.html#milia.anomaly.inject.drift">drift() (in module milia.anomaly.inject)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.cluster.agreement.html#milia.cluster.agreement.drift">(in module milia.cluster.agreement)</a>
+</li>
+        <li><a href="api/generated/milia.evaluate.anomaly.html#milia.evaluate.anomaly.drift">(in module milia.evaluate.anomaly)</a>
+</li>
+        <li><a href="api/generated/milia.plot.figures.agreement.html#milia.plot.figures.agreement.drift">(in module milia.plot.figures.agreement)</a>
+</li>
+        <li><a href="api/generated/milia.plot.lets.agreement.html#milia.plot.lets.agreement.drift">(in module milia.plot.lets.agreement)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.agreement.html#milia.plot.mpl.agreement.drift">(in module milia.plot.mpl.agreement)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.anomaly.inject.html#milia.anomaly.inject.dropout">dropout() (in module milia.anomaly.inject)</a>
+</li>
+      <li><a href="api/generated/milia.plot.figures.trust.html#milia.plot.figures.trust.dumbbell">dumbbell() (in module milia.plot.figures.trust)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.lets.draw.html#milia.plot.lets.draw.dumbbell">(in module milia.plot.lets.draw)</a>
+</li>
+        <li><a href="api/generated/milia.plot.lets.trust.html#milia.plot.lets.trust.dumbbell">(in module milia.plot.lets.trust)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.draw.html#milia.plot.mpl.draw.dumbbell">(in module milia.plot.mpl.draw)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.trust.html#milia.plot.mpl.trust.dumbbell">(in module milia.plot.mpl.trust)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="E">E</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.anomaly.models.ecod.html#milia.anomaly.models.ecod.ECOD">ECOD (class in milia.anomaly.models.ecod)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.models.ecod.html#milia.anomaly.models.ecod.ECODConfig">ECODConfig (class in milia.anomaly.models.ecod)</a>
+</li>
+      <li><a href="api/generated/milia.recommend.uplift.html#milia.recommend.uplift.TLearner.effect">effect() (milia.recommend.uplift.TLearner method)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.recommend.uplift.html#milia.recommend.uplift.XLearner.effect">(milia.recommend.uplift.XLearner method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.cluster.models.spectral.html#milia.cluster.models.spectral.eigengap">eigengap() (in module milia.cluster.models.spectral)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.models.dbscan.html#milia.cluster.models.dbscan.elbow">elbow() (in module milia.cluster.models.dbscan)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.search.html#milia.cluster.search.embed">embed() (in module milia.cluster.search)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.represent.diffusion.html#milia.represent.diffusion.embed">(in module milia.represent.diffusion)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.anomaly.ensemble.html#milia.anomaly.ensemble.Ensemble">Ensemble (class in milia.anomaly.ensemble)</a>
+</li>
+      <li><a href="api/generated/milia.features.events.html#milia.features.events.eventmap">eventmap() (in module milia.features.events)</a>
+</li>
+      <li><a href="api/generated/milia.features.events.html#milia.features.events.events">events() (in module milia.features.events)</a>
+</li>
+      <li><a href="api/generated/milia.features.events.html#milia.features.events.eventset">eventset() (in module milia.features.events)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.changepoint.html#milia.anomaly.changepoint.ewmapaths">ewmapaths() (in module milia.anomaly.changepoint)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.plot.figures.trust.html#milia.plot.figures.trust.excess">excess() (in module milia.plot.figures.trust)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.lets.trust.html#milia.plot.lets.trust.excess">(in module milia.plot.lets.trust)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.trust.html#milia.plot.mpl.trust.excess">(in module milia.plot.mpl.trust)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.anomaly.explain.html#milia.anomaly.explain.explain">explain() (in module milia.anomaly.explain)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.describe.html#milia.cluster.describe.explained">explained() (in module milia.cluster.describe)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.represent.tensor.html#milia.represent.tensor.explained">(in module milia.represent.tensor)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.features.events.html#milia.features.events.exports">exports() (in module milia.features.events)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.group.html#milia.anomaly.group.exportscore">exportscore() (in module milia.anomaly.group)</a>
+</li>
+      <li><a href="api/generated/milia.features.events.html#milia.features.events.exposure">exposure() (in module milia.features.events)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.recommend.equity.html#milia.recommend.equity.exposure">(in module milia.recommend.equity)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.cluster.validation.html#milia.cluster.validation.external">external() (in module milia.cluster.validation)</a>
+</li>
+      <li><a href="api/generated/milia.features.multires.html#milia.features.multires.extract">extract() (in module milia.features.multires)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.features.profile.html#milia.features.profile.extract">(in module milia.features.profile)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="F">F</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.anomaly.ensemble.html#milia.anomaly.ensemble.FAMILIES">FAMILIES (in module milia.anomaly.ensemble)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.cluster.agreement.html#milia.cluster.agreement.FAMILIES">(in module milia.cluster.agreement)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.cluster.agreement.html#milia.cluster.agreement.families">families() (in module milia.cluster.agreement)</a>
+</li>
+      <li><a href="api/generated/milia.evaluate.anomaly.html#milia.evaluate.anomaly.faultaucs">faultaucs() (in module milia.evaluate.anomaly)</a>
+</li>
+      <li><a href="api/generated/milia.evaluate.retrieval.html#milia.evaluate.retrieval.faultycases">faultycases() (in module milia.evaluate.retrieval)</a>
+</li>
+      <li><a href="api/generated/milia.evaluate.anomaly.html#milia.evaluate.anomaly.features">features() (in module milia.evaluate.anomaly)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.search.html#milia.cluster.search.FEATURESETS">FEATURESETS (in module milia.cluster.search)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.search.html#milia.cluster.search.featuresets">featuresets() (in module milia.cluster.search)</a>
+</li>
+      <li><a href="api/generated/milia.core.config.html#milia.core.config.Field">Field() (in module milia.core.config)</a>
+</li>
+      <li><a href="api/generated/milia.plot.style.html#milia.plot.style.filebackend">filebackend() (in module milia.plot.style)</a>
+</li>
+      <li><a href="api/generated/milia.plot.theme.html#milia.plot.theme.fill">fill() (in module milia.plot.theme)</a>
+</li>
+      <li><a href="api/generated/milia.plot.lets.draw.html#milia.plot.lets.draw.finish">finish() (in module milia.plot.lets.draw)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.mpl.draw.html#milia.plot.mpl.draw.finish">(in module milia.plot.mpl.draw)</a>
+</li>
+        <li><a href="api/generated/milia.plot.style.html#milia.plot.style.finish">(in module milia.plot.style)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.anomaly.changepoint.html#milia.anomaly.changepoint.firstalarms">firstalarms() (in module milia.anomaly.changepoint)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.base.html#milia.anomaly.base.BaseDetector.fit">fit() (milia.anomaly.base.BaseDetector method)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.anomaly.html#milia.anomaly.BaseDetector.fit">(milia.anomaly.BaseDetector method)</a>
+</li>
+        <li><a href="api/generated/milia.anomaly.models.controllimit.html#milia.anomaly.models.controllimit.ControlLimit.fit">(milia.anomaly.models.controllimit.ControlLimit method)</a>
+</li>
+        <li><a href="api/generated/milia.cluster.base.html#milia.cluster.base.BaseClusterer.fit">(milia.cluster.base.BaseClusterer method)</a>
+</li>
+        <li><a href="api/generated/milia.cluster.html#milia.cluster.BaseClusterer.fit">(milia.cluster.BaseClusterer method)</a>
+</li>
+        <li><a href="api/generated/milia.features.profile.html#milia.features.profile.ProfileFeatures.fit">(milia.features.profile.ProfileFeatures method)</a>
+</li>
+        <li><a href="api/generated/milia.features.window.html#milia.features.window.WindowFeatures.fit">(milia.features.window.WindowFeatures method)</a>
+</li>
+        <li><a href="api/generated/milia.recommend.action.html#milia.recommend.action.CaseRecommender.fit">(milia.recommend.action.CaseRecommender method)</a>
+</li>
+        <li><a href="api/generated/milia.recommend.baselines.html#milia.recommend.baselines.GroupMean.fit">(milia.recommend.baselines.GroupMean method)</a>
+</li>
+        <li><a href="api/generated/milia.recommend.ranker.html#milia.recommend.ranker.Ranker.fit">(milia.recommend.ranker.Ranker method)</a>
+</li>
+        <li><a href="api/generated/milia.recommend.retrieval.html#milia.recommend.retrieval.KNNRetriever.fit">(milia.recommend.retrieval.KNNRetriever method)</a>
+</li>
+        <li><a href="api/generated/milia.recommend.uplift.html#milia.recommend.uplift.TLearner.fit">(milia.recommend.uplift.TLearner method)</a>
+</li>
+        <li><a href="api/generated/milia.recommend.uplift.html#milia.recommend.uplift.XLearner.fit">(milia.recommend.uplift.XLearner method)</a>
+</li>
+        <li><a href="api/generated/milia.represent.crocs.html#milia.represent.crocs.CROCS.fit">(milia.represent.crocs.CROCS method)</a>
+</li>
+        <li><a href="api/generated/milia.represent.diffusion.html#milia.represent.diffusion.Diffusion.fit">(milia.represent.diffusion.Diffusion method)</a>
+</li>
+        <li><a href="api/generated/milia.represent.foundation.html#milia.represent.foundation.Foundation.fit">(milia.represent.foundation.Foundation method)</a>
+</li>
+        <li><a href="api/generated/milia.represent.tensor.html#milia.represent.tensor.Tucker.fit">(milia.represent.tensor.Tucker method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.represent.crocs.html#milia.represent.crocs.CROCS.fit_transform">fit_transform() (milia.represent.crocs.CROCS method)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.represent.diffusion.html#milia.represent.diffusion.Diffusion.fit_transform">(milia.represent.diffusion.Diffusion method)</a>
+</li>
+        <li><a href="api/generated/milia.represent.tensor.html#milia.represent.tensor.Tucker.fit_transform">(milia.represent.tensor.Tucker method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.anomaly.group.html#milia.anomaly.group.fitloss">fitloss() (in module milia.anomaly.group)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.conformal.html#milia.anomaly.conformal.flag">flag() (in module milia.anomaly.conformal)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.anomaly.base.html#milia.anomaly.base.BaseDetector.flag">(milia.anomaly.base.BaseDetector method)</a>
+</li>
+        <li><a href="api/generated/milia.anomaly.html#milia.anomaly.BaseDetector.flag">(milia.anomaly.BaseDetector method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.represent.foundation.html#milia.represent.foundation.Foundation">Foundation (class in milia.represent.foundation)</a>
+</li>
+      <li><a href="api/generated/milia.plot.figures.anomaly.html#milia.plot.figures.anomaly.fprrecall">fprrecall() (in module milia.plot.figures.anomaly)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.lets.anomaly.html#milia.plot.lets.anomaly.fprrecall">(in module milia.plot.lets.anomaly)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.anomaly.html#milia.plot.mpl.anomaly.fprrecall">(in module milia.plot.mpl.anomaly)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.anomaly.inject.html#milia.anomaly.inject.fragmented">fragmented() (in module milia.anomaly.inject)</a>
+</li>
+      <li><a href="api/generated/milia.recommend.equity.html#milia.recommend.equity.frontier">frontier() (in module milia.recommend.equity)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="G">G</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.plot.style.html#milia.plot.style.GAP">GAP (in module milia.plot.style)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.selection.html#milia.cluster.selection.gates">gates() (in module milia.cluster.selection)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.conformal.html#milia.anomaly.conformal.gaussian">gaussian() (in module milia.anomaly.conformal)</a>
+</li>
+      <li><a href="api/generated/milia.data.synthetic.html#milia.data.synthetic.generate">generate() (in module milia.data.synthetic)</a>
+</li>
+      <li><a href="api/generated/milia.core.registry.html#milia.core.registry.get">get() (in module milia.core.registry)</a>
+</li>
+      <li><a href="api/generated/milia.features.profile.html#milia.features.profile.ProfileFeatures.get_feature_names_out">get_feature_names_out() (milia.features.profile.ProfileFeatures method)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.features.window.html#milia.features.window.WindowFeatures.get_feature_names_out">(milia.features.window.WindowFeatures method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.recommend.equity.html#milia.recommend.equity.gini">gini() (in module milia.recommend.equity)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.models.gmm.html#milia.cluster.models.gmm.GMM">GMM (class in milia.cluster.models.gmm)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.models.gmm.html#milia.cluster.models.gmm.GMMConfig">GMMConfig (class in milia.cluster.models.gmm)</a>
+</li>
+      <li><a href="api/generated/milia.plot.style.html#milia.plot.style.golden">golden() (in module milia.plot.style)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.recommend.ranker.html#milia.recommend.ranker.grades">grades() (in module milia.recommend.ranker)</a>
+</li>
+      <li><a href="api/generated/milia.plot.figures.clusters.html#milia.plot.figures.clusters.grid">grid() (in module milia.plot.figures.clusters)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.lets.clusters.html#milia.plot.lets.clusters.grid">(in module milia.plot.lets.clusters)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.clusters.html#milia.plot.mpl.clusters.grid">(in module milia.plot.mpl.clusters)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.draw.html#milia.plot.mpl.draw.grid">(in module milia.plot.mpl.draw)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.anomaly.conformal.html#milia.anomaly.conformal.groupflag">groupflag() (in module milia.anomaly.conformal)</a>
+</li>
+      <li><a href="api/generated/milia.recommend.baselines.html#milia.recommend.baselines.GroupMean">GroupMean (class in milia.recommend.baselines)</a>
+</li>
+      <li><a href="api/generated/milia.data.profiles.html#milia.data.profiles.groupmean">groupmean() (in module milia.data.profiles)</a>
+</li>
+      <li><a href="api/generated/milia.plot.lets.draw.html#milia.plot.lets.draw.groups">groups() (in module milia.plot.lets.draw)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.mpl.draw.html#milia.plot.mpl.draw.groups">(in module milia.plot.mpl.draw)</a>
+</li>
+        <li><a href="api/generated/milia.recommend.ranking.html#milia.recommend.ranking.groups">(in module milia.recommend.ranking)</a>
+</li>
+        <li><a href="api/generated/milia.recommend.baselines.html#milia.recommend.baselines.GroupMean.groups">(milia.recommend.baselines.GroupMean method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="H">H</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.anomaly.conformal.html#milia.anomaly.conformal.hampel">hampel() (in module milia.anomaly.conformal)</a>
+</li>
+      <li><a href="api/generated/milia.core.config.space.html#milia.core.config.space.hashable">hashable() (in module milia.core.config.space)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.models.hbos.html#milia.anomaly.models.hbos.HBOS">HBOS (class in milia.anomaly.models.hbos)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.models.hbos.html#milia.anomaly.models.hbos.HBOSConfig">HBOSConfig (class in milia.anomaly.models.hbos)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.models.hdbscan.html#milia.cluster.models.hdbscan.HDBSCAN">HDBSCAN (class in milia.cluster.models.hdbscan)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.models.hdbscan.html#milia.cluster.models.hdbscan.HDBSCANConfig">HDBSCANConfig (class in milia.cluster.models.hdbscan)</a>
+</li>
+      <li><a href="api/generated/milia.plot.lets.draw.html#milia.plot.lets.draw.heat">heat() (in module milia.plot.lets.draw)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.mpl.draw.html#milia.plot.mpl.draw.heat">(in module milia.plot.mpl.draw)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.plot.figures.agreement.html#milia.plot.figures.agreement.heatmap">heatmap() (in module milia.plot.figures.agreement)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.lets.agreement.html#milia.plot.lets.agreement.heatmap">(in module milia.plot.lets.agreement)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.agreement.html#milia.plot.mpl.agreement.heatmap">(in module milia.plot.mpl.agreement)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.plot.lets.draw.html#milia.plot.lets.draw.hist">hist() (in module milia.plot.lets.draw)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.mpl.draw.html#milia.plot.mpl.draw.hist">(in module milia.plot.mpl.draw)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.cluster.agreement.html#milia.cluster.agreement.history">history() (in module milia.cluster.agreement)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="I">I</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.anomaly.models.iforest.html#milia.anomaly.models.iforest.IForest">IForest (class in milia.anomaly.models.iforest)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.models.iforest.html#milia.anomaly.models.iforest.IForestConfig">IForestConfig (class in milia.anomaly.models.iforest)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.group.html#milia.anomaly.group.imbalance">imbalance() (in module milia.anomaly.group)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.search.html#milia.cluster.search.importance">importance() (in module milia.cluster.search)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.figures.trust.html#milia.plot.figures.trust.importance">(in module milia.plot.figures.trust)</a>
+</li>
+        <li><a href="api/generated/milia.plot.lets.trust.html#milia.plot.lets.trust.importance">(in module milia.plot.lets.trust)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.trust.html#milia.plot.mpl.trust.importance">(in module milia.plot.mpl.trust)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.benchmark.conditions.html#milia.benchmark.conditions.index">index() (in module milia.benchmark.conditions)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.anomaly.inject.html#milia.anomaly.inject.INJECTIONS">INJECTIONS (in module milia.anomaly.inject)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.ablation.html#milia.cluster.ablation.interaction">interaction() (in module milia.cluster.ablation)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.validation.html#milia.cluster.validation.internal">internal() (in module milia.cluster.validation)</a>
+</li>
+      <li><a href="api/generated/milia.plot.figures.recommend.html#milia.plot.figures.recommend.interval">interval() (in module milia.plot.figures.recommend)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.lets.recommend.html#milia.plot.lets.recommend.interval">(in module milia.plot.lets.recommend)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.recommend.html#milia.plot.mpl.recommend.interval">(in module milia.plot.mpl.recommend)</a>
+</li>
+        <li><a href="api/generated/milia.recommend.ranking.html#milia.recommend.ranking.interval">(in module milia.recommend.ranking)</a>
+</li>
+        <li><a href="api/generated/milia.recommend.retrieval.html#milia.recommend.retrieval.KNNRetriever.interval">(milia.recommend.retrieval.KNNRetriever method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="J">J</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.cluster.agreement.html#milia.cluster.agreement.jaccard">jaccard() (in module milia.cluster.agreement)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="K">K</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.represent.crocs.html#milia.represent.crocs.RLS.k">k (milia.represent.crocs.RLS property)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.models.kde.html#milia.anomaly.models.kde.KDE">KDE (class in milia.anomaly.models.kde)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.models.kde.html#milia.anomaly.models.kde.KDEConfig">KDEConfig (class in milia.anomaly.models.kde)</a>
+</li>
+      <li><a href="api/generated/milia.evaluate.ranking.html#milia.evaluate.ranking.kendall">kendall() (in module milia.evaluate.ranking)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.models.kmeans.html#milia.cluster.models.kmeans.KMeans">KMeans (class in milia.cluster.models.kmeans)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.cluster.models.kmeans.html#milia.cluster.models.kmeans.KMeansConfig">KMeansConfig (class in milia.cluster.models.kmeans)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.models.knn.html#milia.anomaly.models.knn.KNN">KNN (class in milia.anomaly.models.knn)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.models.knn.html#milia.anomaly.models.knn.KNNConfig">KNNConfig (class in milia.anomaly.models.knn)</a>
+</li>
+      <li><a href="api/generated/milia.recommend.retrieval.html#milia.recommend.retrieval.KNNRetriever">KNNRetriever (class in milia.recommend.retrieval)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.models.kshape.html#milia.cluster.models.kshape.KShape">KShape (class in milia.cluster.models.kshape)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.models.kshape.html#milia.cluster.models.kshape.KShapeConfig">KShapeConfig (class in milia.cluster.models.kshape)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="L">L</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.cluster.fitting.html#milia.cluster.fitting.labels">labels() (in module milia.cluster.fitting)</a>
+</li>
+      <li><a href="api/generated/milia.benchmark.runs.html#milia.benchmark.runs.latest">latest() (in module milia.benchmark.runs)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.indices.html#milia.cluster.indices.lccv">lccv() (in module milia.cluster.indices)</a>
+</li>
+      <li><a href="api/generated/milia.plot.style.html#milia.plot.style.legend">legend() (in module milia.plot.style)</a>
+</li>
+      <li><a href="api/generated/milia.core.conformal.html#milia.core.conformal.level">level() (in module milia.core.conformal)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.inject.html#milia.anomaly.inject.LEVEL1">LEVEL1 (in module milia.anomaly.inject)</a>
+</li>
+      <li><a href="api/generated/milia.plot.tokens.html#milia.plot.tokens.lightness">lightness() (in module milia.plot.tokens)</a>
+</li>
+      <li><a href="api/generated/milia.represent.reduce.html#milia.represent.reduce.likelihood">likelihood() (in module milia.represent.reduce)</a>
+</li>
+      <li><a href="api/generated/milia.plot.lets.draw.html#milia.plot.lets.draw.lines">lines() (in module milia.plot.lets.draw)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.mpl.draw.html#milia.plot.mpl.draw.lines">(in module milia.plot.mpl.draw)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.core.io.html#milia.core.io.load">load() (in module milia.core.io)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.anomaly.group.html#milia.anomaly.group.locate">locate() (in module milia.anomaly.group)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.models.lof.html#milia.anomaly.models.lof.LOF">LOF (class in milia.anomaly.models.lof)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.models.lof.html#milia.anomaly.models.lof.LOFConfig">LOFConfig (class in milia.anomaly.models.lof)</a>
+</li>
+      <li><a href="api/generated/milia.core.config.space.html#milia.core.config.space.logscale">logscale() (in module milia.core.config.space)</a>
+</li>
+      <li><a href="api/generated/milia.plot.figures.clusters.html#milia.plot.figures.clusters.long">long() (in module milia.plot.figures.clusters)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.group.html#milia.anomaly.group.LOSSALTERNATIVES">LOSSALTERNATIVES (in module milia.anomaly.group)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.group.html#milia.anomaly.group.lossdesign">lossdesign() (in module milia.anomaly.group)</a>
+</li>
+      <li><a href="api/generated/milia.benchmark.compare.html#milia.benchmark.compare.losses">losses() (in module milia.benchmark.compare)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.group.html#milia.anomaly.group.lossmodel">lossmodel() (in module milia.anomaly.group)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.group.html#milia.anomaly.group.LOSSMODELS">LOSSMODELS (in module milia.anomaly.group)</a>
+</li>
+      <li><a href="api/generated/milia.recommend.ranking.html#milia.recommend.ranking.LOWER">LOWER (in module milia.recommend.ranking)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="M">M</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.features.profile.html#milia.features.profile.magnitude">magnitude() (in module milia.features.profile)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.models.mahalanobis.html#milia.anomaly.models.mahalanobis.Mahalanobis">Mahalanobis (class in milia.anomaly.models.mahalanobis)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.models.mahalanobis.html#milia.anomaly.models.mahalanobis.MahalanobisConfig">MahalanobisConfig (class in milia.anomaly.models.mahalanobis)</a>
+</li>
+      <li><a href="api/generated/milia.core.registry.html#milia.core.registry.make">make() (in module milia.core.registry)</a>
+</li>
+      <li><a href="api/generated/milia.features.events.html#milia.features.events.MAP_NAMES">MAP_NAMES (in module milia.features.events)</a>
+</li>
+      <li><a href="api/generated/milia.plot.tokens.html#milia.plot.tokens.MARKERS">MARKERS (in module milia.plot.tokens)</a>
+</li>
+      <li><a href="api/generated/milia.evaluate.anomaly.html#milia.evaluate.anomaly.match">match() (in module milia.evaluate.anomaly)</a>
+</li>
+      <li><a href="api/generated/milia.plot.tokens.html#milia.plot.tokens.matrix">matrix() (in module milia.plot.tokens)</a>
+</li>
+      <li><a href="api/generated/milia.benchmark.compare.html#milia.benchmark.compare.mcs">mcs() (in module milia.benchmark.compare)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.ablation.html#milia.cluster.ablation.measure">measure() (in module milia.cluster.ablation)</a>
+</li>
+      <li><a href="api/generated/milia.data.profiles.html#milia.data.profiles.medoids">medoids() (in module milia.data.profiles)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.group.html#milia.anomaly.group.memberflags">memberflags() (in module milia.anomaly.group)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.ensemble.html#milia.anomaly.ensemble.members">members() (in module milia.anomaly.ensemble)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.figures.clusters.html#milia.plot.figures.clusters.members">(in module milia.plot.figures.clusters)</a>
+</li>
+        <li><a href="api/generated/milia.plot.lets.clusters.html#milia.plot.lets.clusters.members">(in module milia.plot.lets.clusters)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.clusters.html#milia.plot.mpl.clusters.members">(in module milia.plot.mpl.clusters)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.anomaly.group.html#milia.anomaly.group.MEMBERTESTS">MEMBERTESTS (in module milia.anomaly.group)</a>
+</li>
+      <li><a href="api/generated/milia.core.config.base.html#milia.core.config.base.META">META (in module milia.core.config.base)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.inject.html#milia.anomaly.inject.meterfault">meterfault() (in module milia.anomaly.inject)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.inject.html#milia.anomaly.inject.METERFAULTS">METERFAULTS (in module milia.anomaly.inject)</a>
+</li>
+      <li><a href="api/generated/milia.plot.figures.recommend.html#milia.plot.figures.recommend.methods">methods() (in module milia.plot.figures.recommend)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.lets.recommend.html#milia.plot.lets.recommend.methods">(in module milia.plot.lets.recommend)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.recommend.html#milia.plot.mpl.recommend.methods">(in module milia.plot.mpl.recommend)</a>
+</li>
+      </ul></li>
+      <li>
+    milia.anomaly
+
+      <ul>
+        <li><a href="api/generated/milia.anomaly.html#module-milia.anomaly">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.anomaly.base
+
+      <ul>
+        <li><a href="api/generated/milia.anomaly.base.html#module-milia.anomaly.base">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.anomaly.changepoint
+
+      <ul>
+        <li><a href="api/generated/milia.anomaly.changepoint.html#module-milia.anomaly.changepoint">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.anomaly.conformal
+
+      <ul>
+        <li><a href="api/generated/milia.anomaly.conformal.html#module-milia.anomaly.conformal">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.anomaly.ensemble
+
+      <ul>
+        <li><a href="api/generated/milia.anomaly.ensemble.html#module-milia.anomaly.ensemble">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.anomaly.explain
+
+      <ul>
+        <li><a href="api/generated/milia.anomaly.explain.html#module-milia.anomaly.explain">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.anomaly.group
+
+      <ul>
+        <li><a href="api/generated/milia.anomaly.group.html#module-milia.anomaly.group">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.anomaly.inject
+
+      <ul>
+        <li><a href="api/generated/milia.anomaly.inject.html#module-milia.anomaly.inject">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.anomaly.models
+
+      <ul>
+        <li><a href="api/generated/milia.anomaly.models.html#module-milia.anomaly.models">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.anomaly.models.controllimit
+
+      <ul>
+        <li><a href="api/generated/milia.anomaly.models.controllimit.html#module-milia.anomaly.models.controllimit">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.anomaly.models.copod
+
+      <ul>
+        <li><a href="api/generated/milia.anomaly.models.copod.html#module-milia.anomaly.models.copod">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.anomaly.models.ecod
+
+      <ul>
+        <li><a href="api/generated/milia.anomaly.models.ecod.html#module-milia.anomaly.models.ecod">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.anomaly.models.hbos
+
+      <ul>
+        <li><a href="api/generated/milia.anomaly.models.hbos.html#module-milia.anomaly.models.hbos">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.anomaly.models.iforest
+
+      <ul>
+        <li><a href="api/generated/milia.anomaly.models.iforest.html#module-milia.anomaly.models.iforest">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.anomaly.models.kde
+
+      <ul>
+        <li><a href="api/generated/milia.anomaly.models.kde.html#module-milia.anomaly.models.kde">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.anomaly.models.knn
+
+      <ul>
+        <li><a href="api/generated/milia.anomaly.models.knn.html#module-milia.anomaly.models.knn">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.anomaly.models.lof
+
+      <ul>
+        <li><a href="api/generated/milia.anomaly.models.lof.html#module-milia.anomaly.models.lof">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.anomaly.models.mahalanobis
+
+      <ul>
+        <li><a href="api/generated/milia.anomaly.models.mahalanobis.html#module-milia.anomaly.models.mahalanobis">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.anomaly.models.ocsvm
+
+      <ul>
+        <li><a href="api/generated/milia.anomaly.models.ocsvm.html#module-milia.anomaly.models.ocsvm">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.anomaly.models.reconstruction
+
+      <ul>
+        <li><a href="api/generated/milia.anomaly.models.reconstruction.html#module-milia.anomaly.models.reconstruction">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.anomaly.triage
+
+      <ul>
+        <li><a href="api/generated/milia.anomaly.triage.html#module-milia.anomaly.triage">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.benchmark
+
+      <ul>
+        <li><a href="api/generated/milia.benchmark.html#module-milia.benchmark">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.benchmark.compare
+
+      <ul>
+        <li><a href="api/generated/milia.benchmark.compare.html#module-milia.benchmark.compare">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.benchmark.conditions
+
+      <ul>
+        <li><a href="api/generated/milia.benchmark.conditions.html#module-milia.benchmark.conditions">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.benchmark.provenance
+
+      <ul>
+        <li><a href="api/generated/milia.benchmark.provenance.html#module-milia.benchmark.provenance">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.benchmark.runs
+
+      <ul>
+        <li><a href="api/generated/milia.benchmark.runs.html#module-milia.benchmark.runs">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.cluster
+
+      <ul>
+        <li><a href="api/generated/milia.cluster.html#module-milia.cluster">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.cluster.ablation
+
+      <ul>
+        <li><a href="api/generated/milia.cluster.ablation.html#module-milia.cluster.ablation">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.cluster.agreement
+
+      <ul>
+        <li><a href="api/generated/milia.cluster.agreement.html#module-milia.cluster.agreement">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.cluster.base
+
+      <ul>
+        <li><a href="api/generated/milia.cluster.base.html#module-milia.cluster.base">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.cluster.conformal
+
+      <ul>
+        <li><a href="api/generated/milia.cluster.conformal.html#module-milia.cluster.conformal">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.cluster.consensus
+
+      <ul>
+        <li><a href="api/generated/milia.cluster.consensus.html#module-milia.cluster.consensus">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.cluster.describe
+
+      <ul>
+        <li><a href="api/generated/milia.cluster.describe.html#module-milia.cluster.describe">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.cluster.fitting
+
+      <ul>
+        <li><a href="api/generated/milia.cluster.fitting.html#module-milia.cluster.fitting">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.cluster.graph
+
+      <ul>
+        <li><a href="api/generated/milia.cluster.graph.html#module-milia.cluster.graph">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.cluster.indices
+
+      <ul>
+        <li><a href="api/generated/milia.cluster.indices.html#module-milia.cluster.indices">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.cluster.models
+
+      <ul>
+        <li><a href="api/generated/milia.cluster.models.html#module-milia.cluster.models">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.cluster.models.agglomerative
+
+      <ul>
+        <li><a href="api/generated/milia.cluster.models.agglomerative.html#module-milia.cluster.models.agglomerative">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.cluster.models.birch
+
+      <ul>
+        <li><a href="api/generated/milia.cluster.models.birch.html#module-milia.cluster.models.birch">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.cluster.models.copkmeans
+
+      <ul>
+        <li><a href="api/generated/milia.cluster.models.copkmeans.html#module-milia.cluster.models.copkmeans">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.cluster.models.dbscan
+
+      <ul>
+        <li><a href="api/generated/milia.cluster.models.dbscan.html#module-milia.cluster.models.dbscan">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.cluster.models.gmm
+
+      <ul>
+        <li><a href="api/generated/milia.cluster.models.gmm.html#module-milia.cluster.models.gmm">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.cluster.models.hdbscan
+
+      <ul>
+        <li><a href="api/generated/milia.cluster.models.hdbscan.html#module-milia.cluster.models.hdbscan">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.cluster.models.kmeans
+
+      <ul>
+        <li><a href="api/generated/milia.cluster.models.kmeans.html#module-milia.cluster.models.kmeans">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.cluster.models.kshape
+
+      <ul>
+        <li><a href="api/generated/milia.cluster.models.kshape.html#module-milia.cluster.models.kshape">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.cluster.models.minibatch
+
+      <ul>
+        <li><a href="api/generated/milia.cluster.models.minibatch.html#module-milia.cluster.models.minibatch">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.cluster.models.spectral
+
+      <ul>
+        <li><a href="api/generated/milia.cluster.models.spectral.html#module-milia.cluster.models.spectral">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.cluster.models.tskmeans
+
+      <ul>
+        <li><a href="api/generated/milia.cluster.models.tskmeans.html#module-milia.cluster.models.tskmeans">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.cluster.search
+
+      <ul>
+        <li><a href="api/generated/milia.cluster.search.html#module-milia.cluster.search">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.cluster.selection
+
+      <ul>
+        <li><a href="api/generated/milia.cluster.selection.html#module-milia.cluster.selection">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.cluster.stability
+
+      <ul>
+        <li><a href="api/generated/milia.cluster.stability.html#module-milia.cluster.stability">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.cluster.validation
+
+      <ul>
+        <li><a href="api/generated/milia.cluster.validation.html#module-milia.cluster.validation">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.core
+
+      <ul>
+        <li><a href="api/generated/milia.core.html#module-milia.core">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.core.config
+
+      <ul>
+        <li><a href="api/generated/milia.core.config.html#module-milia.core.config">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.core.config.base
+
+      <ul>
+        <li><a href="api/generated/milia.core.config.base.html#module-milia.core.config.base">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.core.config.space
+
+      <ul>
+        <li><a href="api/generated/milia.core.config.space.html#module-milia.core.config.space">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.core.conformal
+
+      <ul>
+        <li><a href="api/generated/milia.core.conformal.html#module-milia.core.conformal">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.core.exceptions
+
+      <ul>
+        <li><a href="api/generated/milia.core.exceptions.html#module-milia.core.exceptions">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.core.io
+
+      <ul>
+        <li><a href="api/generated/milia.core.io.html#module-milia.core.io">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.core.registry
+
+      <ul>
+        <li><a href="api/generated/milia.core.registry.html#module-milia.core.registry">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.core.seeds
+
+      <ul>
+        <li><a href="api/generated/milia.core.seeds.html#module-milia.core.seeds">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.data
+
+      <ul>
+        <li><a href="api/generated/milia.data.html#module-milia.data">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.data.aggregate
+
+      <ul>
+        <li><a href="api/generated/milia.data.aggregate.html#module-milia.data.aggregate">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.data.prep
+
+      <ul>
+        <li><a href="api/generated/milia.data.prep.html#module-milia.data.prep">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.data.profiles
+
+      <ul>
+        <li><a href="api/generated/milia.data.profiles.html#module-milia.data.profiles">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.data.synthetic
+
+      <ul>
+        <li><a href="api/generated/milia.data.synthetic.html#module-milia.data.synthetic">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.evaluate
+
+      <ul>
+        <li><a href="api/generated/milia.evaluate.html#module-milia.evaluate">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.evaluate.anomaly
+
+      <ul>
+        <li><a href="api/generated/milia.evaluate.anomaly.html#module-milia.evaluate.anomaly">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.evaluate.ranking
+
+      <ul>
+        <li><a href="api/generated/milia.evaluate.ranking.html#module-milia.evaluate.ranking">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.evaluate.retrieval
+
+      <ul>
+        <li><a href="api/generated/milia.evaluate.retrieval.html#module-milia.evaluate.retrieval">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.features
+
+      <ul>
+        <li><a href="api/generated/milia.features.html#module-milia.features">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.features.events
+
+      <ul>
+        <li><a href="api/generated/milia.features.events.html#module-milia.features.events">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.features.multires
+
+      <ul>
+        <li><a href="api/generated/milia.features.multires.html#module-milia.features.multires">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.features.profile
+
+      <ul>
+        <li><a href="api/generated/milia.features.profile.html#module-milia.features.profile">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.features.scale
+
+      <ul>
+        <li><a href="api/generated/milia.features.scale.html#module-milia.features.scale">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.features.window
+
+      <ul>
+        <li><a href="api/generated/milia.features.window.html#module-milia.features.window">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.plot
+
+      <ul>
+        <li><a href="api/generated/milia.plot.html#module-milia.plot">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.plot.bind
+
+      <ul>
+        <li><a href="api/generated/milia.plot.bind.html#module-milia.plot.bind">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.plot.figures
+
+      <ul>
+        <li><a href="api/generated/milia.plot.figures.html#module-milia.plot.figures">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.plot.figures.agreement
+
+      <ul>
+        <li><a href="api/generated/milia.plot.figures.agreement.html#module-milia.plot.figures.agreement">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.plot.figures.anomaly
+
+      <ul>
+        <li><a href="api/generated/milia.plot.figures.anomaly.html#module-milia.plot.figures.anomaly">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.plot.figures.clusters
+
+      <ul>
+        <li><a href="api/generated/milia.plot.figures.clusters.html#module-milia.plot.figures.clusters">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.plot.figures.recommend
+
+      <ul>
+        <li><a href="api/generated/milia.plot.figures.recommend.html#module-milia.plot.figures.recommend">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.plot.figures.represent
+
+      <ul>
+        <li><a href="api/generated/milia.plot.figures.represent.html#module-milia.plot.figures.represent">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.plot.figures.trust
+
+      <ul>
+        <li><a href="api/generated/milia.plot.figures.trust.html#module-milia.plot.figures.trust">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.plot.labels
+
+      <ul>
+        <li><a href="api/generated/milia.plot.labels.html#module-milia.plot.labels">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.plot.lets
+
+      <ul>
+        <li><a href="api/generated/milia.plot.lets.html#module-milia.plot.lets">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.plot.lets.agreement
+
+      <ul>
+        <li><a href="api/generated/milia.plot.lets.agreement.html#module-milia.plot.lets.agreement">module</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    milia.plot.lets.anomaly
+
+      <ul>
+        <li><a href="api/generated/milia.plot.lets.anomaly.html#module-milia.plot.lets.anomaly">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.plot.lets.clusters
+
+      <ul>
+        <li><a href="api/generated/milia.plot.lets.clusters.html#module-milia.plot.lets.clusters">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.plot.lets.draw
+
+      <ul>
+        <li><a href="api/generated/milia.plot.lets.draw.html#module-milia.plot.lets.draw">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.plot.lets.recommend
+
+      <ul>
+        <li><a href="api/generated/milia.plot.lets.recommend.html#module-milia.plot.lets.recommend">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.plot.lets.represent
+
+      <ul>
+        <li><a href="api/generated/milia.plot.lets.represent.html#module-milia.plot.lets.represent">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.plot.lets.trust
+
+      <ul>
+        <li><a href="api/generated/milia.plot.lets.trust.html#module-milia.plot.lets.trust">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.plot.mpl
+
+      <ul>
+        <li><a href="api/generated/milia.plot.mpl.html#module-milia.plot.mpl">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.plot.mpl.agreement
+
+      <ul>
+        <li><a href="api/generated/milia.plot.mpl.agreement.html#module-milia.plot.mpl.agreement">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.plot.mpl.anomaly
+
+      <ul>
+        <li><a href="api/generated/milia.plot.mpl.anomaly.html#module-milia.plot.mpl.anomaly">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.plot.mpl.clusters
+
+      <ul>
+        <li><a href="api/generated/milia.plot.mpl.clusters.html#module-milia.plot.mpl.clusters">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.plot.mpl.draw
+
+      <ul>
+        <li><a href="api/generated/milia.plot.mpl.draw.html#module-milia.plot.mpl.draw">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.plot.mpl.recommend
+
+      <ul>
+        <li><a href="api/generated/milia.plot.mpl.recommend.html#module-milia.plot.mpl.recommend">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.plot.mpl.represent
+
+      <ul>
+        <li><a href="api/generated/milia.plot.mpl.represent.html#module-milia.plot.mpl.represent">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.plot.mpl.trust
+
+      <ul>
+        <li><a href="api/generated/milia.plot.mpl.trust.html#module-milia.plot.mpl.trust">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.plot.style
+
+      <ul>
+        <li><a href="api/generated/milia.plot.style.html#module-milia.plot.style">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.plot.tables
+
+      <ul>
+        <li><a href="api/generated/milia.plot.tables.html#module-milia.plot.tables">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.plot.theme
+
+      <ul>
+        <li><a href="api/generated/milia.plot.theme.html#module-milia.plot.theme">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.plot.tokens
+
+      <ul>
+        <li><a href="api/generated/milia.plot.tokens.html#module-milia.plot.tokens">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.recommend
+
+      <ul>
+        <li><a href="api/generated/milia.recommend.html#module-milia.recommend">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.recommend.action
+
+      <ul>
+        <li><a href="api/generated/milia.recommend.action.html#module-milia.recommend.action">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.recommend.baselines
+
+      <ul>
+        <li><a href="api/generated/milia.recommend.baselines.html#module-milia.recommend.baselines">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.recommend.diagnostics
+
+      <ul>
+        <li><a href="api/generated/milia.recommend.diagnostics.html#module-milia.recommend.diagnostics">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.recommend.equity
+
+      <ul>
+        <li><a href="api/generated/milia.recommend.equity.html#module-milia.recommend.equity">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.recommend.ranker
+
+      <ul>
+        <li><a href="api/generated/milia.recommend.ranker.html#module-milia.recommend.ranker">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.recommend.ranking
+
+      <ul>
+        <li><a href="api/generated/milia.recommend.ranking.html#module-milia.recommend.ranking">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.recommend.retrieval
+
+      <ul>
+        <li><a href="api/generated/milia.recommend.retrieval.html#module-milia.recommend.retrieval">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.recommend.uplift
+
+      <ul>
+        <li><a href="api/generated/milia.recommend.uplift.html#module-milia.recommend.uplift">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.represent
+
+      <ul>
+        <li><a href="api/generated/milia.represent.html#module-milia.represent">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.represent.crocs
+
+      <ul>
+        <li><a href="api/generated/milia.represent.crocs.html#module-milia.represent.crocs">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.represent.diffusion
+
+      <ul>
+        <li><a href="api/generated/milia.represent.diffusion.html#module-milia.represent.diffusion">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.represent.foundation
+
+      <ul>
+        <li><a href="api/generated/milia.represent.foundation.html#module-milia.represent.foundation">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.represent.reduce
+
+      <ul>
+        <li><a href="api/generated/milia.represent.reduce.html#module-milia.represent.reduce">module</a>
+</li>
+      </ul></li>
+      <li>
+    milia.represent.tensor
+
+      <ul>
+        <li><a href="api/generated/milia.represent.tensor.html#module-milia.represent.tensor">module</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.core.exceptions.html#milia.core.exceptions.MiliaError">MiliaError</a>
+</li>
+      <li><a href="api/generated/milia.cluster.models.minibatch.html#milia.cluster.models.minibatch.MiniBatch">MiniBatch (class in milia.cluster.models.minibatch)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.models.minibatch.html#milia.cluster.models.minibatch.MiniBatchConfig">MiniBatchConfig (class in milia.cluster.models.minibatch)</a>
+</li>
+      <li><a href="api/generated/milia.core.exceptions.html#milia.core.exceptions.MissingExtraError">MissingExtraError</a>
+</li>
+      <li><a href="api/generated/milia.cluster.indices.html#milia.cluster.indices.mmi">mmi() (in module milia.cluster.indices)</a>
+</li>
+      <li><a href="api/generated/milia.recommend.ranking.html#milia.recommend.ranking.models">models() (in module milia.recommend.ranking)</a>
+</li>
+      <li>
+    module
+
+      <ul>
+        <li><a href="api/generated/milia.anomaly.html#module-milia.anomaly">milia.anomaly</a>
+</li>
+        <li><a href="api/generated/milia.anomaly.base.html#module-milia.anomaly.base">milia.anomaly.base</a>
+</li>
+        <li><a href="api/generated/milia.anomaly.changepoint.html#module-milia.anomaly.changepoint">milia.anomaly.changepoint</a>
+</li>
+        <li><a href="api/generated/milia.anomaly.conformal.html#module-milia.anomaly.conformal">milia.anomaly.conformal</a>
+</li>
+        <li><a href="api/generated/milia.anomaly.ensemble.html#module-milia.anomaly.ensemble">milia.anomaly.ensemble</a>
+</li>
+        <li><a href="api/generated/milia.anomaly.explain.html#module-milia.anomaly.explain">milia.anomaly.explain</a>
+</li>
+        <li><a href="api/generated/milia.anomaly.group.html#module-milia.anomaly.group">milia.anomaly.group</a>
+</li>
+        <li><a href="api/generated/milia.anomaly.inject.html#module-milia.anomaly.inject">milia.anomaly.inject</a>
+</li>
+        <li><a href="api/generated/milia.anomaly.models.html#module-milia.anomaly.models">milia.anomaly.models</a>
+</li>
+        <li><a href="api/generated/milia.anomaly.models.controllimit.html#module-milia.anomaly.models.controllimit">milia.anomaly.models.controllimit</a>
+</li>
+        <li><a href="api/generated/milia.anomaly.models.copod.html#module-milia.anomaly.models.copod">milia.anomaly.models.copod</a>
+</li>
+        <li><a href="api/generated/milia.anomaly.models.ecod.html#module-milia.anomaly.models.ecod">milia.anomaly.models.ecod</a>
+</li>
+        <li><a href="api/generated/milia.anomaly.models.hbos.html#module-milia.anomaly.models.hbos">milia.anomaly.models.hbos</a>
+</li>
+        <li><a href="api/generated/milia.anomaly.models.iforest.html#module-milia.anomaly.models.iforest">milia.anomaly.models.iforest</a>
+</li>
+        <li><a href="api/generated/milia.anomaly.models.kde.html#module-milia.anomaly.models.kde">milia.anomaly.models.kde</a>
+</li>
+        <li><a href="api/generated/milia.anomaly.models.knn.html#module-milia.anomaly.models.knn">milia.anomaly.models.knn</a>
+</li>
+        <li><a href="api/generated/milia.anomaly.models.lof.html#module-milia.anomaly.models.lof">milia.anomaly.models.lof</a>
+</li>
+        <li><a href="api/generated/milia.anomaly.models.mahalanobis.html#module-milia.anomaly.models.mahalanobis">milia.anomaly.models.mahalanobis</a>
+</li>
+        <li><a href="api/generated/milia.anomaly.models.ocsvm.html#module-milia.anomaly.models.ocsvm">milia.anomaly.models.ocsvm</a>
+</li>
+        <li><a href="api/generated/milia.anomaly.models.reconstruction.html#module-milia.anomaly.models.reconstruction">milia.anomaly.models.reconstruction</a>
+</li>
+        <li><a href="api/generated/milia.anomaly.triage.html#module-milia.anomaly.triage">milia.anomaly.triage</a>
+</li>
+        <li><a href="api/generated/milia.benchmark.html#module-milia.benchmark">milia.benchmark</a>
+</li>
+        <li><a href="api/generated/milia.benchmark.compare.html#module-milia.benchmark.compare">milia.benchmark.compare</a>
+</li>
+        <li><a href="api/generated/milia.benchmark.conditions.html#module-milia.benchmark.conditions">milia.benchmark.conditions</a>
+</li>
+        <li><a href="api/generated/milia.benchmark.provenance.html#module-milia.benchmark.provenance">milia.benchmark.provenance</a>
+</li>
+        <li><a href="api/generated/milia.benchmark.runs.html#module-milia.benchmark.runs">milia.benchmark.runs</a>
+</li>
+        <li><a href="api/generated/milia.cluster.html#module-milia.cluster">milia.cluster</a>
+</li>
+        <li><a href="api/generated/milia.cluster.ablation.html#module-milia.cluster.ablation">milia.cluster.ablation</a>
+</li>
+        <li><a href="api/generated/milia.cluster.agreement.html#module-milia.cluster.agreement">milia.cluster.agreement</a>
+</li>
+        <li><a href="api/generated/milia.cluster.base.html#module-milia.cluster.base">milia.cluster.base</a>
+</li>
+        <li><a href="api/generated/milia.cluster.conformal.html#module-milia.cluster.conformal">milia.cluster.conformal</a>
+</li>
+        <li><a href="api/generated/milia.cluster.consensus.html#module-milia.cluster.consensus">milia.cluster.consensus</a>
+</li>
+        <li><a href="api/generated/milia.cluster.describe.html#module-milia.cluster.describe">milia.cluster.describe</a>
+</li>
+        <li><a href="api/generated/milia.cluster.fitting.html#module-milia.cluster.fitting">milia.cluster.fitting</a>
+</li>
+        <li><a href="api/generated/milia.cluster.graph.html#module-milia.cluster.graph">milia.cluster.graph</a>
+</li>
+        <li><a href="api/generated/milia.cluster.indices.html#module-milia.cluster.indices">milia.cluster.indices</a>
+</li>
+        <li><a href="api/generated/milia.cluster.models.html#module-milia.cluster.models">milia.cluster.models</a>
+</li>
+        <li><a href="api/generated/milia.cluster.models.agglomerative.html#module-milia.cluster.models.agglomerative">milia.cluster.models.agglomerative</a>
+</li>
+        <li><a href="api/generated/milia.cluster.models.birch.html#module-milia.cluster.models.birch">milia.cluster.models.birch</a>
+</li>
+        <li><a href="api/generated/milia.cluster.models.copkmeans.html#module-milia.cluster.models.copkmeans">milia.cluster.models.copkmeans</a>
+</li>
+        <li><a href="api/generated/milia.cluster.models.dbscan.html#module-milia.cluster.models.dbscan">milia.cluster.models.dbscan</a>
+</li>
+        <li><a href="api/generated/milia.cluster.models.gmm.html#module-milia.cluster.models.gmm">milia.cluster.models.gmm</a>
+</li>
+        <li><a href="api/generated/milia.cluster.models.hdbscan.html#module-milia.cluster.models.hdbscan">milia.cluster.models.hdbscan</a>
+</li>
+        <li><a href="api/generated/milia.cluster.models.kmeans.html#module-milia.cluster.models.kmeans">milia.cluster.models.kmeans</a>
+</li>
+        <li><a href="api/generated/milia.cluster.models.kshape.html#module-milia.cluster.models.kshape">milia.cluster.models.kshape</a>
+</li>
+        <li><a href="api/generated/milia.cluster.models.minibatch.html#module-milia.cluster.models.minibatch">milia.cluster.models.minibatch</a>
+</li>
+        <li><a href="api/generated/milia.cluster.models.spectral.html#module-milia.cluster.models.spectral">milia.cluster.models.spectral</a>
+</li>
+        <li><a href="api/generated/milia.cluster.models.tskmeans.html#module-milia.cluster.models.tskmeans">milia.cluster.models.tskmeans</a>
+</li>
+        <li><a href="api/generated/milia.cluster.search.html#module-milia.cluster.search">milia.cluster.search</a>
+</li>
+        <li><a href="api/generated/milia.cluster.selection.html#module-milia.cluster.selection">milia.cluster.selection</a>
+</li>
+        <li><a href="api/generated/milia.cluster.stability.html#module-milia.cluster.stability">milia.cluster.stability</a>
+</li>
+        <li><a href="api/generated/milia.cluster.validation.html#module-milia.cluster.validation">milia.cluster.validation</a>
+</li>
+        <li><a href="api/generated/milia.core.html#module-milia.core">milia.core</a>
+</li>
+        <li><a href="api/generated/milia.core.config.html#module-milia.core.config">milia.core.config</a>
+</li>
+        <li><a href="api/generated/milia.core.config.base.html#module-milia.core.config.base">milia.core.config.base</a>
+</li>
+        <li><a href="api/generated/milia.core.config.space.html#module-milia.core.config.space">milia.core.config.space</a>
+</li>
+        <li><a href="api/generated/milia.core.conformal.html#module-milia.core.conformal">milia.core.conformal</a>
+</li>
+        <li><a href="api/generated/milia.core.exceptions.html#module-milia.core.exceptions">milia.core.exceptions</a>
+</li>
+        <li><a href="api/generated/milia.core.io.html#module-milia.core.io">milia.core.io</a>
+</li>
+        <li><a href="api/generated/milia.core.registry.html#module-milia.core.registry">milia.core.registry</a>
+</li>
+        <li><a href="api/generated/milia.core.seeds.html#module-milia.core.seeds">milia.core.seeds</a>
+</li>
+        <li><a href="api/generated/milia.data.html#module-milia.data">milia.data</a>
+</li>
+        <li><a href="api/generated/milia.data.aggregate.html#module-milia.data.aggregate">milia.data.aggregate</a>
+</li>
+        <li><a href="api/generated/milia.data.prep.html#module-milia.data.prep">milia.data.prep</a>
+</li>
+        <li><a href="api/generated/milia.data.profiles.html#module-milia.data.profiles">milia.data.profiles</a>
+</li>
+        <li><a href="api/generated/milia.data.synthetic.html#module-milia.data.synthetic">milia.data.synthetic</a>
+</li>
+        <li><a href="api/generated/milia.evaluate.html#module-milia.evaluate">milia.evaluate</a>
+</li>
+        <li><a href="api/generated/milia.evaluate.anomaly.html#module-milia.evaluate.anomaly">milia.evaluate.anomaly</a>
+</li>
+        <li><a href="api/generated/milia.evaluate.ranking.html#module-milia.evaluate.ranking">milia.evaluate.ranking</a>
+</li>
+        <li><a href="api/generated/milia.evaluate.retrieval.html#module-milia.evaluate.retrieval">milia.evaluate.retrieval</a>
+</li>
+        <li><a href="api/generated/milia.features.html#module-milia.features">milia.features</a>
+</li>
+        <li><a href="api/generated/milia.features.events.html#module-milia.features.events">milia.features.events</a>
+</li>
+        <li><a href="api/generated/milia.features.multires.html#module-milia.features.multires">milia.features.multires</a>
+</li>
+        <li><a href="api/generated/milia.features.profile.html#module-milia.features.profile">milia.features.profile</a>
+</li>
+        <li><a href="api/generated/milia.features.scale.html#module-milia.features.scale">milia.features.scale</a>
+</li>
+        <li><a href="api/generated/milia.features.window.html#module-milia.features.window">milia.features.window</a>
+</li>
+        <li><a href="api/generated/milia.plot.html#module-milia.plot">milia.plot</a>
+</li>
+        <li><a href="api/generated/milia.plot.bind.html#module-milia.plot.bind">milia.plot.bind</a>
+</li>
+        <li><a href="api/generated/milia.plot.figures.html#module-milia.plot.figures">milia.plot.figures</a>
+</li>
+        <li><a href="api/generated/milia.plot.figures.agreement.html#module-milia.plot.figures.agreement">milia.plot.figures.agreement</a>
+</li>
+        <li><a href="api/generated/milia.plot.figures.anomaly.html#module-milia.plot.figures.anomaly">milia.plot.figures.anomaly</a>
+</li>
+        <li><a href="api/generated/milia.plot.figures.clusters.html#module-milia.plot.figures.clusters">milia.plot.figures.clusters</a>
+</li>
+        <li><a href="api/generated/milia.plot.figures.recommend.html#module-milia.plot.figures.recommend">milia.plot.figures.recommend</a>
+</li>
+        <li><a href="api/generated/milia.plot.figures.represent.html#module-milia.plot.figures.represent">milia.plot.figures.represent</a>
+</li>
+        <li><a href="api/generated/milia.plot.figures.trust.html#module-milia.plot.figures.trust">milia.plot.figures.trust</a>
+</li>
+        <li><a href="api/generated/milia.plot.labels.html#module-milia.plot.labels">milia.plot.labels</a>
+</li>
+        <li><a href="api/generated/milia.plot.lets.html#module-milia.plot.lets">milia.plot.lets</a>
+</li>
+        <li><a href="api/generated/milia.plot.lets.agreement.html#module-milia.plot.lets.agreement">milia.plot.lets.agreement</a>
+</li>
+        <li><a href="api/generated/milia.plot.lets.anomaly.html#module-milia.plot.lets.anomaly">milia.plot.lets.anomaly</a>
+</li>
+        <li><a href="api/generated/milia.plot.lets.clusters.html#module-milia.plot.lets.clusters">milia.plot.lets.clusters</a>
+</li>
+        <li><a href="api/generated/milia.plot.lets.draw.html#module-milia.plot.lets.draw">milia.plot.lets.draw</a>
+</li>
+        <li><a href="api/generated/milia.plot.lets.recommend.html#module-milia.plot.lets.recommend">milia.plot.lets.recommend</a>
+</li>
+        <li><a href="api/generated/milia.plot.lets.represent.html#module-milia.plot.lets.represent">milia.plot.lets.represent</a>
+</li>
+        <li><a href="api/generated/milia.plot.lets.trust.html#module-milia.plot.lets.trust">milia.plot.lets.trust</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.html#module-milia.plot.mpl">milia.plot.mpl</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.agreement.html#module-milia.plot.mpl.agreement">milia.plot.mpl.agreement</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.anomaly.html#module-milia.plot.mpl.anomaly">milia.plot.mpl.anomaly</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.clusters.html#module-milia.plot.mpl.clusters">milia.plot.mpl.clusters</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.draw.html#module-milia.plot.mpl.draw">milia.plot.mpl.draw</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.recommend.html#module-milia.plot.mpl.recommend">milia.plot.mpl.recommend</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.represent.html#module-milia.plot.mpl.represent">milia.plot.mpl.represent</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.trust.html#module-milia.plot.mpl.trust">milia.plot.mpl.trust</a>
+</li>
+        <li><a href="api/generated/milia.plot.style.html#module-milia.plot.style">milia.plot.style</a>
+</li>
+        <li><a href="api/generated/milia.plot.tables.html#module-milia.plot.tables">milia.plot.tables</a>
+</li>
+        <li><a href="api/generated/milia.plot.theme.html#module-milia.plot.theme">milia.plot.theme</a>
+</li>
+        <li><a href="api/generated/milia.plot.tokens.html#module-milia.plot.tokens">milia.plot.tokens</a>
+</li>
+        <li><a href="api/generated/milia.recommend.html#module-milia.recommend">milia.recommend</a>
+</li>
+        <li><a href="api/generated/milia.recommend.action.html#module-milia.recommend.action">milia.recommend.action</a>
+</li>
+        <li><a href="api/generated/milia.recommend.baselines.html#module-milia.recommend.baselines">milia.recommend.baselines</a>
+</li>
+        <li><a href="api/generated/milia.recommend.diagnostics.html#module-milia.recommend.diagnostics">milia.recommend.diagnostics</a>
+</li>
+        <li><a href="api/generated/milia.recommend.equity.html#module-milia.recommend.equity">milia.recommend.equity</a>
+</li>
+        <li><a href="api/generated/milia.recommend.ranker.html#module-milia.recommend.ranker">milia.recommend.ranker</a>
+</li>
+        <li><a href="api/generated/milia.recommend.ranking.html#module-milia.recommend.ranking">milia.recommend.ranking</a>
+</li>
+        <li><a href="api/generated/milia.recommend.retrieval.html#module-milia.recommend.retrieval">milia.recommend.retrieval</a>
+</li>
+        <li><a href="api/generated/milia.recommend.uplift.html#module-milia.recommend.uplift">milia.recommend.uplift</a>
+</li>
+        <li><a href="api/generated/milia.represent.html#module-milia.represent">milia.represent</a>
+</li>
+        <li><a href="api/generated/milia.represent.crocs.html#module-milia.represent.crocs">milia.represent.crocs</a>
+</li>
+        <li><a href="api/generated/milia.represent.diffusion.html#module-milia.represent.diffusion">milia.represent.diffusion</a>
+</li>
+        <li><a href="api/generated/milia.represent.foundation.html#module-milia.represent.foundation">milia.represent.foundation</a>
+</li>
+        <li><a href="api/generated/milia.represent.reduce.html#module-milia.represent.reduce">milia.represent.reduce</a>
+</li>
+        <li><a href="api/generated/milia.represent.tensor.html#module-milia.represent.tensor">milia.represent.tensor</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.anomaly.conformal.html#milia.anomaly.conformal.mondrian">mondrian() (in module milia.anomaly.conformal)</a>
+</li>
+      <li><a href="api/generated/milia.evaluate.anomaly.html#milia.evaluate.anomaly.monitor">monitor() (in module milia.evaluate.anomaly)</a>
+</li>
+      <li><a href="api/generated/milia.evaluate.anomaly.html#milia.evaluate.anomaly.Monitoring">Monitoring (class in milia.evaluate.anomaly)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.selection.html#milia.cluster.selection.MONOTONE">MONOTONE (in module milia.cluster.selection)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="N">N</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.benchmark.conditions.html#milia.benchmark.conditions.name">name() (in module milia.benchmark.conditions)</a>
+</li>
+      <li><a href="api/generated/milia.features.events.html#milia.features.events.NAMES">NAMES (in module milia.features.events)</a>
+</li>
+      <li><a href="api/generated/milia.features.window.html#milia.features.window.names">names() (in module milia.features.window)</a>
+</li>
+      <li><a href="api/generated/milia.evaluate.ranking.html#milia.evaluate.ranking.ndcg">ndcg() (in module milia.evaluate.ranking)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.cluster.stability.html#milia.cluster.stability.nearest">nearest() (in module milia.cluster.stability)</a>
+</li>
+      <li><a href="api/generated/milia.data.prep.html#milia.data.prep.normalize">normalize() (in module milia.data.prep)</a>
+</li>
+      <li><a href="api/generated/milia.core.exceptions.html#milia.core.exceptions.NotFittedError">NotFittedError</a>
+</li>
+      <li><a href="api/generated/milia.evaluate.anomaly.html#milia.evaluate.anomaly.novelty">novelty() (in module milia.evaluate.anomaly)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.stability.html#milia.cluster.stability.null">null() (in module milia.cluster.stability)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="O">O</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.cluster.search.html#milia.cluster.search.objective">objective() (in module milia.cluster.search)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.models.ocsvm.html#milia.anomaly.models.ocsvm.OCSVM">OCSVM (class in milia.anomaly.models.ocsvm)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.models.ocsvm.html#milia.anomaly.models.ocsvm.OCSVMConfig">OCSVMConfig (class in milia.anomaly.models.ocsvm)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.inject.html#milia.anomaly.inject.offhours">offhours() (in module milia.anomaly.inject)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.stability.html#milia.cluster.stability.onedirection">onedirection() (in module milia.cluster.stability)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.cluster.describe.html#milia.cluster.describe.outcomes">outcomes() (in module milia.cluster.describe)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.figures.recommend.html#milia.plot.figures.recommend.outcomes">(in module milia.plot.figures.recommend)</a>
+</li>
+        <li><a href="api/generated/milia.plot.lets.recommend.html#milia.plot.lets.recommend.outcomes">(in module milia.plot.lets.recommend)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.recommend.html#milia.plot.mpl.recommend.outcomes">(in module milia.plot.mpl.recommend)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.cluster.agreement.html#milia.cluster.agreement.overlap">overlap() (in module milia.cluster.agreement)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="P">P</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.plot.style.html#milia.plot.style.pad">pad() (in module milia.plot.style)</a>
+</li>
+      <li><a href="api/generated/milia.benchmark.compare.html#milia.benchmark.compare.pairwise">pairwise() (in module milia.benchmark.compare)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.cluster.agreement.html#milia.cluster.agreement.pairwise">(in module milia.cluster.agreement)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.plot.style.html#milia.plot.style.panel">panel() (in module milia.plot.style)</a>
+</li>
+      <li><a href="api/generated/milia.core.config.base.html#milia.core.config.base.BaseModelConfig.params">params() (milia.core.config.base.BaseModelConfig method)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.core.config.html#milia.core.config.BaseModelConfig.params">(milia.core.config.BaseModelConfig method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.cluster.search.html#milia.cluster.search.pareto">pareto() (in module milia.cluster.search)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.figures.trust.html#milia.plot.figures.trust.pareto">(in module milia.plot.figures.trust)</a>
+</li>
+        <li><a href="api/generated/milia.plot.lets.trust.html#milia.plot.lets.trust.pareto">(in module milia.plot.lets.trust)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.trust.html#milia.plot.mpl.trust.pareto">(in module milia.plot.mpl.trust)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.anomaly.changepoint.html#milia.anomaly.changepoint.pathlimit">pathlimit() (in module milia.anomaly.changepoint)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.changepoint.html#milia.anomaly.changepoint.paths">paths() (in module milia.anomaly.changepoint)</a>
+</li>
+      <li><a href="api/generated/milia.represent.reduce.html#milia.represent.reduce.pca">pca() (in module milia.represent.reduce)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.conformal.html#milia.anomaly.conformal.peaksover">peaksover() (in module milia.anomaly.conformal)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.changepoint.html#milia.anomaly.changepoint.pelt">pelt() (in module milia.anomaly.changepoint)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.group.html#milia.anomaly.group.perday">perday() (in module milia.anomaly.group)</a>
+</li>
+      <li><a href="api/generated/milia.represent.foundation.html#milia.represent.foundation.Foundation.pipeline">pipeline() (milia.represent.foundation.Foundation method)</a>
+</li>
+      <li><a href="api/generated/milia.data.profiles.html#milia.data.profiles.pivot">pivot() (in module milia.data.profiles)</a>
+</li>
+      <li><a href="api/generated/milia.plot.style.html#milia.plot.style.place">place() (in module milia.plot.style)</a>
+</li>
+      <li><a href="api/generated/milia.plot.figures.trust.html#milia.plot.figures.trust.plane">plane() (in module milia.plot.figures.trust)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.lets.trust.html#milia.plot.lets.trust.plane">(in module milia.plot.lets.trust)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.trust.html#milia.plot.mpl.trust.plane">(in module milia.plot.mpl.trust)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.evaluate.anomaly.html#milia.evaluate.anomaly.pointadjust">pointadjust() (in module milia.evaluate.anomaly)</a>
+</li>
+      <li><a href="api/generated/milia.represent.foundation.html#milia.represent.foundation.pool">pool() (in module milia.represent.foundation)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.group.html#milia.anomaly.group.POOLINGS">POOLINGS (in module milia.anomaly.group)</a>
+</li>
+      <li><a href="api/generated/milia.evaluate.ranking.html#milia.evaluate.ranking.precision">precision() (in module milia.evaluate.ranking)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.fitting.html#milia.cluster.fitting.precomputed">precomputed() (in module milia.cluster.fitting)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.anomaly.base.html#milia.anomaly.base.BaseDetector.predict">predict() (milia.anomaly.base.BaseDetector method)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.anomaly.html#milia.anomaly.BaseDetector.predict">(milia.anomaly.BaseDetector method)</a>
+</li>
+        <li><a href="api/generated/milia.cluster.base.html#milia.cluster.base.BaseClusterer.predict">(milia.cluster.base.BaseClusterer method)</a>
+</li>
+        <li><a href="api/generated/milia.cluster.html#milia.cluster.BaseClusterer.predict">(milia.cluster.BaseClusterer method)</a>
+</li>
+        <li><a href="api/generated/milia.cluster.conformal.html#milia.cluster.conformal.ConformalSets.predict">(milia.cluster.conformal.ConformalSets method)</a>
+</li>
+        <li><a href="api/generated/milia.recommend.action.html#milia.recommend.action.CaseRecommender.predict">(milia.recommend.action.CaseRecommender method)</a>
+</li>
+        <li><a href="api/generated/milia.recommend.baselines.html#milia.recommend.baselines.GroupMean.predict">(milia.recommend.baselines.GroupMean method)</a>
+</li>
+        <li><a href="api/generated/milia.recommend.ranker.html#milia.recommend.ranker.Ranker.predict">(milia.recommend.ranker.Ranker method)</a>
+</li>
+        <li><a href="api/generated/milia.recommend.retrieval.html#milia.recommend.retrieval.KNNRetriever.predict">(milia.recommend.retrieval.KNNRetriever method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.cluster.models.gmm.html#milia.cluster.models.gmm.GMM.predict_proba">predict_proba() (milia.cluster.models.gmm.GMM method)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.recommend.action.html#milia.recommend.action.CaseRecommender.predict_proba">(milia.recommend.action.CaseRecommender method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.cluster.base.html#milia.cluster.base.predictive">predictive() (in module milia.cluster.base)</a>
+</li>
+      <li><a href="api/generated/milia.plot.tokens.html#milia.plot.tokens.printed">printed() (in module milia.plot.tokens)</a>
+</li>
+      <li><a href="api/generated/milia.plot.tokens.html#milia.plot.tokens.printshift">printshift() (in module milia.plot.tokens)</a>
+</li>
+      <li><a href="api/generated/milia.features.profile.html#milia.features.profile.profile">profile() (in module milia.features.profile)</a>
+</li>
+      <li><a href="api/generated/milia.features.profile.html#milia.features.profile.ProfileConfig">ProfileConfig (class in milia.features.profile)</a>
+</li>
+      <li><a href="api/generated/milia.features.profile.html#milia.features.profile.ProfileFeatures">ProfileFeatures (class in milia.features.profile)</a>
+</li>
+      <li><a href="api/generated/milia.evaluate.anomaly.html#milia.evaluate.anomaly.profilerows">profilerows() (in module milia.evaluate.anomaly)</a>
+</li>
+      <li><a href="api/generated/milia.plot.figures.clusters.html#milia.plot.figures.clusters.profiles">profiles() (in module milia.plot.figures.clusters)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.lets.clusters.html#milia.plot.lets.clusters.profiles">(in module milia.plot.lets.clusters)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.clusters.html#milia.plot.mpl.clusters.profiles">(in module milia.plot.mpl.clusters)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.represent.reduce.html#milia.represent.reduce.project">project() (in module milia.represent.reduce)</a>
+</li>
+      <li><a href="api/generated/milia.data.prep.html#milia.data.prep.prune">prune() (in module milia.data.prep)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.validation.html#milia.cluster.validation.purity">purity() (in module milia.cluster.validation)</a>
+</li>
+      <li><a href="api/generated/milia.core.conformal.html#milia.core.conformal.pvalue">pvalue() (in module milia.core.conformal)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.recommend.retrieval.html#milia.recommend.retrieval.KNNRetriever.pvalue">(milia.recommend.retrieval.KNNRetriever method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.anomaly.conformal.html#milia.anomaly.conformal.pvalues">pvalues() (in module milia.anomaly.conformal)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="Q">Q</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.core.conformal.html#milia.core.conformal.quantile">quantile() (in module milia.core.conformal)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="R">R</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.plot.lets.draw.html#milia.plot.lets.draw.ranges">ranges() (in module milia.plot.lets.draw)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.mpl.draw.html#milia.plot.mpl.draw.ranges">(in module milia.plot.mpl.draw)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.features.scale.html#milia.features.scale.rangescale">rangescale() (in module milia.features.scale)</a>
+</li>
+      <li><a href="api/generated/milia.recommend.ranking.html#milia.recommend.ranking.rank">rank() (in module milia.recommend.ranking)</a>
+</li>
+      <li><a href="api/generated/milia.recommend.ranker.html#milia.recommend.ranker.Ranker">Ranker (class in milia.recommend.ranker)</a>
+</li>
+      <li><a href="api/generated/milia.represent.tensor.html#milia.represent.tensor.ranks">ranks() (in module milia.represent.tensor)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.ablation.html#milia.cluster.ablation.rankshift">rankshift() (in module milia.cluster.ablation)</a>
+</li>
+      <li><a href="api/generated/milia.features.profile.html#milia.features.profile.ratio">ratio() (in module milia.features.profile)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.ensemble.html#milia.anomaly.ensemble.Ensemble.raw">raw() (milia.anomaly.ensemble.Ensemble method)</a>
+</li>
+      <li><a href="api/generated/milia.plot.style.html#milia.plot.style.RC">RC (in module milia.plot.style)</a>
+</li>
+      <li><a href="api/generated/milia.benchmark.provenance.html#milia.benchmark.provenance.read">read() (in module milia.benchmark.provenance)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.search.html#milia.cluster.search.rebuild">rebuild() (in module milia.cluster.search)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.search.html#milia.cluster.search.recheck">recheck() (in module milia.cluster.search)</a>
+</li>
+      <li><a href="api/generated/milia.evaluate.ranking.html#milia.evaluate.ranking.reciprocal">reciprocal() (in module milia.evaluate.ranking)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.selection.html#milia.cluster.selection.recommend">recommend() (in module milia.cluster.selection)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.models.reconstruction.html#milia.anomaly.models.reconstruction.Reconstruction">Reconstruction (class in milia.anomaly.models.reconstruction)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.models.reconstruction.html#milia.anomaly.models.reconstruction.ReconstructionConfig">ReconstructionConfig (class in milia.anomaly.models.reconstruction)</a>
+</li>
+      <li><a href="api/generated/milia.benchmark.provenance.html#milia.benchmark.provenance.record">record() (in module milia.benchmark.provenance)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.tables.html#milia.plot.tables.record">(in module milia.plot.tables)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.cluster.agreement.html#milia.cluster.agreement.recovery">recovery() (in module milia.cluster.agreement)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.figures.represent.html#milia.plot.figures.represent.recovery">(in module milia.plot.figures.represent)</a>
+</li>
+        <li><a href="api/generated/milia.plot.lets.represent.html#milia.plot.lets.represent.recovery">(in module milia.plot.lets.represent)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.represent.html#milia.plot.mpl.represent.recovery">(in module milia.plot.mpl.represent)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.anomaly.models.knn.html#milia.anomaly.models.knn.KNN.reduce">reduce() (milia.anomaly.models.knn.KNN method)</a>
+</li>
+      <li><a href="api/generated/milia.represent.reduce.html#milia.represent.reduce.reducer">reducer() (in module milia.represent.reduce)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.search.html#milia.cluster.search.REDUCERS">REDUCERS (in module milia.cluster.search)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.represent.reduce.html#milia.represent.reduce.REDUCERS">(in module milia.represent.reduce)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.cluster.ablation.html#milia.cluster.ablation.reference">reference() (in module milia.cluster.ablation)</a>
+</li>
+      <li><a href="api/generated/milia.data.prep.html#milia.data.prep.repeatratio">repeatratio() (in module milia.data.prep)</a>
+</li>
+      <li><a href="api/generated/milia.features.events.html#milia.features.events.represent">represent() (in module milia.features.events)</a>
+</li>
+      <li><a href="api/generated/milia.features.events.html#milia.features.events.REPRESENTATIONS">REPRESENTATIONS (in module milia.features.events)</a>
+</li>
+      <li><a href="api/generated/milia.core.exceptions.html#milia.core.exceptions.require">require() (in module milia.core.exceptions)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.ensemble.html#milia.anomaly.ensemble.rescale">rescale() (in module milia.anomaly.ensemble)</a>
+</li>
+      <li><a href="api/generated/milia.plot.theme.html#milia.plot.theme.reset">reset() (in module milia.plot.theme)</a>
+</li>
+      <li><a href="api/generated/milia.data.prep.html#milia.data.prep.RESOLUTION">RESOLUTION (in module milia.data.prep)</a>
+</li>
+      <li><a href="api/generated/milia.represent.crocs.html#milia.represent.crocs.RLS">RLS (class in milia.represent.crocs)</a>
+</li>
+      <li><a href="api/generated/milia.represent.crocs.html#milia.represent.crocs.rls">rls() (in module milia.represent.crocs)</a>
+</li>
+      <li><a href="api/generated/milia.core.seeds.html#milia.core.seeds.rng">rng() (in module milia.core.seeds)</a>
+</li>
+      <li><a href="api/generated/milia.features.window.html#milia.features.window.rolling">rolling() (in module milia.features.window)</a>
+</li>
+      <li><a href="api/generated/milia.benchmark.runs.html#milia.benchmark.runs.ROOT">ROOT (in module milia.benchmark.runs)</a>
+</li>
+      <li><a href="api/generated/milia.benchmark.runs.html#milia.benchmark.runs.root">root() (in module milia.benchmark.runs)</a>
+</li>
+      <li><a href="api/generated/milia.features.events.html#milia.features.events.runlength">runlength() (in module milia.features.events)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="S">S</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.cluster.validation.html#milia.cluster.validation.safe">safe() (in module milia.cluster.validation)</a>
+</li>
+      <li><a href="api/generated/milia.core.config.base.html#milia.core.config.base.BaseModelConfig.sample">sample() (milia.core.config.base.BaseModelConfig method)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.core.config.html#milia.core.config.BaseModelConfig.sample">(milia.core.config.BaseModelConfig method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.core.io.html#milia.core.io.save">save() (in module milia.core.io)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.style.html#milia.plot.style.save">(in module milia.plot.style)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.features.scale.html#milia.features.scale.scale">scale() (in module milia.features.scale)</a>
+</li>
+      <li><a href="api/generated/milia.features.scale.html#milia.features.scale.scaler">scaler() (in module milia.features.scale)</a>
+</li>
+      <li><a href="api/generated/milia.plot.figures.clusters.html#milia.plot.figures.clusters.scatter">scatter() (in module milia.plot.figures.clusters)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.lets.clusters.html#milia.plot.lets.clusters.scatter">(in module milia.plot.lets.clusters)</a>
+</li>
+        <li><a href="api/generated/milia.plot.lets.draw.html#milia.plot.lets.draw.scatter">(in module milia.plot.lets.draw)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.clusters.html#milia.plot.mpl.clusters.scatter">(in module milia.plot.mpl.clusters)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.draw.html#milia.plot.mpl.draw.scatter">(in module milia.plot.mpl.draw)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.anomaly.base.html#milia.anomaly.base.BaseDetector.score_samples">score_samples() (milia.anomaly.base.BaseDetector method)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.anomaly.html#milia.anomaly.BaseDetector.score_samples">(milia.anomaly.BaseDetector method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.anomaly.ensemble.html#milia.anomaly.ensemble.scores">scores() (in module milia.anomaly.ensemble)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.figures.anomaly.html#milia.plot.figures.anomaly.scores">(in module milia.plot.figures.anomaly)</a>
+</li>
+        <li><a href="api/generated/milia.plot.lets.anomaly.html#milia.plot.lets.anomaly.scores">(in module milia.plot.lets.anomaly)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.anomaly.html#milia.plot.mpl.anomaly.scores">(in module milia.plot.mpl.anomaly)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.data.prep.html#milia.data.prep.screen">screen() (in module milia.data.prep)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.search.html#milia.cluster.search.search">search() (in module milia.cluster.search)</a>
+</li>
+      <li><a href="api/generated/milia.core.config.html#milia.core.config.SearchSpace">SearchSpace (class in milia.core.config)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.core.config.space.html#milia.core.config.space.SearchSpace">(class in milia.core.config.space)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.data.prep.html#milia.data.prep.seasons">seasons() (in module milia.data.prep)</a>
+</li>
+      <li><a href="api/generated/milia.core.seeds.html#milia.core.seeds.seed">seed() (in module milia.core.seeds)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.agreement.html#milia.cluster.agreement.seeds">seeds() (in module milia.cluster.agreement)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.conformal.html#milia.anomaly.conformal.select">select() (in module milia.anomaly.conformal)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.data.profiles.html#milia.data.profiles.select">(in module milia.data.profiles)</a>
+</li>
+        <li><a href="api/generated/milia.recommend.equity.html#milia.recommend.equity.select">(in module milia.recommend.equity)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.evaluate.anomaly.html#milia.evaluate.anomaly.selfbaseline">selfbaseline() (in module milia.evaluate.anomaly)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.indices.html#milia.cluster.indices.separation">separation() (in module milia.cluster.indices)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.tokens.html#milia.plot.tokens.separation">(in module milia.plot.tokens)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.plot.tokens.html#milia.plot.tokens.sequential">sequential() (in module milia.plot.tokens)</a>
+</li>
+      <li><a href="api/generated/milia.plot.mpl.draw.html#milia.plot.mpl.draw.series">series() (in module milia.plot.mpl.draw)</a>
+</li>
+      <li><a href="api/generated/milia.recommend.ranker.html#milia.recommend.ranker.Ranker.set_fit_request">set_fit_request() (milia.recommend.ranker.Ranker method)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.recommend.uplift.html#milia.recommend.uplift.TLearner.set_fit_request">(milia.recommend.uplift.TLearner method)</a>
+</li>
+        <li><a href="api/generated/milia.recommend.uplift.html#milia.recommend.uplift.XLearner.set_fit_request">(milia.recommend.uplift.XLearner method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.recommend.action.html#milia.recommend.action.CaseRecommender.set_score_request">set_score_request() (milia.recommend.action.CaseRecommender method)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.recommend.baselines.html#milia.recommend.baselines.GroupMean.set_score_request">(milia.recommend.baselines.GroupMean method)</a>
+</li>
+        <li><a href="api/generated/milia.recommend.retrieval.html#milia.recommend.retrieval.KNNRetriever.set_score_request">(milia.recommend.retrieval.KNNRetriever method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.anomaly.group.html#milia.anomaly.group.setfeatures">setfeatures() (in module milia.anomaly.group)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.conformal.html#milia.cluster.conformal.sets">sets() (in module milia.cluster.conformal)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.conformal.html#milia.cluster.conformal.setsizes">setsizes() (in module milia.cluster.conformal)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.figures.anomaly.html#milia.plot.figures.anomaly.setsizes">(in module milia.plot.figures.anomaly)</a>
+</li>
+        <li><a href="api/generated/milia.plot.lets.anomaly.html#milia.plot.lets.anomaly.setsizes">(in module milia.plot.lets.anomaly)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.anomaly.html#milia.plot.mpl.anomaly.setsizes">(in module milia.plot.mpl.anomaly)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.benchmark.provenance.html#milia.benchmark.provenance.sha256">sha256() (in module milia.benchmark.provenance)</a>
+</li>
+      <li><a href="api/generated/milia.data.profiles.html#milia.data.profiles.shape">shape() (in module milia.data.profiles)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.features.profile.html#milia.features.profile.shape">(in module milia.features.profile)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.data.synthetic.html#milia.data.synthetic.SHAPES">SHAPES (in module milia.data.synthetic)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.tokens.html#milia.plot.tokens.SHAPES">(in module milia.plot.tokens)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.features.profile.html#milia.features.profile.shapes">shapes() (in module milia.features.profile)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.inject.html#milia.anomaly.inject.shift">shift() (in module milia.anomaly.inject)</a>
+</li>
+      <li><a href="api/generated/milia.plot.style.html#milia.plot.style.show">show() (in module milia.plot.style)</a>
+</li>
+      <li><a href="api/generated/milia.benchmark.provenance.html#milia.benchmark.provenance.sidecar">sidecar() (in module milia.benchmark.provenance)</a>
+</li>
+      <li><a href="api/generated/milia.benchmark.compare.html#milia.benchmark.compare.signedrank">signedrank() (in module milia.benchmark.compare)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.selection.html#milia.cluster.selection.sized">sized() (in module milia.cluster.selection)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.validation.html#milia.cluster.validation.sizes">sizes() (in module milia.cluster.validation)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.features.profile.html#milia.features.profile.sizes">(in module milia.features.profile)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.plot.style.html#milia.plot.style.sketch">sketch() (in module milia.plot.style)</a>
+</li>
+      <li><a href="api/generated/milia.data.profiles.html#milia.data.profiles.slot">slot() (in module milia.data.profiles)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.inject.html#milia.anomaly.inject.span">span() (in module milia.anomaly.inject)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.models.spectral.html#milia.cluster.models.spectral.Spectral">Spectral (class in milia.cluster.models.spectral)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.models.spectral.html#milia.cluster.models.spectral.SpectralConfig">SpectralConfig (class in milia.cluster.models.spectral)</a>
+</li>
+      <li><a href="api/generated/milia.features.window.html#milia.features.window.spectrum">spectrum() (in module milia.features.window)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.figures.represent.html#milia.plot.figures.represent.spectrum">(in module milia.plot.figures.represent)</a>
+</li>
+        <li><a href="api/generated/milia.plot.lets.represent.html#milia.plot.lets.represent.spectrum">(in module milia.plot.lets.represent)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.represent.html#milia.plot.mpl.represent.spectrum">(in module milia.plot.mpl.represent)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.anomaly.inject.html#milia.anomaly.inject.spike">spike() (in module milia.anomaly.inject)</a>
+</li>
+      <li><a href="api/generated/milia.evaluate.anomaly.html#milia.evaluate.anomaly.split">split() (in module milia.evaluate.anomaly)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.indices.html#milia.cluster.indices.spread">spread() (in module milia.cluster.indices)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.recommend.retrieval.html#milia.recommend.retrieval.KNNRetriever.spread">(milia.recommend.retrieval.KNNRetriever method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.plot.figures.agreement.html#milia.plot.figures.agreement.square">square() (in module milia.plot.figures.agreement)</a>
+</li>
+      <li><a href="api/generated/milia.features.scale.html#milia.features.scale.standardise">standardise() (in module milia.features.scale)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.ensemble.html#milia.anomaly.ensemble.standardised">standardised() (in module milia.anomaly.ensemble)</a>
+</li>
+      <li><a href="api/generated/milia.benchmark.runs.html#milia.benchmark.runs.start">start() (in module milia.benchmark.runs)</a>
+</li>
+      <li><a href="api/generated/milia.data.profiles.html#milia.data.profiles.steps">steps() (in module milia.data.profiles)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.stability.html#milia.cluster.stability.strength">strength() (in module milia.cluster.stability)</a>
+</li>
+      <li><a href="api/generated/milia.plot.figures.agreement.html#milia.plot.figures.agreement.strip">strip() (in module milia.plot.figures.agreement)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.lets.agreement.html#milia.plot.lets.agreement.strip">(in module milia.plot.lets.agreement)</a>
+</li>
+        <li><a href="api/generated/milia.plot.lets.draw.html#milia.plot.lets.draw.strip">(in module milia.plot.lets.draw)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.agreement.html#milia.plot.mpl.agreement.strip">(in module milia.plot.mpl.agreement)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.draw.html#milia.plot.mpl.draw.strip">(in module milia.plot.mpl.draw)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.anomaly.inject.html#milia.anomaly.inject.stuck">stuck() (in module milia.anomaly.inject)</a>
+</li>
+      <li><a href="api/generated/milia.plot.theme.html#milia.plot.theme.Style">Style (class in milia.plot.theme)</a>
+</li>
+      <li><a href="api/generated/milia.plot.style.html#milia.plot.style.style">style() (in module milia.plot.style)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.stability.html#milia.cluster.stability.subsample">subsample() (in module milia.cluster.stability)</a>
+</li>
+      <li><a href="api/generated/milia.evaluate.retrieval.html#milia.evaluate.retrieval.success">success() (in module milia.evaluate.retrieval)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.search.html#milia.cluster.search.suggest">suggest() (in module milia.cluster.search)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.core.config.html#milia.core.config.SearchSpace.suggest">(milia.core.config.SearchSpace method)</a>
+</li>
+        <li><a href="api/generated/milia.core.config.space.html#milia.core.config.space.SearchSpace.suggest">(milia.core.config.space.SearchSpace method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.evaluate.anomaly.html#milia.evaluate.anomaly.summarize">summarize() (in module milia.evaluate.anomaly)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.validation.html#milia.cluster.validation.sweep">sweep() (in module milia.cluster.validation)</a>
+</li>
+      <li><a href="api/generated/milia.data.aggregate.html#milia.data.aggregate.synthesize">synthesize() (in module milia.data.aggregate)</a>
+</li>
+      <li><a href="api/generated/milia.data.synthetic.html#milia.data.synthetic.Synthetic">Synthetic (class in milia.data.synthetic)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="T">T</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.plot.tables.html#milia.plot.tables.table">table() (in module milia.plot.tables)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.models.ecod.html#milia.anomaly.models.ecod.tails">tails() (in module milia.anomaly.models.ecod)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.group.html#milia.anomaly.group.tamper">tamper() (in module milia.anomaly.group)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.group.html#milia.anomaly.group.TAMPERS">TAMPERS (in module milia.anomaly.group)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.agreement.html#milia.cluster.agreement.temporal">temporal() (in module milia.cluster.agreement)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.validation.html#milia.cluster.validation.tendency">tendency() (in module milia.cluster.validation)</a>
+</li>
+      <li><a href="api/generated/milia.data.profiles.html#milia.data.profiles.tensor">tensor() (in module milia.data.profiles)</a>
+</li>
+      <li><a href="api/generated/milia.plot.style.html#milia.plot.style.texsafe">texsafe() (in module milia.plot.style)</a>
+</li>
+      <li><a href="api/generated/milia.plot.tables.html#milia.plot.tables.text">text() (in module milia.plot.tables)</a>
+</li>
+      <li><a href="api/generated/milia.plot.style.html#milia.plot.style.TEXTWIDTH">TEXTWIDTH (in module milia.plot.style)</a>
+</li>
+      <li><a href="api/generated/milia.plot.theme.html#milia.plot.theme.theme">theme() (in module milia.plot.theme)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.theme.html#milia.plot.theme.Style.theme">(milia.plot.theme.Style method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.plot.tokens.html#milia.plot.tokens.tint">tint() (in module milia.plot.tokens)</a>
+</li>
+      <li><a href="api/generated/milia.recommend.uplift.html#milia.recommend.uplift.TLearner">TLearner (class in milia.recommend.uplift)</a>
+</li>
+      <li><a href="api/generated/milia.plot.figures.recommend.html#milia.plot.figures.recommend.top">top() (in module milia.plot.figures.recommend)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.lets.recommend.html#milia.plot.lets.recommend.top">(in module milia.plot.lets.recommend)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.recommend.html#milia.plot.mpl.recommend.top">(in module milia.plot.mpl.recommend)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.recommend.equity.html#milia.recommend.equity.topshare">topshare() (in module milia.recommend.equity)</a>
+</li>
+      <li><a href="api/generated/milia.features.profile.html#milia.features.profile.ProfileFeatures.transform">transform() (milia.features.profile.ProfileFeatures method)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.features.window.html#milia.features.window.WindowFeatures.transform">(milia.features.window.WindowFeatures method)</a>
+</li>
+        <li><a href="api/generated/milia.represent.foundation.html#milia.represent.foundation.Foundation.transform">(milia.represent.foundation.Foundation method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.cluster.agreement.html#milia.cluster.agreement.transitions">transitions() (in module milia.cluster.agreement)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.figures.agreement.html#milia.plot.figures.agreement.transitions">(in module milia.plot.figures.agreement)</a>
+</li>
+        <li><a href="api/generated/milia.plot.lets.agreement.html#milia.plot.lets.agreement.transitions">(in module milia.plot.lets.agreement)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.agreement.html#milia.plot.mpl.agreement.transitions">(in module milia.plot.mpl.agreement)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.features.profile.html#milia.features.profile.trend">trend() (in module milia.features.profile)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.triage.html#milia.anomaly.triage.triage">triage() (in module milia.anomaly.triage)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.inject.html#milia.anomaly.inject.tripping">tripping() (in module milia.anomaly.inject)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.inject.html#milia.anomaly.inject.TRIPS">TRIPS (in module milia.anomaly.inject)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.stability.html#milia.cluster.stability.trust">trust() (in module milia.cluster.stability)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.figures.recommend.html#milia.plot.figures.recommend.trust">(in module milia.plot.figures.recommend)</a>
+</li>
+        <li><a href="api/generated/milia.plot.lets.recommend.html#milia.plot.lets.recommend.trust">(in module milia.plot.lets.recommend)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.recommend.html#milia.plot.mpl.recommend.trust">(in module milia.plot.mpl.recommend)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.recommend.retrieval.html#milia.recommend.retrieval.KNNRetriever.trusted">trusted() (milia.recommend.retrieval.KNNRetriever method)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.models.tskmeans.html#milia.cluster.models.tskmeans.TSKMeans">TSKMeans (class in milia.cluster.models.tskmeans)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.models.tskmeans.html#milia.cluster.models.tskmeans.TSKMeansConfig">TSKMeansConfig (class in milia.cluster.models.tskmeans)</a>
+</li>
+      <li><a href="api/generated/milia.represent.tensor.html#milia.represent.tensor.Tucker">Tucker (class in milia.represent.tensor)</a>
+</li>
+      <li><a href="api/generated/milia.plot.theme.html#milia.plot.theme.twiga">twiga() (in module milia.plot.theme)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.selection.html#milia.cluster.selection.twostage">twostage() (in module milia.cluster.selection)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="U">U</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.anomaly.inject.html#milia.anomaly.inject.underreport">underreport() (in module milia.anomaly.inject)</a>
+</li>
+      <li><a href="api/generated/milia.anomaly.group.html#milia.anomaly.group.unexplained">unexplained() (in module milia.anomaly.group)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.plot.theme.html#milia.plot.theme.use">use() (in module milia.plot.theme)</a>
+</li>
+      <li><a href="api/generated/milia.cluster.selection.html#milia.cluster.selection.utility">utility() (in module milia.cluster.selection)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="V">V</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.cluster.graph.html#milia.cluster.graph.validate">validate() (in module milia.cluster.graph)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.data.prep.html#milia.data.prep.validate">(in module milia.data.prep)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.plot.figures.clusters.html#milia.plot.figures.clusters.validity">validity() (in module milia.plot.figures.clusters)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.lets.clusters.html#milia.plot.lets.clusters.validity">(in module milia.plot.lets.clusters)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.clusters.html#milia.plot.mpl.clusters.validity">(in module milia.plot.mpl.clusters)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/milia.plot.figures.recommend.html#milia.plot.figures.recommend.variance">variance() (in module milia.plot.figures.recommend)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.lets.recommend.html#milia.plot.lets.recommend.variance">(in module milia.plot.lets.recommend)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.recommend.html#milia.plot.mpl.recommend.variance">(in module milia.plot.mpl.recommend)</a>
+</li>
+        <li><a href="api/generated/milia.recommend.diagnostics.html#milia.recommend.diagnostics.variance">(in module milia.recommend.diagnostics)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.features.window.html#milia.features.window.vector">vector() (in module milia.features.window)</a>
+</li>
+      <li><a href="api/generated/milia.benchmark.provenance.html#milia.benchmark.provenance.version">version() (in module milia.benchmark.provenance)</a>
+</li>
+      <li><a href="api/generated/milia.features.profile.html#milia.features.profile.volatility">volatility() (in module milia.features.profile)</a>
+</li>
+      <li><a href="api/generated/milia.recommend.action.html#milia.recommend.action.CaseRecommender.votes">votes() (milia.recommend.action.CaseRecommender method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="W">W</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.anomaly.explain.html#milia.anomaly.explain.waterfall">waterfall() (in module milia.anomaly.explain)</a>
+</li>
+      <li><a href="api/generated/milia.data.profiles.html#milia.data.profiles.weekly">weekly() (in module milia.data.profiles)</a>
+</li>
+      <li><a href="api/generated/milia.recommend.ranking.html#milia.recommend.ranking.weights">weights() (in module milia.recommend.ranking)</a>
+</li>
+      <li><a href="api/generated/milia.plot.figures.agreement.html#milia.plot.figures.agreement.window">window() (in module milia.plot.figures.agreement)</a>
+
+      <ul>
+        <li><a href="api/generated/milia.plot.lets.agreement.html#milia.plot.lets.agreement.window">(in module milia.plot.lets.agreement)</a>
+</li>
+        <li><a href="api/generated/milia.plot.mpl.agreement.html#milia.plot.mpl.agreement.window">(in module milia.plot.mpl.agreement)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.features.window.html#milia.features.window.WindowFeatures">WindowFeatures (class in milia.features.window)</a>
+</li>
+      <li><a href="api/generated/milia.benchmark.provenance.html#milia.benchmark.provenance.write">write() (in module milia.benchmark.provenance)</a>
+</li>
+      <li><a href="api/generated/milia.represent.crocs.html#milia.represent.crocs.wsmd">wsmd() (in module milia.represent.crocs)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="X">X</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/milia.recommend.uplift.html#milia.recommend.uplift.XLearner">XLearner (class in milia.recommend.uplift)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=18bd87630a240e9c25be"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=18bd87630a240e9c25be"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, sambaiga.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.2.0.
+  </p>
+</div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

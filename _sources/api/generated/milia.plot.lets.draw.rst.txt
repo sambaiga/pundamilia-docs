@@ -1,0 +1,23 @@
+milia.plot.lets.draw
+====================
+
+.. automodule:: milia.plot.lets.draw
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      accents
+      band
+      bars
+      dumbbell
+      finish
+      groups
+      heat
+      hist
+      lines
+      ranges
+      scatter
+      strip
+   

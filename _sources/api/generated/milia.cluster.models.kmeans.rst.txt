@@ -1,0 +1,13 @@
+milia.cluster.models.kmeans
+===========================
+
+.. automodule:: milia.cluster.models.kmeans
+
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      KMeans
+      KMeansConfig
+   

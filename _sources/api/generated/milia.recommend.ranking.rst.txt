@@ -1,0 +1,23 @@
+milia.recommend.ranking
+=======================
+
+.. automodule:: milia.recommend.ranking
+
+   
+   .. rubric:: Module Attributes
+
+   .. autosummary::
+   
+      LOWER
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      combine
+      groups
+      interval
+      models
+      rank
+      weights
+   

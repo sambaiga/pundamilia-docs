@@ -1,0 +1,21 @@
+milia.cluster.stability
+=======================
+
+.. automodule:: milia.cluster.stability
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      audit
+      bootstrap
+      calibrated
+      comembership
+      nearest
+      null
+      onedirection
+      strength
+      subsample
+      trust
+   

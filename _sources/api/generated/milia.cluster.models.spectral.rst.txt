@@ -1,0 +1,19 @@
+milia.cluster.models.spectral
+=============================
+
+.. automodule:: milia.cluster.models.spectral
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      eigengap
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Spectral
+      SpectralConfig
+   

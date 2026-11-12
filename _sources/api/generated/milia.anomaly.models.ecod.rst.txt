@@ -1,0 +1,19 @@
+milia.anomaly.models.ecod
+=========================
+
+.. automodule:: milia.anomaly.models.ecod
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      tails
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      ECOD
+      ECODConfig
+   

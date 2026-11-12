@@ -1,0 +1,14 @@
+# Contributing
+
+Open a pull request against `main` with a conventional-commit title, such as `feat(cluster): ...` or `fix(anomaly): ...`.
+The title becomes the changelog entry.
+
+```bash
+make sync     # uv sync with the development extras
+make test     # the test suite with a coverage gate
+make lint     # ruff and ty
+make docs     # build these pages; every example runs, and a warning fails the build
+```
+
+Names are short and plain, with no needless underscores, and a test enforces this for the public API. Docstrings use the
+Google style. A new method needs a unit test and, when it is a public task, an example in the user guide.

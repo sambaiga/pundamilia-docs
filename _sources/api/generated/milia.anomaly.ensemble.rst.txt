@@ -1,0 +1,29 @@
+milia.anomaly.ensemble
+======================
+
+.. automodule:: milia.anomaly.ensemble
+
+   
+   .. rubric:: Module Attributes
+
+   .. autosummary::
+   
+      DEFAULTS
+      FAMILIES
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      combine
+      members
+      rescale
+      scores
+      standardised
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Ensemble
+   

@@ -1,0 +1,30 @@
+milia.features.profile
+======================
+
+.. automodule:: milia.features.profile
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      autocorr
+      calendar
+      distribution
+      extract
+      magnitude
+      profile
+      ratio
+      shape
+      shapes
+      sizes
+      trend
+      volatility
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      ProfileConfig
+      ProfileFeatures
+   

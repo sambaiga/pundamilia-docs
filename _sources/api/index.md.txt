@@ -1,0 +1,32 @@
+# API reference
+
+The reference lists every public class and function in milia, one page per subpackage. For explanations and examples,
+see the [user guide](../guide/index.md).
+
+| Subpackage | Contents |
+|---|---|
+| [`milia.data`](data.md) | Cleaning, normalisation, daily profiles, tensors, aggregation and synthetic data. |
+| [`milia.features`](features.md) | Profile features for clustering, window features and events for anomaly detection. |
+| [`milia.represent`](represent.md) | Reducers, diffusion maps, Tucker, CROCS and foundation-model embeddings. |
+| [`milia.cluster`](cluster.md) | Clusterers, validity, selection, stability, agreement and conformal sets. |
+| [`milia.recommend`](recommend.md) | Retrieval, baselines, case-based recommendation and ranking. |
+| [`milia.anomaly`](anomaly.md) | Detectors, ensembles, conformal thresholds, injection and change points. |
+| [`milia.evaluate`](evaluate.md) | Evaluation harnesses for detectors and retrieval. |
+| [`milia.benchmark`](benchmark.md) | Run folders, provenance, seeded conditions and significance tests. |
+| [`milia.plot`](plot.md) | Figures in lets-plot and matplotlib. |
+| [`milia.core`](core.md) | Configuration, the registry, the conformal quantile, seeds and persistence. |
+
+```{toctree}
+:hidden:
+
+data
+features
+represent
+cluster
+recommend
+anomaly
+evaluate
+benchmark
+plot
+core
+```

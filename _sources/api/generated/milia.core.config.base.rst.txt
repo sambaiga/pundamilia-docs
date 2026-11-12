@@ -1,0 +1,18 @@
+milia.core.config.base
+======================
+
+.. automodule:: milia.core.config.base
+
+   
+   .. rubric:: Module Attributes
+
+   .. autosummary::
+   
+      META
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      BaseModelConfig
+   

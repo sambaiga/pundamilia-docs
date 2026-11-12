@@ -1,0 +1,16 @@
+milia.evaluate.ranking
+======================
+
+.. automodule:: milia.evaluate.ranking
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      dcg
+      kendall
+      ndcg
+      precision
+      reciprocal
+   

@@ -1,0 +1,16 @@
+milia.recommend.equity
+======================
+
+.. automodule:: milia.recommend.equity
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      exposure
+      frontier
+      gini
+      select
+      topshare
+   

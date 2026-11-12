@@ -1,0 +1,22 @@
+milia.data.profiles
+===================
+
+.. automodule:: milia.data.profiles
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      daily
+      diversity
+      groupmean
+      medoids
+      pivot
+      select
+      shape
+      slot
+      steps
+      tensor
+      weekly
+   

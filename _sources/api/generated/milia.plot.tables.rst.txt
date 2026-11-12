@@ -1,0 +1,14 @@
+milia.plot.tables
+=================
+
+.. automodule:: milia.plot.tables
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      record
+      table
+      text
+   

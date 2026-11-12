@@ -1,0 +1,14 @@
+Tutorials
+=========
+
+Four worked examples, each a notebook that runs when the documentation is built. The first three use a synthetic
+population of load profiles with a known grouping and planted anomalies, so every result can be checked. The fourth
+applies the same methods to a series that is not energy.
+
+.. toctree::
+   :maxdepth: 1
+
+   01-cluster-load-profiles
+   02-flag-anomalous-days
+   03-retrieve-similar-cases
+   04-beyond-energy

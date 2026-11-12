@@ -1,0 +1,25 @@
+milia.cluster.validation
+========================
+
+.. automodule:: milia.cluster.validation
+
+   
+   .. rubric:: Module Attributes
+
+   .. autosummary::
+   
+      DIRECTION
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      balance
+      external
+      internal
+      purity
+      safe
+      sizes
+      sweep
+      tendency
+   

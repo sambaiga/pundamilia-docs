@@ -1,0 +1,9 @@
+# milia.data
+
+```{eval-rst}
+.. autosummary::
+   :toctree: generated
+   :recursive:
+
+   milia.data
+```

@@ -1,0 +1,23 @@
+milia.cluster.models
+====================
+
+.. automodule:: milia.cluster.models
+
+   
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   agglomerative
+   birch
+   copkmeans
+   dbscan
+   gmm
+   hdbscan
+   kmeans
+   kshape
+   minibatch
+   spectral
+   tskmeans

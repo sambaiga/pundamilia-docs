@@ -1,0 +1,18 @@
+milia.represent.diffusion
+=========================
+
+.. automodule:: milia.represent.diffusion
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      embed
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Diffusion
+   

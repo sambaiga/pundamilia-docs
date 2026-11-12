@@ -1,0 +1,17 @@
+milia.plot.figures.recommend
+============================
+
+.. automodule:: milia.plot.figures.recommend
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      interval
+      methods
+      outcomes
+      top
+      trust
+      variance
+   

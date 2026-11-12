@@ -1,0 +1,24 @@
+milia.plot.mpl.draw
+===================
+
+.. automodule:: milia.plot.mpl.draw
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      band
+      bars
+      dumbbell
+      finish
+      grid
+      groups
+      heat
+      hist
+      lines
+      ranges
+      scatter
+      series
+      strip
+   

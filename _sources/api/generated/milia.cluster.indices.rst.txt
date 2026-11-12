@@ -1,0 +1,20 @@
+milia.cluster.indices
+=====================
+
+.. automodule:: milia.cluster.indices
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      cvflda
+      dbcs
+      dbcv
+      dbcvknn
+      divide
+      lccv
+      mmi
+      separation
+      spread
+   

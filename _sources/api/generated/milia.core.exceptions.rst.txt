@@ -1,0 +1,21 @@
+milia.core.exceptions
+=====================
+
+.. automodule:: milia.core.exceptions
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      require
+   
+   .. rubric:: Exceptions
+
+   .. autosummary::
+   
+      ConfigurationError
+      MiliaError
+      MissingExtraError
+      NotFittedError
+   

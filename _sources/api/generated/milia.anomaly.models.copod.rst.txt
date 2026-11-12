@@ -1,0 +1,13 @@
+milia.anomaly.models.copod
+==========================
+
+.. automodule:: milia.anomaly.models.copod
+
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      COPOD
+      COPODConfig
+   

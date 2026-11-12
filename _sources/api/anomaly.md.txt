@@ -1,0 +1,9 @@
+# milia.anomaly
+
+```{eval-rst}
+.. autosummary::
+   :toctree: generated
+   :recursive:
+
+   milia.anomaly
+```

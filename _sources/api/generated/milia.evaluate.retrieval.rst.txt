@@ -1,0 +1,14 @@
+milia.evaluate.retrieval
+========================
+
+.. automodule:: milia.evaluate.retrieval
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      benchmark
+      faultycases
+      success
+   

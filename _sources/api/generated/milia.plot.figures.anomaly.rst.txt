@@ -1,0 +1,16 @@
+milia.plot.figures.anomaly
+==========================
+
+.. automodule:: milia.plot.figures.anomaly
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      band
+      decay
+      fprrecall
+      scores
+      setsizes
+   

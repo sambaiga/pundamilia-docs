@@ -1,0 +1,9 @@
+# milia.benchmark
+
+```{eval-rst}
+.. autosummary::
+   :toctree: generated
+   :recursive:
+
+   milia.benchmark
+```

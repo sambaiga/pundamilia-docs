@@ -1,0 +1,13 @@
+milia.core.seeds
+================
+
+.. automodule:: milia.core.seeds
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      rng
+      seed
+   

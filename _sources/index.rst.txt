@@ -1,0 +1,163 @@
+:html_theme.sidebar_secondary.remove:
+:html_theme.sidebar_primary.remove:
+
+milia
+=====
+
+.. raw:: html
+
+   <section class="mi-landing">
+
+   <!-- ── Hero ──────────────────────────────────────────────── -->
+   <div class="mi-hero">
+     <div class="mi-hero-left">
+       <img src="_static/img/logo.svg" alt="milia" class="mi-hero-logo only-light" />
+       <img src="_static/img/logo-dark.svg" alt="milia" class="mi-hero-logo only-dark" />
+       <p class="mi-hero-tagline">
+         milia clusters, ranks and detects in time series: it groups the series that behave alike,
+         finds the cases most similar to a given one, and flags the days that are not normal.
+       </p>
+       <div class="mi-hero-badges">
+         <span class="mi-badge" id="mi-version-badge"></span>
+         <span class="mi-badge">Apache 2.0</span>
+       </div>
+       <script>
+         document.addEventListener('DOMContentLoaded', function () {
+           var el = document.getElementById('mi-version-badge');
+           if (el && typeof DOCUMENTATION_OPTIONS !== 'undefined') {
+             el.textContent = 'v' + DOCUMENTATION_OPTIONS.VERSION;
+           }
+         });
+       </script>
+       <div class="mi-hero-actions">
+         <a class="mi-btn-primary" href="getting-started/quickstart.html">Get Started</a>
+         <a class="mi-btn-secondary" href="tutorials/index.html">Tutorials</a>
+       </div>
+     </div>
+     <div class="mi-hero-right">
+       <div class="mi-install-box">
+         <span class="mi-install-label">Install</span>
+         <code class="mi-install-code">pip install "pundamilia[all]"</code>
+       </div>
+       <div class="mi-code-snippet" id="mi-hero-code"></div>
+       <script>
+         document.getElementById('mi-hero-code').innerHTML =
+           '<pre>' +
+           '<span class="k">from</span> milia <span class="k">import</span> make\n' +
+           '<span class="k">from</span> milia.anomaly.ensemble <span class="k">import</span> Ensemble\n\n' +
+           '<span class="c"># group the series that behave alike</span>\n' +
+           'model = make(<span class="s">&quot;clusterer&quot;</span>, <span class="s">&quot;kmeans&quot;</span>, n_clusters=3)\n' +
+           'labels = model.fit_predict(shapes)\n\n' +
+           '<span class="c"># flag the days that are not normal</span>\n' +
+           'detector = Ensemble().fit(normal)\n' +
+           'detector.calibrate(held_out, alpha=0.1)\n' +
+           'flags = detector.flag(new_days)' +
+           '</pre>';
+       </script>
+     </div>
+   </div>
+
+   <!-- ── Tasks ─────────────────────────────────────────────── -->
+   <div class="mi-tasks">
+
+     <div class="mi-task">
+       <a class="mi-task-figure" href="tutorials/index.html">
+         <img class="only-light" src="_static/img/illustration-cluster.svg" alt="" />
+         <img class="only-dark" src="_static/img/illustration-cluster-dark.svg" alt="" />
+       </a>
+       <h2 class="mi-task-title">Cluster</h2>
+       <p class="mi-task-body"><strong>Find the herds.</strong> Group the series that behave alike, decide how many groups the data supports, and see how far to trust them.</p>
+       <a class="mi-task-link" href="guide/cluster.html">Read the user guide <i class="bi bi-arrow-right"></i></a>
+     </div>
+
+     <div class="mi-task">
+       <a class="mi-task-figure" href="tutorials/index.html">
+         <img class="only-light" src="_static/img/illustration-rank.svg" alt="" />
+         <img class="only-dark" src="_static/img/illustration-rank-dark.svg" alt="" />
+       </a>
+       <h2 class="mi-task-title">Rank</h2>
+       <p class="mi-task-body"><strong>Find the look-alikes.</strong> Retrieve the most similar cases to a series, rank them, and recommend the action that worked for them.</p>
+       <a class="mi-task-link" href="guide/rank.html">Read the user guide <i class="bi bi-arrow-right"></i></a>
+     </div>
+
+     <div class="mi-task">
+       <a class="mi-task-figure" href="tutorials/index.html">
+         <img class="only-light" src="_static/img/illustration-detect.svg" alt="" />
+         <img class="only-dark" src="_static/img/illustration-detect-dark.svg" alt="" />
+       </a>
+       <h2 class="mi-task-title">Detect</h2>
+       <p class="mi-task-body"><strong>Spot the odd stripe.</strong> Flag the days or windows that are not normal, at a false-alarm rate that you set.</p>
+       <a class="mi-task-link" href="guide/detect.html">Read the user guide <i class="bi bi-arrow-right"></i></a>
+     </div>
+
+   </div>
+
+   <!-- ── Navigation ────────────────────────────────────────── -->
+   <div class="mi-nav-cards">
+     <a class="mi-nav-card" href="getting-started/index.html">
+       <div class="mi-nav-card-body">
+         <h3>Getting started</h3>
+         <p>Install milia and cluster and flag a first set of series.</p>
+       </div>
+       <span class="mi-nav-card-button">To getting started</span>
+     </a>
+     <a class="mi-nav-card" href="guide/index.html">
+       <div class="mi-nav-card-body">
+         <h3>User guide</h3>
+         <p>The ideas behind each task, with examples and their limitations.</p>
+       </div>
+       <span class="mi-nav-card-button">To the user guide</span>
+     </a>
+     <a class="mi-nav-card" href="api/index.html">
+       <div class="mi-nav-card-body">
+         <h3>API reference</h3>
+         <p>Every public class and function, with its parameters and return values.</p>
+       </div>
+       <span class="mi-nav-card-button">To the reference</span>
+     </a>
+     <a class="mi-nav-card" href="contributing.html">
+       <div class="mi-nav-card-body">
+         <h3>Contributing</h3>
+         <p>How to set up a development environment, run the tests and propose a change.</p>
+       </div>
+       <span class="mi-nav-card-button">To the contributor guide</span>
+     </a>
+   </div>
+
+   </section>
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Get started
+
+   Get started <getting-started/index>
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: User guide
+
+   User guide <guide/index>
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Tutorials
+
+   Tutorials <tutorials/index>
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Reference
+
+   Reference <api/index>
+
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+   :caption: More
+
+   Contributing <contributing>
+   Changelog <changelog>

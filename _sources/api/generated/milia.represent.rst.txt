@@ -1,0 +1,17 @@
+﻿milia.represent
+===============
+
+.. automodule:: milia.represent
+
+   
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   crocs
+   diffusion
+   foundation
+   reduce
+   tensor

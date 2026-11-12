@@ -1,0 +1,20 @@
+﻿milia.recommend
+===============
+
+.. automodule:: milia.recommend
+
+   
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   action
+   baselines
+   diagnostics
+   equity
+   ranker
+   ranking
+   retrieval
+   uplift

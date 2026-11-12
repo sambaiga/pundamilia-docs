@@ -1,0 +1,18 @@
+﻿milia.core
+==========
+
+.. automodule:: milia.core
+
+   
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   config
+   conformal
+   exceptions
+   io
+   registry
+   seeds

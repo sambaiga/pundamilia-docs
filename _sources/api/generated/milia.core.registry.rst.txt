@@ -1,0 +1,17 @@
+milia.core.registry
+===================
+
+.. automodule:: milia.core.registry
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      available
+      base
+      clusterer
+      detector
+      get
+      make
+   

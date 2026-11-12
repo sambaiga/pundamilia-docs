@@ -1,0 +1,39 @@
+milia.anomaly.inject
+====================
+
+.. automodule:: milia.anomaly.inject
+
+   
+   .. rubric:: Module Attributes
+
+   .. autosummary::
+   
+      TRIPS
+      CLOCKSHIFT
+      ADOPTIONS
+      LEVEL1
+      BEHAVIOURFAULTS
+      METERFAULTS
+      INJECTIONS
+      BEHAVIOURS
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      adopt
+      behaviourfault
+      clockerror
+      clockshift
+      drift
+      dropout
+      fragmented
+      meterfault
+      offhours
+      shift
+      span
+      spike
+      stuck
+      tripping
+      underreport
+   

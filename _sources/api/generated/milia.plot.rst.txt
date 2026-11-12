@@ -1,0 +1,21 @@
+﻿milia.plot
+==========
+
+.. automodule:: milia.plot
+
+   
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   bind
+   figures
+   labels
+   lets
+   mpl
+   style
+   tables
+   theme
+   tokens

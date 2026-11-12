@@ -1,0 +1,13 @@
+milia.anomaly.models.knn
+========================
+
+.. automodule:: milia.anomaly.models.knn
+
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      KNN
+      KNNConfig
+   

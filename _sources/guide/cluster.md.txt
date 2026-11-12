@@ -1,0 +1,77 @@
+---
+file_format: mystnb
+kernelspec:
+  name: python3
+---
+
+# Cluster
+
+`milia.cluster` groups series that behave alike, decides how many groups the data supports, and reports how far to trust
+them.
+
+```{code-cell} ipython3
+from milia import available, make
+from milia.data import profiles, synthetic
+
+population = synthetic.generate(meters=60, days=90, steps=48)
+shapes = profiles.shape(population.pivot)
+available("clusterer")
+```
+
+## Choose the number of groups
+
+`validation.sweep` scores every candidate number of groups by internal validity, and with `resampling=True` by
+prediction strength, the smallest-cluster bootstrap and subsample agreement. `selection.recommend` applies a strategy to
+the table. The `trust` strategy only accepts a number of groups that passes the resampling checks.
+
+```{code-cell} ipython3
+from milia.cluster import selection, validation
+
+scores = validation.sweep(shapes, range(2, 8), resampling=True)
+k = selection.recommend(scores, strategy="trust")
+scores[["k", "silhouette", "davies", "strength", "stability"]].round(2)
+```
+
+```{code-cell} ipython3
+k
+```
+
+## Fit and check
+
+```{code-cell} ipython3
+model = make("clusterer", "kmeans", n_clusters=k)
+labels = model.fit_predict(shapes)
+validation.internal(shapes, labels), validation.external(labels, population.labels)
+```
+
+When the true grouping is known, as it is here, `validation.external` measures agreement with it. On real data there is
+no truth, which is why the resampling checks matter.
+
+## Combine clusterers
+
+`Consensus` clusters the same data with several clusterers, or with one clusterer over several seeds, and groups the
+series that are most often put together.
+
+```{code-cell} ipython3
+from milia.cluster.consensus import Consensus
+
+consensus = Consensus(n_clusters=k).fit_predict(shapes)
+[int((consensus == group).sum()) for group in range(k)]
+```
+
+## Say when a series is ambiguous
+
+`conformal.sets` calibrates a distance threshold on held-out series, so that a new series gets a set of groups: one when
+it clearly belongs, several when it is between groups, none when it is far from all of them.
+
+```{code-cell} ipython3
+from milia.cluster import conformal
+
+sets = conformal.sets(shapes, make("clusterer", "kmeans", n_clusters=k), alpha=0.1)
+sets.tau, sets.alpha
+```
+
+## Limits
+
+k-means assumes compact, similarly sized groups. The resampling checks tell you when a split is not stable, not
+whether the groups are useful for your decision. Read the clusters, not only the indices.

@@ -1,0 +1,1120 @@
+/* ============================================================
+   milia - PyData theme overrides
+   Ported from twiga-forecast's docs so the two sites read as siblings;
+   palette from milia.plotting.tokens, so the docs match milia's figures.
+   Fonts: Jost (headings) · Libre Franklin (body)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Libre+Franklin:wght@300;400;500;600;700&display=swap');
+
+/* ── Tokens ──────────────────────────────────────────────────────
+   milia.plotting.tokens:
+     deep teal   #111318  - primary: headings, links (5.2:1 on white)
+     bright cyan #C47F2C  - accents, icons, hover
+     orange      #C47F2C  - the thing to notice: primary button, highlights
+     charcoal    #111318  - text
+   ─────────────────────────────────────────────────────────────── */
+:root {
+  --mi-teal:         #111318;
+  --mi-teal-mid:     #C47F2C;
+  --mi-teal-light:   #F3EBDD;
+  --mi-teal-bg:      #FAF6EE;
+  --mi-orange:       #C47F2C;
+  --mi-orange-deep:  #9C6420;
+  --mi-charcoal:     #111318;
+  --mi-slate:        #4A453D;
+  --mi-border:       #E5DCCB;
+  --mi-surface:      #F8F6F2;
+  --mi-white:        #ffffff;
+  --mi-text:         #111318;
+
+  --pst-color-primary:           var(--mi-teal);
+  --pst-color-primary-highlight: var(--mi-teal-mid);
+  --pst-color-link:              var(--mi-teal);
+  --pst-color-link-hover:        var(--mi-teal-mid);
+  --pst-color-inline-code:       var(--mi-teal);
+  --pst-font-family-base:        'Libre Franklin', 'Helvetica Neue', Arial, sans-serif;
+  --pst-font-family-heading:     'Jost', 'Segoe UI', sans-serif;
+  --pst-sidebar-primary-width:    195px;
+  --pst-sidebar-secondary-width:  195px;
+}
+
+/* Night: milia sees in the dark, so the dark theme is a first-class one. */
+html[data-theme="dark"] {
+  --mi-teal:       #C47F2C;
+  --mi-teal-mid:   #C47F2C;
+  --mi-teal-light: rgba(196,127,44,0.12);
+  --mi-teal-bg:    rgba(196,127,44,0.08);
+  --mi-border:     rgba(196,127,44,0.25);
+  --mi-surface:    #17191E;
+  --mi-text:       #E7E2D8;
+  --pst-color-primary:           var(--mi-teal);
+  --pst-color-primary-highlight: var(--mi-teal-mid);
+  --pst-color-link:              var(--mi-teal);
+  --pst-color-link-hover:        var(--mi-teal-mid);
+  --pst-color-background:        #0F1115;
+  --pst-color-on-background:     #17191E;
+}
+
+/* ── Base ────────────────────────────────────────────────────── */
+body {
+  font-family: 'Libre Franklin', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--mi-slate);
+}
+html[data-theme="dark"] body { color: #A8A196; }
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Jost', 'Segoe UI', sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: 1.5rem; border-bottom: 3px solid var(--mi-teal); padding-bottom: 0.3em; margin-bottom: 0.8em; color: var(--mi-teal); }
+h2 { font-size: 1.15rem; border-bottom: 1px solid var(--mi-border); padding-bottom: 0.2em; margin-top: 2rem; color: var(--mi-teal); }
+h3 { font-size: 0.95rem; color: var(--mi-teal-mid); }
+
+a { color: var(--mi-teal); }
+a:hover { color: var(--mi-teal-mid); }
+
+/* ── Navbar ──────────────────────────────────────────────────── */
+.bd-header {
+  border-bottom: 2px solid var(--mi-teal) !important;
+  box-shadow: 0 1px 4px rgba(17,19,24,0.08) !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Tighten logo */
+.navbar-brand img { max-height: 36px !important; }
+
+/* Nav links - compact, uppercase, teal on hover */
+.navbar-nav .nav-item { margin: 0 1px; }
+
+.navbar-nav .nav-link {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--mi-charcoal) !important;
+  padding: 0.55rem 0.75rem !important;
+  border-radius: 4px;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+  box-shadow: none !important;
+}
+
+html[data-theme="dark"] .navbar-nav .nav-link { color: #E5DCCB !important; }
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:active,
+.navbar-nav .nav-item.active > .nav-link,
+.navbar-nav .current > .nav-link {
+  color: var(--mi-teal) !important;
+  background-color: var(--mi-teal-light) !important;
+  box-shadow: none !important;
+}
+
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:focus-visible {
+  color: var(--mi-teal) !important;
+  background-color: var(--mi-teal-light) !important;
+  outline: 2px solid var(--mi-teal) !important;
+  outline-offset: 2px !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="dark"] .navbar-nav .nav-link:hover,
+html[data-theme="dark"] .navbar-nav .nav-link:active,
+html[data-theme="dark"] .navbar-nav .nav-link:focus,
+html[data-theme="dark"] .navbar-nav .nav-link:focus-visible {
+  background-color: var(--mi-teal-bg) !important;
+  color: var(--mi-teal) !important;
+  box-shadow: none !important;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  border: 1px solid var(--mi-border) !important;
+  border-radius: 6px !important;
+  box-shadow: 0 4px 16px rgba(17,19,24,0.12) !important;
+  padding: 6px !important;
+  min-width: 180px;
+}
+
+.dropdown-item {
+  font-size: 0.875rem;
+  font-family: 'Libre Franklin', sans-serif;
+  border-radius: 4px;
+  padding: 6px 12px !important;
+  color: var(--mi-text) !important;
+}
+
+.dropdown-item:hover {
+  background-color: var(--mi-teal-light) !important;
+  color: var(--mi-teal) !important;
+}
+
+/* ── Sidebar ─────────────────────────────────────────────────── */
+.bd-sidebar-primary {
+  background-color: var(--mi-surface) !important;
+  border-right: 1px solid var(--mi-border);
+  font-size: 0.875rem;
+}
+
+.bd-sidebar-primary .nav-link {
+  font-family: 'Libre Franklin', sans-serif;
+  color: var(--mi-text);
+  border-radius: 4px;
+  padding: 3px 10px;
+  transition: all 0.12s;
+}
+
+.bd-sidebar-primary .nav-link:hover {
+  color: var(--mi-teal);
+  background-color: var(--mi-teal-light) !important;
+}
+
+.bd-sidebar-primary .nav-link.active {
+  color: var(--mi-teal) !important;
+  background-color: var(--mi-teal-bg) !important;
+  font-weight: 700;
+  border-left: 3px solid var(--mi-teal);
+}
+
+.bd-sidebar-primary .caption-text {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--mi-teal) !important;
+  margin-top: 1rem;
+  opacity: 0.85;
+}
+
+/* ── Content ─────────────────────────────────────────────────── */
+.bd-content { max-width: 900px; }
+
+/* Hide the RST-generated h1 on the landing page - the hero section serves this role.
+   Sphinx still reads it for the <title> tag and toctree label. */
+.bd-article-container:has(.mi-landing) h1:first-of-type,
+section#milia > h1:first-of-type {
+  display: none;
+}
+
+/* Landing page - centered content wrapper */
+.mi-landing,
+section#milia {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Override all width constraints on the landing page so the content
+   can center itself with margin: 0 auto in the full viewport.
+   Targets both .mi-landing (from raw HTML) and section#milia
+   (always present - generated by RST for the index heading). */
+.bd-main .bd-content:has(.mi-landing),
+.bd-main:has(.mi-landing) .bd-article-container,
+.bd-content:has(.mi-landing),
+.bd-page-width:has(.mi-landing),
+.bd-container:has(.mi-landing),
+.bd-main .bd-content:has(section#milia),
+.bd-main:has(section#milia) .bd-article-container,
+.bd-content:has(section#milia),
+.bd-page-width:has(section#milia),
+.bd-container:has(section#milia) {
+  max-width: none !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+.bd-article-container:has(.mi-landing) .bd-article,
+.bd-article:has(.mi-landing),
+.bd-article-container:has(section#milia) .bd-article,
+.bd-article:has(section#milia) {
+  max-width: none !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  width: 100% !important;
+}
+
+/* ── Code blocks - clean card ────────────────────────────────── */
+/* Style the outer notranslate wrapper so there's one visual layer */
+[class*="highlight-"].notranslate {
+  background-color: var(--mi-surface) !important;
+  border: 1px solid var(--mi-border);
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 1rem 0;
+  box-shadow: 0 1px 4px rgba(17,19,24,0.06);
+}
+
+html[data-theme="dark"] [class*="highlight-"].notranslate {
+  background-color: #0F1115 !important;
+  border-color: rgba(196,127,44,0.18);
+  box-shadow: none;
+}
+
+/* Inner div.highlight - transparent, no border of its own */
+div.highlight {
+  background-color: transparent !important;
+  border: none;
+  border-radius: 0;
+}
+
+/* pre - transparent, inherits everything from the outer card */
+pre,
+div.highlight pre {
+  background-color: transparent !important;
+  border: none;
+  border-radius: 0;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+/* Inline code - covers .literal, .docutils, and plain <code> in HTML sections */
+code:not(pre code) {
+  background-color: var(--mi-teal-bg);
+  border: 1px solid var(--mi-border);
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-size: 0.87em;
+  color: var(--mi-teal);
+  font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', monospace;
+}
+
+/* ── Admonitions ─────────────────────────────────────────────── */
+.admonition { border-radius: 6px; border-left-width: 4px; }
+.admonition.note    { border-color: var(--mi-teal);   background: var(--mi-teal-bg); }
+.admonition.tip     { border-color: #4A453D;           background: #F4F0E8; }
+.admonition.warning { border-color: #C47F2C;           background: #FBF3E6; }
+html[data-theme="dark"] .admonition.note    { background: var(--mi-teal-bg); }
+html[data-theme="dark"] .admonition.tip     { background: rgba(74,69,61,0.1); }
+html[data-theme="dark"] .admonition.warning { background: rgba(196,127,44,0.1); }
+
+.admonition .admonition-title {
+  font-family: 'Jost', sans-serif;
+  font-weight: 700; font-size: 0.82rem;
+  text-transform: uppercase; letter-spacing: 0.05em;
+}
+
+/* ── Tables (aligned with themed_gt / Great Tables style) ─────── */
+table.docutils {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Libre Franklin', 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  font-size: 13px;
+  color: #23262D;
+  border-top: 2px solid #111318;
+  border-bottom: 1px solid #111318;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+  overflow: visible;
+}
+html[data-theme="dark"] table.docutils { color: var(--mi-text); border-color: var(--mi-teal); }
+
+table.docutils th {
+  background: transparent;
+  color: var(--mi-charcoal);
+  padding: 9px 14px;
+  text-align: left;
+  font-family: 'Libre Franklin', 'Segoe UI', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: none;
+  letter-spacing: 0;
+  border-bottom: 1px solid #6B6358;
+}
+table.docutils td {
+  padding: 7px 14px;
+  border-bottom: 1px solid #E4E0D8;
+  font-size: 13px;
+}
+table.docutils tr:last-child td { border-bottom: none; }
+table.docutils tr:nth-child(even) td { background: #FAF8F4; }
+html[data-theme="dark"] table.docutils tr:nth-child(even) td { background: rgba(255,255,255,0.04); }
+
+/* ── sphinx-design cards ─────────────────────────────────────── */
+.sd-card {
+  background: var(--mi-white) !important;
+  border: 1px solid var(--mi-border) !important;
+  border-radius: 8px;
+  transition: box-shadow 0.2s, transform 0.15s, border-color 0.2s;
+}
+html[data-theme="dark"] .sd-card { background: var(--mi-surface) !important; }
+.sd-card:hover {
+  box-shadow: 0 4px 18px rgba(17,19,24,0.15);
+  transform: translateY(-2px);
+  border-color: var(--mi-teal) !important;
+}
+.sd-card-header {
+  background: var(--mi-teal) !important;
+  color: #fff !important;
+  font-family: 'Jost', sans-serif; font-weight: 600;
+  border-radius: 7px 7px 0 0; padding: 10px 16px;
+  border-bottom: none !important;
+}
+.sd-card-footer a {
+  color: var(--mi-teal) !important; font-weight: 700;
+  font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.04em;
+}
+.sd-badge {
+  font-size: 0.72rem; font-weight: 700; padding: 2px 9px; border-radius: 12px;
+  background: var(--mi-teal-bg) !important; color: var(--mi-teal) !important;
+  border: 1px solid var(--mi-border);
+}
+
+/* ── API reference ───────────────────────────────────────────── */
+dl.py.class > dt, dl.py.function > dt, dl.py.method > dt {
+  background: var(--mi-teal-bg) !important;
+  border-left: 4px solid var(--mi-teal);
+  border-radius: 0 4px 4px 0;
+  padding: 7px 14px; font-size: 0.92rem;
+}
+
+/* ── Footer ──────────────────────────────────────────────────── */
+.bd-footer { border-top: 2px solid var(--mi-teal); font-size: 0.82rem; }
+
+/* ════════════════════════════════════════════════════════════════
+   LANDING PAGE
+   ════════════════════════════════════════════════════════════════ */
+
+/* Hero - two-column layout */
+.mi-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  padding: 3rem 0 2.5rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid var(--mi-border);
+}
+
+@media (max-width: 900px) {
+  .mi-hero { grid-template-columns: 1fr; }
+  .mi-hero-right { display: none; }
+}
+
+.mi-hero-logo { height: 52px; margin-bottom: 1.2rem; display: block; }
+
+.mi-hero-tagline {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 300;
+  line-height: 1.65;
+  color: var(--mi-text);
+  margin: 0 0 1.2rem;
+}
+
+.mi-hero-badges { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 1.5rem; }
+
+.mi-badge {
+  display: inline-block;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 0.72rem; font-weight: 700;
+  padding: 3px 10px; border-radius: 12px;
+  background: var(--mi-teal-bg);
+  color: var(--mi-teal);
+  border: 1px solid var(--mi-border);
+  letter-spacing: 0.04em;
+}
+
+.mi-hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.mi-btn-primary {
+  display: inline-block;
+  font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.88rem;
+  padding: 9px 22px; border-radius: 6px;
+  background: var(--mi-teal); color: #fff !important;
+  text-decoration: none !important;
+  transition: background 0.15s, transform 0.1s;
+  letter-spacing: 0.02em;
+}
+.mi-btn-primary:hover { background: var(--mi-teal-mid); transform: translateY(-1px); }
+
+.mi-btn-secondary {
+  display: inline-block;
+  font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.88rem;
+  padding: 8px 22px; border-radius: 6px;
+  background: transparent; color: var(--mi-teal) !important;
+  border: 2px solid var(--mi-teal);
+  text-decoration: none !important;
+  transition: all 0.15s;
+}
+.mi-btn-secondary:hover {
+  background: var(--mi-teal-light);
+  transform: translateY(-1px);
+}
+
+/* Install + code snippet on the right */
+.mi-hero-right { display: flex; flex-direction: column; gap: 12px; }
+
+.mi-install-box {
+  background: var(--mi-charcoal);
+  border-radius: 8px;
+  padding: 14px 18px;
+  display: flex; align-items: center; gap: 14px;
+}
+
+.mi-install-label {
+  font-family: 'Jost', sans-serif; font-weight: 700;
+  font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--mi-teal-mid); white-space: nowrap;
+}
+
+.mi-install-code {
+  margin: 0; padding: 0; background: transparent;
+  border: none; border-left: none;
+  font-size: 0.88rem; color: #D8CDB8;
+  font-family: 'SFMono-Regular', 'Consolas', monospace;
+}
+
+.mi-code-snippet {
+  background: var(--mi-charcoal);
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+
+.mi-code-snippet pre {
+  margin: 0; padding: 0;
+  background: transparent !important; border: none;
+  font-size: 0.83rem; color: #E7E2D8;
+  line-height: 1.65;
+  font-family: 'SFMono-Regular', 'Consolas', monospace;
+}
+
+.mi-code-snippet .kw { color: var(--mi-teal-mid); }
+.mi-code-snippet .st { color: #D8CDB8; }
+
+/* ════════════════════════════════════════════════════════════════
+   TASK PANELS  (Model, Simulate, Estimate on the landing page)
+   ════════════════════════════════════════════════════════════════ */
+
+.mi-tasks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin: 1rem 0 3rem;
+}
+
+@media (max-width: 900px) { .mi-tasks { grid-template-columns: 1fr; } }
+
+.mi-task {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.2rem 1.1rem;
+  background: var(--mi-white);
+  border: 1px solid var(--mi-border);
+  border-radius: 10px;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+html[data-theme="dark"] .mi-task { background: var(--mi-surface); }
+
+.mi-task:hover {
+  box-shadow: 0 4px 20px rgba(17,19,24,0.12);
+  border-color: var(--mi-teal-mid);
+}
+
+/* The figures are drawn on white; the frame keeps them on white in both themes,
+   and gives the taller network diagram the same footprint as the two charts. */
+.mi-task-figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 210px;
+  margin: 0 0 1rem;
+  padding: 0.5rem;
+  background: #ffffff;
+  border-radius: 6px;
+}
+
+html[data-theme="dark"] .mi-task-figure { border: 1px solid var(--mi-border); }
+
+.mi-task-figure img { max-width: 100%; max-height: 100%; object-fit: contain; }
+
+.mi-task-title {
+  font-family: 'Jost', sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--mi-teal);
+  margin: 0 0 0.5rem;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.mi-task-body {
+  font-size: 0.875rem;
+  color: var(--mi-slate);
+  line-height: 1.65;
+  margin: 0 0 0.75rem;
+  flex: 1;
+}
+
+html[data-theme="dark"] .mi-task-body { color: #A8A196; }
+
+.mi-task-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--mi-teal) !important;
+  text-decoration: none !important;
+  transition: gap 0.15s, color 0.15s;
+}
+
+.mi-task-link:hover { color: var(--mi-teal-mid) !important; gap: 8px; }
+
+/* Edit on GitHub button */
+.bd-header-article a.btn { border-color: var(--mi-teal); color: var(--mi-teal); font-size: 0.82rem; }
+.bd-header-article a.btn:hover { background: var(--mi-teal); color: #fff; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mi-hero { padding: 2rem 0; }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   NAV CARDS  (section grid at the foot of the landing page)
+   ════════════════════════════════════════════════════════════════ */
+
+.mi-nav-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin: 2.5rem 0;
+}
+
+@media (max-width: 960px) { .mi-nav-cards { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .mi-nav-cards { grid-template-columns: 1fr; } }
+
+.mi-nav-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.25rem 1.25rem 1.1rem;
+  background: var(--mi-white);
+  border: 1px solid var(--mi-border);
+  border-radius: 10px;
+  text-decoration: none !important;
+  color: var(--mi-text) !important;
+  transition: box-shadow 0.2s, transform 0.15s, border-color 0.2s;
+}
+
+html[data-theme="dark"] .mi-nav-card { background: var(--mi-surface); }
+
+.mi-nav-card:hover {
+  box-shadow: 0 4px 20px rgba(17,19,24,0.14);
+  transform: translateY(-2px);
+  border-color: var(--mi-teal);
+  text-decoration: none !important;
+}
+
+.mi-nav-card-body { flex: 1; }
+
+/* Button at the foot of each nav card, in milia's outline-button style. */
+.mi-nav-card-button {
+  font-family: 'Jost', sans-serif;
+  align-self: flex-start;
+  padding: 6px 14px;
+  border: 1.5px solid var(--mi-teal);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--mi-teal);
+  transition: background 0.15s, color 0.15s;
+}
+
+.mi-nav-card:hover .mi-nav-card-button { background: var(--mi-teal); color: #fff; }
+html[data-theme="dark"] .mi-nav-card:hover .mi-nav-card-button { color: #0F1115; }
+
+
+.mi-nav-card-body h3 {
+  font-family: 'Jost', sans-serif;
+  font-weight: 700; font-size: 0.97rem;
+  margin: 0 0 0.35rem;
+  color: var(--mi-teal);
+}
+
+.mi-nav-card-body p {
+  font-size: 0.85rem;
+  color: var(--mi-slate);
+  line-height: 1.55; margin: 0;
+}
+
+html[data-theme="dark"] .mi-nav-card-body p { color: #A8A196; }
+
+/* ════════════════════════════════════════════════════════════════
+   TUTORIAL GALLERY  (thumbnails from each tutorial's own figures)
+   ════════════════════════════════════════════════════════════════ */
+
+.mi-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin: 1.5rem 0 3rem;
+}
+
+@media (max-width: 900px) { .mi-gallery { grid-template-columns: 1fr; } }
+
+.mi-gallery-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.2rem 1.1rem;
+  border: 1px solid var(--mi-border);
+  border-radius: 10px;
+  background: var(--mi-white);
+  text-decoration: none !important;
+  color: var(--mi-text) !important;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+html[data-theme="dark"] .mi-gallery-card { background: var(--mi-surface); }
+
+.mi-gallery-card:hover {
+  box-shadow: 0 4px 20px rgba(17,19,24,0.12);
+  border-color: var(--mi-teal-mid);
+}
+
+/* Same frame as the landing page's task panels: figures drawn on white, at one footprint. */
+.mi-gallery-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 210px;
+  margin: 0 0 1rem;
+  padding: 0.5rem;
+  background: #ffffff;
+  border-radius: 6px;
+}
+
+html[data-theme="dark"] .mi-gallery-thumb { border: 1px solid var(--mi-border); }
+html[data-theme="dark"] .mi-gallery-thumb img { filter: none; }
+
+.mi-gallery-thumb img { max-width: 100%; max-height: 100%; object-fit: contain; }
+
+.mi-gallery-info { display: flex; flex-direction: column; gap: 0.35rem; }
+
+.mi-gallery-num {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--mi-slate);
+}
+
+html[data-theme="dark"] .mi-gallery-num { color: #A8A196; }
+
+.mi-gallery-info h3 {
+  font-family: 'Jost', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin: 0;
+  color: var(--mi-teal);
+  border: none;
+  padding: 0;
+}
+
+.mi-gallery-info p {
+  font-size: 0.875rem;
+  color: var(--mi-slate);
+  line-height: 1.65;
+  margin: 0;
+}
+
+html[data-theme="dark"] .mi-gallery-info p { color: #A8A196; }
+
+/* ════════════════════════════════════════════════════════════════
+   SUBSYSTEM GRADIENT HEADERS  (new - MLOps & overview cards)
+   ════════════════════════════════════════════════════════════════ */
+
+.mi-ovr-pipe  { background: linear-gradient(135deg, #111318, #6B6358) !important; color: white !important; }
+.mi-ovr-model { background: linear-gradient(135deg, #3A362F, #111318) !important; color: white !important; }
+.mi-ovr-cv    { background: linear-gradient(135deg, #9C6420, #C47F2C) !important; color: white !important; }
+.mi-ovr-met   { background: linear-gradient(135deg, #1E3A5F, #234B73) !important; color: white !important; }
+.mi-ovr-conf  { background: linear-gradient(135deg, #3A362F, #4A453D) !important; color: white !important; }
+.mi-ovr-mlops { background: linear-gradient(135deg, #5A3E1B, #7A5320) !important; color: white !important; }
+
+/* ════════════════════════════════════════════════════════════════
+   OVERVIEW SUBSYSTEM CARDS  - responsive grid polish
+   ════════════════════════════════════════════════════════════════ */
+
+/* Equal-height cards in every row */
+.sd-row .sd-card { height: 100%; display: flex; flex-direction: column; }
+.sd-row .sd-card .sd-card-body { flex: 1; }
+
+/* Tighten card body padding on narrow columns */
+@media (max-width: 768px) {
+  .sd-card-body { padding: 0.9rem 1rem !important; }
+  .sd-card-header { padding: 8px 12px !important; }
+  .sd-card-footer { padding: 8px 12px !important; }
+}
+
+/* Ensure bullet lists inside cards don't overflow */
+.sd-card-body ul {
+  padding-left: 1.2rem;
+  margin: 0.4rem 0 0;
+}
+.sd-card-body li { font-size: 0.875rem; line-height: 1.6; }
+
+/* Footer link - always visible at the bottom */
+.sd-card-footer { margin-top: auto; border-top: 1px solid var(--mi-border) !important; }
+
+/* ════════════════════════════════════════════════════════════════
+   NAVBAR VERSION DROPDOWN  (Bokeh-style version indicator)
+   ════════════════════════════════════════════════════════════════ */
+
+.mi-version-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.mi-version-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 1px solid var(--mi-border);
+  border-radius: 6px;
+  padding: 3px 10px;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--mi-charcoal) !important;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+
+.mi-version-btn:hover,
+.mi-version-btn:focus,
+.mi-version-btn.show {
+  border-color: var(--mi-teal) !important;
+  background: var(--mi-teal-light) !important;
+  color: var(--mi-teal) !important;
+  box-shadow: none !important;
+}
+
+html[data-theme="dark"] .mi-version-btn {
+  color: var(--mi-text) !important;
+  border-color: var(--mi-border);
+}
+
+html[data-theme="dark"] .mi-version-btn:hover,
+html[data-theme="dark"] .mi-version-btn.show {
+  background: var(--mi-teal-bg) !important;
+  color: var(--mi-teal) !important;
+}
+
+.mi-version-label {
+  font-size: 0.78rem;
+}
+
+.mi-alpha-pill {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: var(--mi-teal-bg);
+  color: var(--mi-teal);
+  border: 1px solid var(--mi-border);
+  border-radius: 10px;
+  padding: 1px 6px;
+  line-height: 1.4;
+}
+
+.mi-version-btn.show .mi-alpha-pill,
+.mi-version-btn:hover .mi-alpha-pill {
+  background: rgba(17,19,24,0.15);
+  border-color: var(--mi-teal);
+}
+
+.mi-version-menu {
+  min-width: 270px;
+  padding: 14px 16px !important;
+  border: 1px solid var(--mi-border) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 6px 24px rgba(17,19,24,0.13) !important;
+  margin-top: 6px !important;
+}
+
+html[data-theme="dark"] .mi-version-menu {
+  background: var(--mi-surface) !important;
+  border-color: var(--mi-border) !important;
+}
+
+.mi-version-info p {
+  font-size: 0.85rem;
+  color: var(--mi-text);
+  margin: 0 0 10px;
+  line-height: 1.55;
+}
+
+.mi-version-changelog-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--mi-teal) !important;
+  text-decoration: none !important;
+  letter-spacing: 0.02em;
+}
+
+.mi-version-changelog-link:hover {
+  color: var(--mi-teal-mid) !important;
+  text-decoration: underline !important;
+}
+
+/* ── Mermaid ─────────────────────────────────────────────────── */
+.mermaid { text-align: center; margin: 1.5rem 0; }
+.mermaid svg { max-width: 100% !important; height: auto !important; }
+
+/* ════════════════════════════════════════════════════════════════
+   NOTEBOOK PAGES  (myst-nb cell typography normalisation)
+   Align font sizes and line-height with the rest of the site so
+   tutorial pages look identical to regular Sphinx pages.
+   ════════════════════════════════════════════════════════════════ */
+
+/* Markdown prose inside notebook cells */
+.cell .cell_input,
+.cell_input .highlight,
+div.cell p,
+div.cell li,
+div.cell blockquote {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--mi-slate);
+  font-family: 'Libre Franklin', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Headings inside notebook markdown cells - match site heading scale */
+div.cell h1 { font-size: 1.5rem; }
+div.cell h2 { font-size: 1.15rem; }
+div.cell h3 { font-size: 0.95rem; }
+div.cell h4 { font-size: 0.9rem; }
+
+/* Plain-text stdout / stderr output - keep slightly smaller (data output) */
+.cell_output .output_area pre,
+.cell_output .output_text pre,
+.cell_output .output_stream pre {
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* Rich text output (e.g. printed DataFrames, HTML repr) */
+.cell_output .output_html,
+.cell_output .jp-RenderedHTMLCommon {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  font-family: 'Libre Franklin', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Author line and any inline bold/italic in notebook prose */
+div.cell p strong,
+div.cell p em {
+  font-size: inherit;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   BORROWED FROM BOKEH - brand-neutral polish
+   ════════════════════════════════════════════════════════════════ */
+
+/* Ligatures cause bad kerning in technical names - disable globally */
+* { font-variant-ligatures: none; }
+
+/* Hide the auto-generated sidebar section title - milia caption-text already
+   handles section labels via .bd-sidebar-primary .caption-text */
+.bd-links__title { display: none; }
+
+/* sphinx-design card rows - add vertical breathing room between rows */
+.sd-row { --sd-gutter-y: 1.5em; }
+
+/* API reference - lighter weight signatures are easier to scan */
+.class .sig,
+.function .sig,
+.sig .property { font-weight: 400; }
+
+/* Optional image border class for screenshots in notebooks/guides.
+   Shadow uses milia teal tint instead of Bokeh's neutral grey. */
+img.image-border {
+  border: 1px solid var(--mi-border);
+  margin-bottom: 1.15rem;
+  border-radius: 4px;
+  box-shadow: 1px 2px 6px rgba(17,19,24,0.12);
+}
+
+/* ════════════════════════════════════════════════════════════════
+   PANDAS DATAFRAME  (notebook output tables)
+   Adapted from Bokeh/nbsphinx - colors remapped to milia tokens.
+   ════════════════════════════════════════════════════════════════ */
+
+.dataframe {
+  max-width: 100%;
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+table.dataframe {
+  border: none !important;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-top: 2px solid #111318 !important;
+  border-bottom: 1px solid #111318 !important;
+  font-family: 'Libre Franklin', 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  font-size: 13px;
+  color: #23262D;
+  width: 100%;
+}
+
+table.dataframe thead {
+  border-bottom: 1px solid #6B6358;
+  vertical-align: bottom;
+}
+
+table.dataframe tr,
+table.dataframe th,
+table.dataframe td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 7px 14px;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+
+table.dataframe th {
+  background: transparent;
+  color: var(--mi-charcoal);
+  font-family: 'Libre Franklin', 'Segoe UI', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+table.dataframe tbody tr:nth-child(even) {
+  background: #FAF8F4;
+}
+
+table.dataframe tbody tr:nth-child(odd) {
+  background: #ffffff;
+}
+
+table.dataframe tbody tr:hover {
+  background: #F3EEE4;
+}
+
+table.dataframe tbody td {
+  border-bottom: 1px solid #E4E0D8;
+}
+
+table.dataframe tbody tr:last-child td {
+  border-bottom: none;
+}
+
+html[data-theme="dark"] table.dataframe {
+  color: var(--mi-text);
+  border-top-color: var(--mi-teal) !important;
+  border-bottom-color: var(--mi-teal) !important;
+}
+
+html[data-theme="dark"] table.dataframe th {
+  background: #3A362F;
+}
+
+html[data-theme="dark"] table.dataframe tbody tr:nth-child(even) {
+  background: rgba(255,255,255,0.04);
+}
+
+html[data-theme="dark"] table.dataframe tbody tr:nth-child(odd) {
+  background: transparent;
+}
+
+html[data-theme="dark"] table.dataframe tbody tr:hover {
+  background: var(--mi-teal-bg);
+}
+
+/* Header rows follow milia.plotting.tables.themed_gt: dark text on white under a teal rule. */
+html[data-theme="dark"] table.docutils th,
+html[data-theme="dark"] .output_area table.dataframe th,
+html[data-theme="dark"] div.cell_output table th { color: var(--mi-text); }
+
+/* ════════════════════════════════════════════════════════════════
+   milia additions
+   ════════════════════════════════════════════════════════════════ */
+
+/* The hero logo is a mark-and-wordmark lockup, wider than twiga's. */
+.mi-hero-logo { height: 64px; width: auto; }
+
+/* The primary action is milia's orange: the thing to notice. */
+.mi-btn-primary { background: var(--mi-orange); }
+.mi-btn-primary:hover { background: var(--mi-orange-deep); }
+
+/* Hero code snippet: keywords, strings and comments. */
+.mi-code-snippet .k { color: var(--mi-teal-mid); font-weight: 600; }
+.mi-code-snippet .s { color: #E8C48F; }
+.mi-code-snippet .c { color: #8E887D; font-style: italic; }
+
+/* Section headings on the landing page. */
+.mi-section-title {
+  font-family: 'Jost', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--mi-teal);
+  margin: 0 0 0.4rem;
+}
+
+/* Overview figure: the full content width, aligned with the panels above. It draws its
+   own day and night cards, so it has no frame; the white backing keeps the figure's
+   margins white in dark mode. */
+.mi-overview {
+  margin: 0.8rem 0 1.6rem;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffffff;
+}
+.mi-overview img { display: block; width: 100%; height: auto; }
+
+/* Companion strip: a quiet band linking to twiga. */
+.mi-companion {
+  margin: 2.4rem 0 1rem;
+  padding: 1rem 1.3rem;
+  border-left: 4px solid var(--mi-orange);
+  background: var(--mi-surface);
+  border-radius: 6px;
+  color: var(--mi-slate);
+}
+.mi-companion p { margin: 0; }
+html[data-theme="dark"] .mi-companion { color: var(--mi-text); }
+
+/* Narrow screens: let the hero's columns shrink and scroll long code inside its card,
+   instead of widening the whole page. */
+.mi-hero > * { min-width: 0; }
+.mi-code-snippet pre { overflow-x: auto; }
+.mi-install-box { overflow-x: auto; }
+.mi-install-code { white-space: nowrap; }
+
+/* The overview figure carries its own day and night halves, and the panel figures sit on
+   their own white frame; keep both undimmed in dark mode. */
+html[data-theme="dark"] .mi-overview img,
+html[data-theme="dark"] .mi-task-figure img { filter: none; }
+
+/* ── Notebook cells: the zebra palette has no green, so the input bar of a code cell is ochre ─────────────── */
+div.cell > div.cell_input,
+.cell_input {
+  border-left-color: var(--mi-orange) !important;
+}
+div.cell > div.cell_input { border-left-width: 3px; }

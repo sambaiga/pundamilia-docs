@@ -1,0 +1,17 @@
+﻿milia.features
+==============
+
+.. automodule:: milia.features
+
+   
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   events
+   multires
+   profile
+   scale
+   window

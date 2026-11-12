@@ -1,0 +1,16 @@
+﻿milia.benchmark
+===============
+
+.. automodule:: milia.benchmark
+
+   
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   compare
+   conditions
+   provenance
+   runs

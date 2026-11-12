@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>milia.anomaly.group &#8212; milia</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=18bd87630a240e9c25be" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=18bd87630a240e9c25be" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx_autodoc_typehints.css?v=057ac668" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=6a604523" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/milia.css?v=3243ebb9" />
+    <link crossorigin="anonymous" rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../../_static/scripts/fontawesome.js?digest=18bd87630a240e9c25be"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=18bd87630a240e9c25be" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=18bd87630a240e9c25be" />
+
+    <script src="../../_static/documentation_options.js?v=01f34227"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=22840dfd"></script>
+    <script>let toggleHintShow = 'Show';</script>
+    <script>let toggleHintHide = 'Hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=b8b12719"></script>
+    <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="../../_static/design-tabs.js?v=fcb327ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/generated/milia.anomaly.group';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="icon" href="../../_static/favicon.svg"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="milia.anomaly.inject" href="milia.anomaly.inject.html" />
+    <link rel="prev" title="milia.anomaly.explain" href="milia.anomaly.explain.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="color-scheme" content="light dark"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="0.1.0" />
+  
+    
+    <script src="../../_static/searchtools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="light">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button type="button" class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../_static/logo.svg" class="logo__image only-light" alt="milia"/>
+    <img src="../../_static/logo-dark.svg" class="logo__image only-dark pst-js-only" alt="milia"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting-started/index.html">
+    Get started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../guide/index.html">
+    User guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../tutorials/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    Reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing.html">
+    Contributing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../changelog.html">
+    Changelog
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button type="button" class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+<div class="dropdown mi-version-wrapper">
+  <button
+    class="btn dropdown-toggle mi-version-btn"
+    type="button"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+    aria-label="milia version 0.1.0"
+  >
+    <span class="mi-version-label">v0.1.0</span>
+    <span class="mi-alpha-pill">alpha</span>
+  </button>
+  <div class="dropdown-menu dropdown-menu-end mi-version-menu">
+    <div class="mi-version-info">
+      <p>
+        <strong>milia 0.1.0</strong> is in alpha.
+        The API may change before 1.0.
+      </p>
+      <a
+        href="../../changelog.html"
+        class="mi-version-changelog-link"
+      >
+        View changelog <i class="bi bi-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</div></div>
+      
+        <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pundamilia/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/box-seam-fill.svg" class="icon-link-image" alt="PyPI"/></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button type="button" class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+    </div>
+  
+
+  
+    <button type="button" class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting-started/index.html">
+    Get started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../guide/index.html">
+    User guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../tutorials/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    Reference
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contributing.html">
+    Contributing
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../changelog.html">
+    Changelog
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<div class="dropdown mi-version-wrapper">
+  <button
+    class="btn dropdown-toggle mi-version-btn"
+    type="button"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+    aria-label="milia version 0.1.0"
+  >
+    <span class="mi-version-label">v0.1.0</span>
+    <span class="mi-alpha-pill">alpha</span>
+  </button>
+  <div class="dropdown-menu dropdown-menu-end mi-version-menu">
+    <div class="mi-version-info">
+      <p>
+        <strong>milia 0.1.0</strong> is in alpha.
+        The API may change before 1.0.
+      </p>
+      <a
+        href="../../changelog.html"
+        class="mi-version-changelog-link"
+      >
+        View changelog <i class="bi bi-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</div></div>
+        
+          <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/pundamilia/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/box-seam-fill.svg" class="icon-link-image" alt="PyPI"/></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../data.html">milia.data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">milia.features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../represent.html">milia.represent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cluster.html">milia.cluster</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../recommend.html">milia.recommend</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../anomaly.html">milia.anomaly</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="reference internal" href="milia.anomaly.html">milia.anomaly</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../evaluate.html">milia.evaluate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../benchmark.html">milia.benchmark</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../plot.html">milia.plot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../core.html">milia.core</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">API reference</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../anomaly.html" class="nav-link">milia.anomaly</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="milia.anomaly.html" class="nav-link">milia.anomaly</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">milia.anomaly.group</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="module-milia.anomaly.group">
+<span id="milia-anomaly-group"></span><h1>milia.anomaly.group<a class="headerlink" href="#module-milia.anomaly.group" title="Link to this heading">#</a></h1>
+<p>Anomaly scores for a group of meters rather than a single one.</p>
+<p>Besides the coincidence of export, the module holds the energy balance of a transformer: its head power
+<span class="math notranslate nohighlight">\(P^{\mathrm{head}}_t\)</span> against the sum of its meters <span class="math notranslate nohighlight">\(\sum_i P^{(i)}_t\)</span>. The difference is the technical
+loss of the feeders when no meter is tampered with. Technical loss is resistive and grows with the square of the
+branch currents, so it is modelled by least squares on days known to be normal (<a class="reference internal" href="#milia.anomaly.group.lossdesign" title="milia.anomaly.group.lossdesign"><code class="xref py py-func docutils literal notranslate"><span class="pre">lossdesign()</span></code></a>,
+<a class="reference internal" href="#milia.anomaly.group.fitloss" title="milia.anomaly.group.fitloss"><code class="xref py py-func docutils literal notranslate"><span class="pre">fitloss()</span></code></a>), and the residual left by the model (<a class="reference internal" href="#milia.anomaly.group.unexplained" title="milia.anomaly.group.unexplained"><code class="xref py py-func docutils literal notranslate"><span class="pre">unexplained()</span></code></a>) is the evidence of non-technical loss.
+Two loss models are compared: <code class="docutils literal notranslate"><span class="pre">&quot;head&quot;</span></code>, <span class="math notranslate nohighlight">\(a P^2 + c\)</span> in the head power alone, and <code class="docutils literal notranslate"><span class="pre">&quot;components&quot;</span></code>,
+<span class="math notranslate nohighlight">\(a P^2 + b D^2 + g G^2 + c\)</span>, which adds the summed import <span class="math notranslate nohighlight">\(D\)</span> and generation <span class="math notranslate nohighlight">\(G\)</span> from meters with
+separate registers. Import and export cancel in the head power but both drive branch currents, so the head-only
+model is misspecified once PV exports.</p>
+<p class="rubric">Module Attributes</p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#milia.anomaly.group.POOLINGS" title="milia.anomaly.group.POOLINGS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">POOLINGS</span></code></a></p></td>
+<td><p>Ways of pooling the members of a group into one score.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#milia.anomaly.group.MEMBERTESTS" title="milia.anomaly.group.MEMBERTESTS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MEMBERTESTS</span></code></a></p></td>
+<td><p>flag the group if any member is flagged, or control the false discovery rate across members (Benjamini-Hochberg).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#milia.anomaly.group.LOSSMODELS" title="milia.anomaly.group.LOSSMODELS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LOSSMODELS</span></code></a></p></td>
+<td><p>the head power alone, or with the summed import and generation.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#milia.anomaly.group.LOSSALTERNATIVES" title="milia.anomaly.group.LOSSALTERNATIVES"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LOSSALTERNATIVES</span></code></a></p></td>
+<td><p>a robust (Huber) fit of the import-and-export model, which down-weights contaminated steps, and gradient-boosted trees on the head power, import, generation and hour, which assume no physics.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#milia.anomaly.group.TAMPERS" title="milia.anomaly.group.TAMPERS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TAMPERS</span></code></a></p></td>
+<td><p>a register that records part of the demand, or an appliance connected ahead of the meter.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#milia.anomaly.group.BYPASS" title="milia.anomaly.group.BYPASS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BYPASS</span></code></a></p></td>
+<td><p>an evening heating or hot water load.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="rubric">Functions</p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#milia.anomaly.group.coincidence" title="milia.anomaly.group.coincidence"><code class="xref py py-obj docutils literal notranslate"><span class="pre">coincidence</span></code></a>(members)</p></td>
+<td><p>Depth of the group's coincident export: minus the minimum of the summed net load.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#milia.anomaly.group.exportscore" title="milia.anomaly.group.exportscore"><code class="xref py py-obj docutils literal notranslate"><span class="pre">exportscore</span></code></a>(net[, how, weights])</p></td>
+<td><p>Daily coincident-export score of a group of meters: the largest pooled export of each day.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#milia.anomaly.group.fitloss" title="milia.anomaly.group.fitloss"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fitloss</span></code></a>(design, loss)</p></td>
+<td><p>Fit a technical-loss model by least squares on steps known to be normal.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#milia.anomaly.group.imbalance" title="milia.anomaly.group.imbalance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">imbalance</span></code></a>(head, meters)</p></td>
+<td><p>Share of energy at the feeder head not seen by its meters, per step.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#milia.anomaly.group.locate" title="milia.anomaly.group.locate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">locate</span></code></a>(residual, readings[, method])</p></td>
+<td><p>Score each meter by how well a hidden share of its demand explains a residual.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#milia.anomaly.group.lossdesign" title="milia.anomaly.group.lossdesign"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lossdesign</span></code></a>(head[, imports, generation, model])</p></td>
+<td><p>Regressors of a technical-loss model, quadratic in the powers that drive the branch currents.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#milia.anomaly.group.lossmodel" title="milia.anomaly.group.lossmodel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lossmodel</span></code></a>(model, head, imports, generation, ...)</p></td>
+<td><p>Fit a technical-loss model on steps known to be normal and return its prediction of the loss.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#milia.anomaly.group.memberflags" title="milia.anomaly.group.memberflags"><code class="xref py py-obj docutils literal notranslate"><span class="pre">memberflags</span></code></a>(calibration, scores[, alpha, test])</p></td>
+<td><p>Flag a group's days by testing its members one by one against their own calibration days.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#milia.anomaly.group.perday" title="milia.anomaly.group.perday"><code class="xref py py-obj docutils literal notranslate"><span class="pre">perday</span></code></a>(values[, steps, step])</p></td>
+<td><p>Energy per day from power per step, for a series of whole days.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#milia.anomaly.group.setfeatures" title="milia.anomaly.group.setfeatures"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setfeatures</span></code></a>(net[, window])</p></td>
+<td><p>Fixed set-function features of a group's day: summed export, summed squared export, summed midday export.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#milia.anomaly.group.tamper" title="milia.anomaly.group.tamper"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tamper</span></code></a>(head, meters, imports, demand, hours, ...)</p></td>
+<td><p>Tamper with the energy balance of a transformer or phase.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#milia.anomaly.group.unexplained" title="milia.anomaly.group.unexplained"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unexplained</span></code></a>(head, meters, design, coefficients)</p></td>
+<td><p>Power the meters and the technical-loss model leave unexplained, <span class="math notranslate nohighlight">\(u_t\)</span>, per step.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<dl class="py data">
+<dt class="sig sig-object py" id="milia.anomaly.group.POOLINGS">
+<span class="sig-prename descclassname"><span class="pre">milia.anomaly.group.</span></span><span class="sig-name descname"><span class="pre">POOLINGS</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#tuple" title="(in Python v3.15)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('sum',</span> <span class="pre">'max',</span> <span class="pre">'weighted')</span></span><a class="headerlink" href="#milia.anomaly.group.POOLINGS" title="Link to this definition">#</a></dt>
+<dd><p>Ways of pooling the members of a group into one score.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="milia.anomaly.group.MEMBERTESTS">
+<span class="sig-prename descclassname"><span class="pre">milia.anomaly.group.</span></span><span class="sig-name descname"><span class="pre">MEMBERTESTS</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#tuple" title="(in Python v3.15)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('any',</span> <span class="pre">'bh')</span></span><a class="headerlink" href="#milia.anomaly.group.MEMBERTESTS" title="Link to this definition">#</a></dt>
+<dd><p>flag the group if any member is flagged, or control the false discovery
+rate across members (Benjamini-Hochberg).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Ways of testing members one by one</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="milia.anomaly.group.LOSSMODELS">
+<span class="sig-prename descclassname"><span class="pre">milia.anomaly.group.</span></span><span class="sig-name descname"><span class="pre">LOSSMODELS</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#tuple" title="(in Python v3.15)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('head',</span> <span class="pre">'components')</span></span><a class="headerlink" href="#milia.anomaly.group.LOSSMODELS" title="Link to this definition">#</a></dt>
+<dd><p>the head power alone, or with the summed import and generation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Technical-loss models</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="milia.anomaly.group.LOSSALTERNATIVES">
+<span class="sig-prename descclassname"><span class="pre">milia.anomaly.group.</span></span><span class="sig-name descname"><span class="pre">LOSSALTERNATIVES</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#tuple" title="(in Python v3.15)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('huber',</span> <span class="pre">'boosted')</span></span><a class="headerlink" href="#milia.anomaly.group.LOSSALTERNATIVES" title="Link to this definition">#</a></dt>
+<dd><p>a robust (Huber) fit of the import-and-export model, which
+down-weights contaminated steps, and gradient-boosted trees on the head power, import, generation and hour, which
+assume no physics.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Data-driven alternatives to the physical loss models</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="milia.anomaly.group.TAMPERS">
+<span class="sig-prename descclassname"><span class="pre">milia.anomaly.group.</span></span><span class="sig-name descname"><span class="pre">TAMPERS</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#tuple" title="(in Python v3.15)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('underreport',</span> <span class="pre">'bypass')</span></span><a class="headerlink" href="#milia.anomaly.group.TAMPERS" title="Link to this definition">#</a></dt>
+<dd><p>a register that records part of the demand, or an appliance connected ahead of the meter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Kinds of tampering</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="milia.anomaly.group.BYPASS">
+<span class="sig-prename descclassname"><span class="pre">milia.anomaly.group.</span></span><span class="sig-name descname"><span class="pre">BYPASS</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#tuple" title="(in Python v3.15)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(17,</span> <span class="pre">22)</span></span><a class="headerlink" href="#milia.anomaly.group.BYPASS" title="Link to this definition">#</a></dt>
+<dd><p>an evening heating or hot
+water load.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Hours of the day (start inclusive, end exclusive) in which a bypassed appliance runs</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="milia.anomaly.group.coincidence">
+<span class="sig-prename descclassname"><span class="pre">milia.anomaly.group.</span></span><span class="sig-name descname"><span class="pre">coincidence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">members</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#milia.anomaly.group.coincidence" title="Link to this definition">#</a></dt>
+<dd><p>Depth of the group’s coincident export: minus the minimum of the summed net load.</p>
+<p>Higher means more anomalous: many members exporting at once on one
+transformer or feeder is what drives over-voltage.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>members</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.ArrayLike" title="(in NumPy v2.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArrayLike</span></code></a></span>) – Member net-load profiles, shape <code class="docutils literal notranslate"><span class="pre">(members,</span> <span class="pre">steps)</span></code>.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The export depth of the group, in the units of the profiles.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">coincidence</span><span class="p">([[</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">]])</span>
+<span class="go">3.0</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="milia.anomaly.group.imbalance">
+<span class="sig-prename descclassname"><span class="pre">milia.anomaly.group.</span></span><span class="sig-name descname"><span class="pre">imbalance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">head</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#milia.anomaly.group.imbalance" title="Link to this definition">#</a></dt>
+<dd><p>Share of energy at the feeder head not seen by its meters, per step.</p>
+<p>A rise in this apparent loss, beyond the technical-loss baseline, is the
+signature of non-technical loss such as meter tampering.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>head</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.ArrayLike" title="(in NumPy v2.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArrayLike</span></code></a></span>) – Feeder-head power per step.</p></li>
+<li><p><strong>meters</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.ArrayLike" title="(in NumPy v2.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArrayLike</span></code></a></span>) – Summed metered power per step.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">(head</span> <span class="pre">-</span> <span class="pre">meters)</span> <span class="pre">/</span> <span class="pre">head</span></code> per step.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">imbalance</span><span class="p">([</span><span class="mf">10.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">9.0</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">])</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="go">[0.1, 0.2]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="milia.anomaly.group.lossdesign">
+<span class="sig-prename descclassname"><span class="pre">milia.anomaly.group.</span></span><span class="sig-name descname"><span class="pre">lossdesign</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">head</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">imports</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">generation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'components'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#milia.anomaly.group.lossdesign" title="Link to this definition">#</a></dt>
+<dd><p>Regressors of a technical-loss model, quadratic in the powers that drive the branch currents.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>head</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.ArrayLike" title="(in NumPy v2.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArrayLike</span></code></a></span>) – Head power per step.</p></li>
+<li><p><strong>imports</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.ArrayLike" title="(in NumPy v2.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArrayLike</span></code></a> | <span class="highlight sphinx_autodoc_typehints-value"><a class="reference external" href="https://docs.python.org/3/builtins/constants.html#None" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="kc"><span class="pre">None</span></span></code></a></span></span>) – Summed import of the meters per step; required for <code class="docutils literal notranslate"><span class="pre">&quot;components&quot;</span></code>.</p></li>
+<li><p><strong>generation</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.ArrayLike" title="(in NumPy v2.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArrayLike</span></code></a> | <span class="highlight sphinx_autodoc_typehints-value"><a class="reference external" href="https://docs.python.org/3/builtins/constants.html#None" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="kc"><span class="pre">None</span></span></code></a></span></span>) – Summed generation of the meters per step; required for <code class="docutils literal notranslate"><span class="pre">&quot;components&quot;</span></code>.</p></li>
+<li><p><strong>model</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span>) – One of <a class="reference internal" href="#milia.anomaly.group.LOSSMODELS" title="milia.anomaly.group.LOSSMODELS"><code class="xref py py-data docutils literal notranslate"><span class="pre">LOSSMODELS</span></code></a>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>An <code class="docutils literal notranslate"><span class="pre">(n,</span> <span class="pre">k)</span></code> design matrix whose last column is the constant.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/exceptions.html#ValueError" title="(in Python v3.15)"><strong>ValueError</strong></a> – If <code class="docutils literal notranslate"><span class="pre">model</span></code> is unknown, or <code class="docutils literal notranslate"><span class="pre">&quot;components&quot;</span></code> lacks the import or generation.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lossdesign</span><span class="p">([</span><span class="mf">2.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">3.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">])</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="go">[[4.0, 9.0, 1.0, 1.0]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lossdesign</span><span class="p">([</span><span class="mf">2.0</span><span class="p">],</span> <span class="n">model</span><span class="o">=</span><span class="s2">"head"</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="go">[[4.0, 1.0]]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="milia.anomaly.group.fitloss">
+<span class="sig-prename descclassname"><span class="pre">milia.anomaly.group.</span></span><span class="sig-name descname"><span class="pre">fitloss</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">design</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loss</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#milia.anomaly.group.fitloss" title="Link to this definition">#</a></dt>
+<dd><p>Fit a technical-loss model by least squares on steps known to be normal.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>design</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.ArrayLike" title="(in NumPy v2.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArrayLike</span></code></a></span>) – Regressors from <a class="reference internal" href="#milia.anomaly.group.lossdesign" title="milia.anomaly.group.lossdesign"><code class="xref py py-func docutils literal notranslate"><span class="pre">lossdesign()</span></code></a>.</p></li>
+<li><p><strong>loss</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.ArrayLike" title="(in NumPy v2.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArrayLike</span></code></a></span>) – The observed loss per step, head power minus the sum of the meters.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The coefficients, in the order of the design’s columns.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">head</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fitloss</span><span class="p">(</span><span class="n">lossdesign</span><span class="p">(</span><span class="n">head</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="s2">"head"</span><span class="p">),</span> <span class="mf">0.01</span> <span class="o">*</span> <span class="n">head</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">0.2</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="go">[0.01, 0.2]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="milia.anomaly.group.unexplained">
+<span class="sig-prename descclassname"><span class="pre">milia.anomaly.group.</span></span><span class="sig-name descname"><span class="pre">unexplained</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">head</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">design</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coefficients</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#milia.anomaly.group.unexplained" title="Link to this definition">#</a></dt>
+<dd><p>Power the meters and the technical-loss model leave unexplained, <span class="math notranslate nohighlight">\(u_t\)</span>, per step.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>head</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.ArrayLike" title="(in NumPy v2.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArrayLike</span></code></a></span>) – Head power per step.</p></li>
+<li><p><strong>meters</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.ArrayLike" title="(in NumPy v2.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArrayLike</span></code></a></span>) – Summed meter readings per step, possibly tampered with.</p></li>
+<li><p><strong>design</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.ArrayLike" title="(in NumPy v2.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArrayLike</span></code></a></span>) – Regressors from <a class="reference internal" href="#milia.anomaly.group.lossdesign" title="milia.anomaly.group.lossdesign"><code class="xref py py-func docutils literal notranslate"><span class="pre">lossdesign()</span></code></a> for the same steps.</p></li>
+<li><p><strong>coefficients</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.ArrayLike" title="(in NumPy v2.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArrayLike</span></code></a></span>) – Coefficients from <a class="reference internal" href="#milia.anomaly.group.fitloss" title="milia.anomaly.group.fitloss"><code class="xref py py-func docutils literal notranslate"><span class="pre">fitloss()</span></code></a>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="math notranslate nohighlight">\(u_t = P^{\mathrm{head}}_t - \sum_i P^{(i)}_t - \hat P^{\mathrm{loss}}_t\)</span> per step.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">unexplained</span><span class="p">([</span><span class="mf">10.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">9.0</span><span class="p">],</span> <span class="p">[[</span><span class="mf">100.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]],</span> <span class="p">[</span><span class="mf">0.005</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">])</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="go">[0.3]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="milia.anomaly.group.perday">
+<span class="sig-prename descclassname"><span class="pre">milia.anomaly.group.</span></span><span class="sig-name descname"><span class="pre">perday</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">48</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#milia.anomaly.group.perday" title="Link to this definition">#</a></dt>
+<dd><p>Energy per day from power per step, for a series of whole days.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>values</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.ArrayLike" title="(in NumPy v2.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArrayLike</span></code></a></span>) – Power per step, a whole number of days in time order.</p></li>
+<li><p><strong>steps</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></span>) – Steps per day.</p></li>
+<li><p><strong>step</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a></span>) – Length of a step in hours.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Energy per day, in the power’s unit times hours.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">perday</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">96</span><span class="p">))</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="go">[24.0, 24.0]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="milia.anomaly.group.locate">
+<span class="sig-prename descclassname"><span class="pre">milia.anomaly.group.</span></span><span class="sig-name descname"><span class="pre">locate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">residual</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">readings</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'pursuit'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#milia.anomaly.group.locate" title="Link to this definition">#</a></dt>
+<dd><p>Score each meter by how well a hidden share of its demand explains a residual.</p>
+<p>For each meter the least-squares share <span class="math notranslate nohighlight">\(\beta_i = \langle d_i, r \rangle / \langle d_i, d_i \rangle\)</span> of its
+demand <span class="math notranslate nohighlight">\(d_i\)</span> in the residual <span class="math notranslate nohighlight">\(r\)</span> is clipped at zero (a tampered register hides demand, it does not
+add it) and multiplied by the correlation of <span class="math notranslate nohighlight">\(d_i\)</span> and <span class="math notranslate nohighlight">\(r\)</span>. It is one step of matching pursuit over
+the meters’ demand, and a larger score ranks the meter as more likely to be the source.</p>
+<p>Two alternatives fit all the meters jointly, <span class="math notranslate nohighlight">\(r = \sum_i \beta_i d_i + \varepsilon\)</span> with
+<span class="math notranslate nohighlight">\(\beta_i \ge 0\)</span>: <code class="docutils literal notranslate"><span class="pre">&quot;nnls&quot;</span></code> by non-negative least squares, and <code class="docutils literal notranslate"><span class="pre">&quot;lasso&quot;</span></code> by the non-negative lasso
+with its penalty chosen by BIC, which also prefers few non-zero shares, as a single tampering meter implies.
+Joint fits separate meters whose demand is correlated, which the one-at-a-time score confuses, but they become
+unstable when the meters outnumber the independent variation in the steps.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>residual</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.ArrayLike" title="(in NumPy v2.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArrayLike</span></code></a></span>) – The residual per step, length <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p></li>
+<li><p><strong>readings</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.ArrayLike" title="(in NumPy v2.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArrayLike</span></code></a></span>) – Each meter’s demand per step, shape <code class="docutils literal notranslate"><span class="pre">(meters,</span> <span class="pre">n)</span></code>.</p></li>
+<li><p><strong>method</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span>) – <code class="docutils literal notranslate"><span class="pre">&quot;pursuit&quot;</span></code> (one step of matching pursuit), <code class="docutils literal notranslate"><span class="pre">&quot;nnls&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;lasso&quot;</span></code>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>One score per meter; meters whose demand is constant score zero.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">readings</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">336</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">locate</span><span class="p">(</span><span class="mf">0.4</span> <span class="o">*</span> <span class="n">readings</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">+</span> <span class="n">rng</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mi">336</span><span class="p">),</span> <span class="n">readings</span><span class="p">)))</span>
+<span class="go">5</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="milia.anomaly.group.tamper">
+<span class="sig-prename descclassname"><span class="pre">milia.anomaly.group.</span></span><span class="sig-name descname"><span class="pre">tamper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">head</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">imports</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">demand</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hours</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kind</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(17,</span> <span class="pre">22)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#milia.anomaly.group.tamper" title="Link to this definition">#</a></dt>
+<dd><p>Tamper with the energy balance of a transformer or phase.</p>
+<p>Under-recording lowers the meters and the import register by a share of one meter’s demand and leaves the
+head unchanged. A bypass adds an appliance’s power to the head during <code class="docutils literal notranslate"><span class="pre">window</span></code> and leaves the meters
+unchanged; the extra technical loss its current causes is second order and neglected.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>head</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.ArrayLike" title="(in NumPy v2.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArrayLike</span></code></a></span>) – Head power per step.</p></li>
+<li><p><strong>meters</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.ArrayLike" title="(in NumPy v2.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArrayLike</span></code></a></span>) – Summed meter readings per step.</p></li>
+<li><p><strong>imports</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.ArrayLike" title="(in NumPy v2.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArrayLike</span></code></a></span>) – Summed import register per step.</p></li>
+<li><p><strong>demand</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.ArrayLike" title="(in NumPy v2.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArrayLike</span></code></a></span>) – The tampering meter’s demand per step.</p></li>
+<li><p><strong>hours</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.ArrayLike" title="(in NumPy v2.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArrayLike</span></code></a></span>) – Hour of the day of each step.</p></li>
+<li><p><strong>kind</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span>) – One of <a class="reference internal" href="#milia.anomaly.group.TAMPERS" title="milia.anomaly.group.TAMPERS"><code class="xref py py-data docutils literal notranslate"><span class="pre">TAMPERS</span></code></a>.</p></li>
+<li><p><strong>size</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a></span>) – For <code class="docutils literal notranslate"><span class="pre">&quot;underreport&quot;</span></code>, the share of the demand hidden; for <code class="docutils literal notranslate"><span class="pre">&quot;bypass&quot;</span></code>, the appliance’s power.</p></li>
+<li><p><strong>window</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#tuple" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>]</span>) – Hours of the day (start inclusive, end exclusive) in which a bypassed appliance runs.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#tuple" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>[<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>, <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>, <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>]</span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The tampered head, meters and imports.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/exceptions.html#ValueError" title="(in Python v3.15)"><strong>ValueError</strong></a> – If <code class="docutils literal notranslate"><span class="pre">kind</span></code> is unknown.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">head</span><span class="p">,</span> <span class="n">meters</span><span class="p">,</span> <span class="n">imports</span> <span class="o">=</span> <span class="n">tamper</span><span class="p">([</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">4.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">4.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">],</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">18</span><span class="p">],</span> <span class="s2">"bypass"</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">head</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span> <span class="n">meters</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="go">([5.0, 6.0], [4.0, 4.0])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="milia.anomaly.group.exportscore">
+<span class="sig-prename descclassname"><span class="pre">milia.anomaly.group.</span></span><span class="sig-name descname"><span class="pre">exportscore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">net</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">how</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'sum'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#milia.anomaly.group.exportscore" title="Link to this definition">#</a></dt>
+<dd><p>Daily coincident-export score of a group of meters: the largest pooled export of each day.</p>
+<p>Each member’s export is <span class="math notranslate nohighlight">\(x_{i,t} = \max(0, -P^{(i)}_t)\)</span>. The members are pooled at every step and the
+day’s score is the largest pooled value. <code class="docutils literal notranslate"><span class="pre">&quot;sum&quot;</span></code> pools <span class="math notranslate nohighlight">\(\sum_i x_{i,t}\)</span>, the likelihood-ratio
+statistic of a shift shared by the members; <code class="docutils literal notranslate"><span class="pre">&quot;max&quot;</span></code> pools <span class="math notranslate nohighlight">\(\max_i x_{i,t}\)</span>, the statistic of a single
+member’s excursion; <code class="docutils literal notranslate"><span class="pre">&quot;weighted&quot;</span></code> pools <span class="math notranslate nohighlight">\(\sum_i w_i x_{i,t}\)</span>, which with <span class="math notranslate nohighlight">\(w_i\)</span> the resistance of
+member <span class="math notranslate nohighlight">\(i\)</span>’s path approximates the voltage rise <span class="math notranslate nohighlight">\(\sum_i R_i P_i / V\)</span> its export causes. Every
+pooling is permutation invariant, <span class="math notranslate nohighlight">\(\rho(\sum_i \phi(x_i))\)</span> or a maximum, so the order of the members
+carries no information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>net</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.ArrayLike" title="(in NumPy v2.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArrayLike</span></code></a></span>) – Net load of the members, negative while exporting, shape <code class="docutils literal notranslate"><span class="pre">(members,</span> <span class="pre">days,</span> <span class="pre">steps)</span></code>.</p></li>
+<li><p><strong>how</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span>) – One of <a class="reference internal" href="#milia.anomaly.group.POOLINGS" title="milia.anomaly.group.POOLINGS"><code class="xref py py-data docutils literal notranslate"><span class="pre">POOLINGS</span></code></a>.</p></li>
+<li><p><strong>weights</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.ArrayLike" title="(in NumPy v2.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArrayLike</span></code></a> | <span class="highlight sphinx_autodoc_typehints-value"><a class="reference external" href="https://docs.python.org/3/builtins/constants.html#None" title="(in Python v3.15)"><code class="xref py py-obj docutils literal notranslate"><span class="kc"><span class="pre">None</span></span></code></a></span></span>) – One weight per member, required for <code class="docutils literal notranslate"><span class="pre">&quot;weighted&quot;</span></code>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>One score per day, in the unit of the net load (times the weights’ unit for <code class="docutils literal notranslate"><span class="pre">&quot;weighted&quot;</span></code>).</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/exceptions.html#ValueError" title="(in Python v3.15)"><strong>ValueError</strong></a> – If <code class="docutils literal notranslate"><span class="pre">how</span></code> is unknown, or <code class="docutils literal notranslate"><span class="pre">&quot;weighted&quot;</span></code> lacks weights.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">net</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[[</span><span class="mf">1.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">]],</span> <span class="p">[[</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">]]])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">exportscore</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="s2">"sum"</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span> <span class="n">exportscore</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="s2">"max"</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="go">([3.0], [2.0])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">exportscore</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="s2">"weighted"</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">])</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="go">[0.5]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="milia.anomaly.group.memberflags">
+<span class="sig-prename descclassname"><span class="pre">milia.anomaly.group.</span></span><span class="sig-name descname"><span class="pre">memberflags</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">calibration</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scores</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'any'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#milia.anomaly.group.memberflags" title="Link to this definition">#</a></dt>
+<dd><p>Flag a group’s days by testing its members one by one against their own calibration days.</p>
+<p>Each member’s daily score is compared with that member’s calibration scores through a conformal p-value. With
+<code class="docutils literal notranslate"><span class="pre">&quot;any&quot;</span></code>, a day is flagged when any member’s p-value is at most <code class="docutils literal notranslate"><span class="pre">alpha</span></code>: on a normal day about <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">*</span> <span class="pre">alpha</span></code>
+of <code class="docutils literal notranslate"><span class="pre">n</span></code> members are flagged by chance, so the group is flagged on most days. With <code class="docutils literal notranslate"><span class="pre">&quot;bh&quot;</span></code>, the members of a
+day are tested together with Benjamini-Hochberg, which controls the false discovery rate across members at
+the cost of power, so a shift shared by many members, each small, is rarely found.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>calibration</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.ArrayLike" title="(in NumPy v2.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArrayLike</span></code></a></span>) – Calibration scores of each member, shape <code class="docutils literal notranslate"><span class="pre">(members,</span> <span class="pre">days)</span></code>, higher being more anomalous.</p></li>
+<li><p><strong>scores</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.ArrayLike" title="(in NumPy v2.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArrayLike</span></code></a></span>) – Scores of each member on the days tested, shape <code class="docutils literal notranslate"><span class="pre">(members,</span> <span class="pre">days)</span></code>.</p></li>
+<li><p><strong>alpha</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a></span>) – Level of each member’s test, or the false discovery rate for <code class="docutils literal notranslate"><span class="pre">&quot;bh&quot;</span></code>.</p></li>
+<li><p><strong>test</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span>) – One of <a class="reference internal" href="#milia.anomaly.group.MEMBERTESTS" title="milia.anomaly.group.MEMBERTESTS"><code class="xref py py-data docutils literal notranslate"><span class="pre">MEMBERTESTS</span></code></a>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>One boolean per tested day.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/exceptions.html#ValueError" title="(in Python v3.15)"><strong>ValueError</strong></a> – If <code class="docutils literal notranslate"><span class="pre">test</span></code> is unknown.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">calibration</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">20.0</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">scores</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">30.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">]])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">memberflags</span><span class="p">(</span><span class="n">calibration</span><span class="p">,</span> <span class="n">scores</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="go">[False, True]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="milia.anomaly.group.setfeatures">
+<span class="sig-prename descclassname"><span class="pre">milia.anomaly.group.</span></span><span class="sig-name descname"><span class="pre">setfeatures</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">net</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">slice(22,</span> <span class="pre">28,</span> <span class="pre">None)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#milia.anomaly.group.setfeatures" title="Link to this definition">#</a></dt>
+<dd><p>Fixed set-function features of a group’s day: summed export, summed squared export, summed midday export.</p>
+<p>Each feature is a sum over the members of a feature of each member, <span class="math notranslate nohighlight">\(\sum_i \phi(x_i)\)</span>, so a classifier
+<span class="math notranslate nohighlight">\(\rho\)</span> fitted on them is a set function of the Deep Sets form, invariant to the order of the members.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>net</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.ArrayLike" title="(in NumPy v2.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArrayLike</span></code></a></span>) – Net load of the members, negative while exporting, shape <code class="docutils literal notranslate"><span class="pre">(members,</span> <span class="pre">days,</span> <span class="pre">steps)</span></code>.</p></li>
+<li><p><strong>window</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/builtins/functions.html#slice" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">slice</span></code></a></span>) – Steps of the midday window (11:00 to 14:00 for half-hourly days).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Shape <code class="docutils literal notranslate"><span class="pre">(days,</span> <span class="pre">3)</span></code> – the summed daily export, the summed squared export and the summed export in the window.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">net</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">48</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">setfeatures</span><span class="p">(</span><span class="n">net</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="go">[[96.0, 96.0, 12.0]]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="milia.anomaly.group.lossmodel">
+<span class="sig-prename descclassname"><span class="pre">milia.anomaly.group.</span></span><span class="sig-name descname"><span class="pre">lossmodel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">head</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">imports</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">generation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hours</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loss</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#milia.anomaly.group.lossmodel" title="Link to this definition">#</a></dt>
+<dd><p>Fit a technical-loss model on steps known to be normal and return its prediction of the loss.</p>
+<p><code class="docutils literal notranslate"><span class="pre">&quot;head&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;components&quot;</span></code> are the physical models of <a class="reference internal" href="#milia.anomaly.group.lossdesign" title="milia.anomaly.group.lossdesign"><code class="xref py py-func docutils literal notranslate"><span class="pre">lossdesign()</span></code></a> fitted by least squares
+(<a class="reference internal" href="#milia.anomaly.group.fitloss" title="milia.anomaly.group.fitloss"><code class="xref py py-func docutils literal notranslate"><span class="pre">fitloss()</span></code></a>). <code class="docutils literal notranslate"><span class="pre">&quot;huber&quot;</span></code> fits the components model with the Huber loss, so steps whose residual is far
+from the model, such as those of a meter already tampering, weigh less. <code class="docutils literal notranslate"><span class="pre">&quot;boosted&quot;</span></code> fits gradient-boosted
+trees to the head power, import, generation and hour of the day: it needs no physics, but it also fits any
+systematic part of the residual, including tampering present in the training steps.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span>) – One of <a class="reference internal" href="#milia.anomaly.group.LOSSMODELS" title="milia.anomaly.group.LOSSMODELS"><code class="xref py py-data docutils literal notranslate"><span class="pre">LOSSMODELS</span></code></a> or <a class="reference internal" href="#milia.anomaly.group.LOSSALTERNATIVES" title="milia.anomaly.group.LOSSALTERNATIVES"><code class="xref py py-data docutils literal notranslate"><span class="pre">LOSSALTERNATIVES</span></code></a>.</p></li>
+<li><p><strong>head</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.ArrayLike" title="(in NumPy v2.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArrayLike</span></code></a></span>) – Head power per training step.</p></li>
+<li><p><strong>imports</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.ArrayLike" title="(in NumPy v2.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArrayLike</span></code></a></span>) – Summed import per training step.</p></li>
+<li><p><strong>generation</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.ArrayLike" title="(in NumPy v2.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArrayLike</span></code></a></span>) – Summed generation per training step.</p></li>
+<li><p><strong>hours</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.ArrayLike" title="(in NumPy v2.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArrayLike</span></code></a></span>) – Hour of the day of each training step.</p></li>
+<li><p><strong>loss</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.ArrayLike" title="(in NumPy v2.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArrayLike</span></code></a></span>) – The observed loss per training step.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable" title="(in Python v3.15)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Callable</span></code></a>[[<a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.ArrayLike" title="(in NumPy v2.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArrayLike</span></code></a>, <a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.ArrayLike" title="(in NumPy v2.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArrayLike</span></code></a>, <a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.ArrayLike" title="(in NumPy v2.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArrayLike</span></code></a>, <a class="reference external" href="https://numpy.org/doc/stable/reference/typing.html#numpy.typing.ArrayLike" title="(in NumPy v2.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArrayLike</span></code></a>], <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>]</span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A function of <code class="docutils literal notranslate"><span class="pre">(head,</span> <span class="pre">imports,</span> <span class="pre">generation,</span> <span class="pre">hours)</span></code> giving the predicted loss per step.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/builtins/exceptions.html#ValueError" title="(in Python v3.15)"><strong>ValueError</strong></a> – If <code class="docutils literal notranslate"><span class="pre">model</span></code> is unknown.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">head</span><span class="p">,</span> <span class="n">imports</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">500</span><span class="p">),</span> <span class="n">rng</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">generation</span><span class="p">,</span> <span class="n">hours</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">500</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">48</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">)[:</span><span class="mi">500</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">predict</span> <span class="o">=</span> <span class="n">lossmodel</span><span class="p">(</span><span class="s2">"huber"</span><span class="p">,</span> <span class="n">head</span><span class="p">,</span> <span class="n">imports</span><span class="p">,</span> <span class="n">generation</span><span class="p">,</span> <span class="n">hours</span><span class="p">,</span> <span class="mf">0.001</span> <span class="o">*</span> <span class="n">head</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">0.002</span> <span class="o">*</span> <span class="n">imports</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">bool</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">predict</span><span class="p">([</span><span class="mf">10.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">10.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">12.0</span><span class="p">]),</span> <span class="p">[</span><span class="mf">0.3</span><span class="p">],</span> <span class="n">atol</span><span class="o">=</span><span class="mf">0.01</span><span class="p">))</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="milia.anomaly.explain.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">milia.anomaly.explain</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="milia.anomaly.inject.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">milia.anomaly.inject</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#milia.anomaly.group.POOLINGS"><code class="docutils literal notranslate"><span class="pre">POOLINGS</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#milia.anomaly.group.MEMBERTESTS"><code class="docutils literal notranslate"><span class="pre">MEMBERTESTS</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#milia.anomaly.group.LOSSMODELS"><code class="docutils literal notranslate"><span class="pre">LOSSMODELS</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#milia.anomaly.group.LOSSALTERNATIVES"><code class="docutils literal notranslate"><span class="pre">LOSSALTERNATIVES</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#milia.anomaly.group.TAMPERS"><code class="docutils literal notranslate"><span class="pre">TAMPERS</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#milia.anomaly.group.BYPASS"><code class="docutils literal notranslate"><span class="pre">BYPASS</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#milia.anomaly.group.coincidence"><code class="docutils literal notranslate"><span class="pre">coincidence()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#milia.anomaly.group.imbalance"><code class="docutils literal notranslate"><span class="pre">imbalance()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#milia.anomaly.group.lossdesign"><code class="docutils literal notranslate"><span class="pre">lossdesign()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#milia.anomaly.group.fitloss"><code class="docutils literal notranslate"><span class="pre">fitloss()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#milia.anomaly.group.unexplained"><code class="docutils literal notranslate"><span class="pre">unexplained()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#milia.anomaly.group.perday"><code class="docutils literal notranslate"><span class="pre">perday()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#milia.anomaly.group.locate"><code class="docutils literal notranslate"><span class="pre">locate()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#milia.anomaly.group.tamper"><code class="docutils literal notranslate"><span class="pre">tamper()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#milia.anomaly.group.exportscore"><code class="docutils literal notranslate"><span class="pre">exportscore()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#milia.anomaly.group.memberflags"><code class="docutils literal notranslate"><span class="pre">memberflags()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#milia.anomaly.group.setfeatures"><code class="docutils literal notranslate"><span class="pre">setfeatures()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#milia.anomaly.group.lossmodel"><code class="docutils literal notranslate"><span class="pre">lossmodel()</span></code></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=18bd87630a240e9c25be"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=18bd87630a240e9c25be"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, sambaiga.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.2.0.
+  </p>
+</div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

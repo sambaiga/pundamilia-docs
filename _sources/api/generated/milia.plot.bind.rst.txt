@@ -1,0 +1,12 @@
+milia.plot.bind
+===============
+
+.. automodule:: milia.plot.bind
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      bind
+   

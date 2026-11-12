@@ -1,0 +1,18 @@
+milia.recommend.retrieval
+=========================
+
+.. automodule:: milia.recommend.retrieval
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      coverage
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      KNNRetriever
+   

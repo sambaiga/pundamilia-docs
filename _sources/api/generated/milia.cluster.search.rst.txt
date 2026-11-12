@@ -1,0 +1,29 @@
+milia.cluster.search
+====================
+
+.. automodule:: milia.cluster.search
+
+   
+   .. rubric:: Module Attributes
+
+   .. autosummary::
+   
+      FEATURESETS
+      REDUCERS
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      audit
+      clusterers
+      embed
+      featuresets
+      importance
+      objective
+      pareto
+      rebuild
+      recheck
+      search
+      suggest
+   

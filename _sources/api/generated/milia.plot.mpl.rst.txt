@@ -1,0 +1,19 @@
+milia.plot.mpl
+==============
+
+.. automodule:: milia.plot.mpl
+
+   
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   agreement
+   anomaly
+   clusters
+   draw
+   recommend
+   represent
+   trust

@@ -1,0 +1,13 @@
+milia.recommend.uplift
+======================
+
+.. automodule:: milia.recommend.uplift
+
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      TLearner
+      XLearner
+   

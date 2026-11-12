@@ -1,0 +1,12 @@
+milia.anomaly.triage
+====================
+
+.. automodule:: milia.anomaly.triage
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      triage
+   

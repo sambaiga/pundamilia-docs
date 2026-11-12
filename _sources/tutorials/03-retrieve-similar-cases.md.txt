@@ -1,0 +1,69 @@
+---
+file_format: mystnb
+kernelspec:
+  name: python3
+---
+
+# Retrieve similar cases
+
+Find the cases most similar to a query, check whether the query is close enough to trust them, and recommend an action.
+
+```{code-cell} ipython3
+import matplotlib.pyplot as plt
+import numpy as np
+
+from milia.data import profiles, synthetic
+from milia.recommend.action import CaseRecommender
+from milia.recommend.retrieval import KNNRetriever
+
+BLACK, GREY, OCHRE = "#111318", "#8E887D", "#C47F2C"
+hours = np.linspace(0, 24, 48, endpoint=False)
+
+population = synthetic.generate(meters=80, days=90, steps=48, noise=0.35)
+shapes = np.asarray(profiles.shape(population.pivot))
+actions = population.labels  # the action that was taken on each past case
+past, new = np.arange(60), np.arange(60, 80)
+```
+
+## The nearest cases
+
+```{code-cell} ipython3
+retriever = KNNRetriever(n_neighbors=3).fit(shapes[past], np.zeros(len(past)))
+query = 65
+distances, positions = retriever.index_.kneighbors(shapes[[query]])
+nearest = past[positions[0]]
+nearest, distances[0].round(3)
+```
+
+```{code-cell} ipython3
+fig, axes = plt.subplots(1, 3, figsize=(8, 2.2), sharey=True)
+for place, (ax, case, distance) in enumerate(zip(axes, nearest, distances[0], strict=True), start=1):
+    ax.plot(hours, shapes[query], color=OCHRE, lw=1.2, alpha=0.7)
+    ax.plot(hours, shapes[case], color=BLACK, lw=2)
+    ax.set(title=f"{place}: distance {distance:.2f}", xlabel="Hour")
+    ax.spines[["top", "right"]].set_visible(False)
+plt.show()
+```
+
+## Is the query close enough?
+
+The retriever is calibrated on held-out cases. Its trust radius is the distance that most held-out cases fall within, and
+a query beyond it is reported as not trusted.
+
+```{code-cell} ipython3
+retriever = KNNRetriever(n_neighbors=3).fit(shapes[past[:45]], actions[past[:45]].astype(float))
+retriever.calibrate(shapes[past[45:]], alpha=0.1, y=actions[past[45:]].astype(float))
+trusted = retriever.trusted(shapes[new])
+round(float(retriever.tau_), 3), int(trusted.sum()), len(new)
+```
+
+## Recommend an action
+
+```{code-cell} ipython3
+recommender = CaseRecommender(n_neighbors=3).fit(shapes[past], actions[past])
+suggested = recommender.predict(shapes[new])
+float((suggested == actions[new]).mean())
+```
+
+The share of new cases for which the suggested action is the one that the synthetic population assigns. Compare any
+retrieval with a baseline such as `GroupMean` before relying on it.

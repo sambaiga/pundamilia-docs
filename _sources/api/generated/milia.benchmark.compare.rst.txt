@@ -1,0 +1,15 @@
+milia.benchmark.compare
+=======================
+
+.. automodule:: milia.benchmark.compare
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      losses
+      mcs
+      pairwise
+      signedrank
+   

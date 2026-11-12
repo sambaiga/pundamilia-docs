@@ -1,0 +1,12 @@
+milia.recommend.action
+======================
+
+.. automodule:: milia.recommend.action
+
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      CaseRecommender
+   

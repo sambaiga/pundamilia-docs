@@ -1,0 +1,18 @@
+milia.plot.figures.agreement
+============================
+
+.. automodule:: milia.plot.figures.agreement
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      confusion
+      drift
+      heatmap
+      square
+      strip
+      transitions
+      window
+   

@@ -1,0 +1,12 @@
+milia.recommend.baselines
+=========================
+
+.. automodule:: milia.recommend.baselines
+
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      GroupMean
+   

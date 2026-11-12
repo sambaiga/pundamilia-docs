@@ -1,0 +1,73 @@
+---
+file_format: mystnb
+kernelspec:
+  name: python3
+---
+
+# Detect
+
+`milia.anomaly` flags the days or windows that are not normal, at a false-alarm rate that you set.
+
+```{code-cell} ipython3
+from milia import available
+from milia.data import profiles, synthetic
+from milia.features.window import vector
+
+population = synthetic.generate(meters=30, days=90, steps=48, rate=0.06)
+days = profiles.tensor(population.pivot)[0]  # one meter: days by steps
+planted = population.anomalies[0].astype(bool)
+features = [vector(day) for day in days]
+available("detector")
+```
+
+## Fit on normal days, calibrate on held-out normal days
+
+An ensemble rescales the scores of several detectors to a common range and combines them. The threshold is the
+split-conformal quantile of the scores of held-out normal days, so that, for exchangeable data, the expected share of
+normal days that are flagged is at most `alpha`.
+
+```{code-cell} ipython3
+import numpy as np
+
+from milia.anomaly.ensemble import Ensemble
+
+normal = np.flatnonzero(~planted)
+detector = Ensemble().fit([features[i] for i in normal[:50]])
+detector.calibrate([features[i] for i in normal[50:]], alpha=0.1)
+flags = np.asarray(detector.flag(features))
+np.flatnonzero(flags), np.flatnonzero(planted)
+```
+
+## Scores, p-values and a threshold per group
+
+The score of each day is available through `score_samples`. `conformal.pvalues` turns scores into conformal p-values, and
+`conformal.mondrian` gives each group its own threshold, so that a group with a different normal range is not judged by
+the range of another.
+
+```{code-cell} ipython3
+from milia.anomaly import conformal
+
+scores = detector.score_samples(features)
+held = detector.score_samples([features[i] for i in normal[50:]])
+pvalues = conformal.pvalues(held, scores)
+selected = conformal.select(pvalues, alpha=0.1)
+int(selected.sum())
+```
+
+## Change points
+
+When the question is *when did behaviour change*, `changepoint.cusum` finds the points where a series drifts away from
+its baseline, and `pelt` and `binseg` segment it (they need the `changepoint` extra).
+
+```{code-cell} ipython3
+from milia.anomaly import changepoint
+
+level = days.mean(axis=1)
+level[60:] += 0.3 * level.std()
+changepoint.cusum(level, baseline=40)[:5]
+```
+
+## Limits
+
+The guarantee is about normal days that look like the calibration days. A threshold calibrated in summer is not valid in
+winter, and a planted anomaly in a test is easier than a real one. Calibrate on recent, representative normal data.

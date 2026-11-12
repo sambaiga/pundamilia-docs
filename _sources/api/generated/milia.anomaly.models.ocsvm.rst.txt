@@ -1,0 +1,13 @@
+milia.anomaly.models.ocsvm
+==========================
+
+.. automodule:: milia.anomaly.models.ocsvm
+
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      OCSVM
+      OCSVMConfig
+   

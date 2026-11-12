@@ -1,0 +1,26 @@
+milia.data.prep
+===============
+
+.. automodule:: milia.data.prep
+
+   
+   .. rubric:: Module Attributes
+
+   .. autosummary::
+   
+      RESOLUTION
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      clean
+      coverage
+      dailymax
+      normalize
+      prune
+      repeatratio
+      screen
+      seasons
+      validate
+   

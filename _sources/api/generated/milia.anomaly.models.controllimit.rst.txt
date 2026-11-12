@@ -1,0 +1,13 @@
+milia.anomaly.models.controllimit
+=================================
+
+.. automodule:: milia.anomaly.models.controllimit
+
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      ControlLimit
+      ControlLimitConfig
+   

@@ -1,0 +1,21 @@
+milia.anomaly.conformal
+=======================
+
+.. automodule:: milia.anomaly.conformal
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      bestf1
+      calibrate
+      flag
+      gaussian
+      groupflag
+      hampel
+      mondrian
+      peaksover
+      pvalues
+      select
+   

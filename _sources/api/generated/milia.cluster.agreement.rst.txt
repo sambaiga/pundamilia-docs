@@ -1,0 +1,28 @@
+milia.cluster.agreement
+=======================
+
+.. automodule:: milia.cluster.agreement
+
+   
+   .. rubric:: Module Attributes
+
+   .. autosummary::
+   
+      FAMILIES
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      assign
+      drift
+      families
+      history
+      jaccard
+      overlap
+      pairwise
+      recovery
+      seeds
+      temporal
+      transitions
+   

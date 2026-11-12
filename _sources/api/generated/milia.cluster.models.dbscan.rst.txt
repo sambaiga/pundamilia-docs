@@ -1,0 +1,19 @@
+milia.cluster.models.dbscan
+===========================
+
+.. automodule:: milia.cluster.models.dbscan
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      elbow
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      DBSCAN
+      DBSCANConfig
+   
